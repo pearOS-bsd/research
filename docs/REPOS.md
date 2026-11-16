@@ -2,6 +2,29 @@
 
 The rule: one repository = one thing that has its own build and its own tests; the pearOS build (`iso`) fetches the others by name (`pear_fetch NAME REF DIR`), never copies.
 
+## Where everything lives now (done 2026-11-16)
+| repository | what |
+|---|---|
+| `darwinator` | the kernel module that runs Mach-O programs (+ its dyld, tests) |
+| `d` | the daemons: `darwin/` (Mach-O: launchd, notifyd, wsbridge, lsd-stub, lsd-objc, svc-stub, carender-stub, hid-stub, wm-stub), `bsd/` (launchd + agents, usernoted, airportd, Open and Save Panel Service), `session/` (the scripts that start them) |
+| `WindowServer` | wsd: compositor, backends, input, IPC, the client library, the test tools, tests, CI |
+| `SkyLight` | the SkyLight protocol: wire headers, server handlers, client shim, generators, specs |
+| `AppKit` | AppKit written back from the decompile + the backend (`Open*.m`) on wsd |
+| `open` | the launcher (`open Notes.app`), `open-patch.py`, stubs, `deploy.sh`, `build-appkit.sh` |
+| `QuartzCore` | CoreAnimation compat and the reference tests |
+| `CoreUI` | the `.car` reader + `assets/` (Aqua, DarkAqua, DesktopServicesPriv); the big catalogues come from a Mac |
+| `SDK` | compat frameworks and headers (`libwsbsdcompat`, CoreWLAN/CoreWiFi, UserNotifications, XPC ...), `foundation/`, `defaults/` |
+| `LaunchServices` | icons (`LSIcon`, icns), UTI table, desktop pictures |
+| `apps` | Dock, Finder, topbar (SystemUIServer), loginwindow, Terminal, TextEdit, KeyboardSetupAssistant, UITest |
+| `iso` | builds the image: `build.sh` fetches every repository above into one workspace (copies laid out as the scripts expect) and builds; `overlay/ esp/ manifest/ ci/ ports/ dmg/`; the `iso.yml` workflow |
+| `research` | decompile dumps and notes (`docs/`), probes and experiments (`tools/`, `lab/`), hand-over notes, old workflows |
+| `ploader`, `clevo_wmi`, `virtio`, `package-repo`, `pkgbuild`, `AppStore-Backend` | as before |
+| `misc` | emptied: only a pointer; can be archived |
+
+How the build finds them: `iso/build.sh` uses `D_DIR`, `SKYLIGHT_DIR`, `WINDOWSERVER_DIR`, `APPKIT_DIR`, `OPEN_DIR`, `SDK_DIR`, `QUARTZCORE_DIR`, `COREUI_DIR`, `LAUNCHSERVICES_DIR`, `APPS_DIR` when they point to a checkout, otherwise it downloads the branch (`PEAR_REF`, default `main`).
+`open/deploy.sh` takes the repositories next to it (`../AppKit`, `../WindowServer`, `../SkyLight`, `../CoreUI`, `../research`) or `*_DIR`.  `WindowServer`: `make SKYLIGHT=../SkyLight`.
+
+## The plan that led here (kept for the record)
 ## Exist and have their content (or get it now)
 | repository | what | comes from |
 |---|---|---|

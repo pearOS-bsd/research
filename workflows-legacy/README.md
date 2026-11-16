@@ -1,0 +1,1 @@
+Workflows of the old `misc` repository (research runs on macOS / FreeBSD runners, the old GNUstep path).  Not active here: their paths still say `wsbsd/...`; move a workflow to `.github/workflows` and adapt the paths when it is needed again.
