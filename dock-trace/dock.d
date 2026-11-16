@@ -8,3 +8,5 @@ syscall::openat:entry /pid==$target/ { printf("OPENAT %s\n", copyinstr(arg1)); }
 /* SkyLight: the first call of every SLS/CGS function, in order (the window the Dock creates and what it does to it) */
 pid$target:SkyLight:SLS*:entry /!seen[probefunc]/ { seen[probefunc] = 1; printf("SLS %s\n", probefunc); }
 pid$target:SkyLight:CGS*:entry /!seen[probefunc]/ { seen[probefunc] = 1; printf("SLS %s\n", probefunc); }
+/* QuartzCore: the first call of every method of CAContext and CATransaction (how the Dock gets the layer context of its window) */
+objc$target:CAContext:*:entry /!seenobjc[probemod, probefunc]/ { seenobjc[probemod, probefunc] = 1; printf("OBJC %s %s\n", probemod, probefunc); }
