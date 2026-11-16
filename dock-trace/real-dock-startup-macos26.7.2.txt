@@ -37,18 +37,49 @@ OPEN /Users/USER/.CFUserTextEncoding
 OPEN /dev/autofs_nowait
 OPEN /Users/USER/.CFUserTextEncoding
 OPENAT /Library/Preferences/Logging/com.apple.diagnosticd.filter.plist
+SLS SLSMainConnectionID
+SLS SLSMainConnection
+SLS CGS_CHECK_INIT
+SLS SLSPreflightListenEventAccess
 XPCSVC com.apple.tccd.system
+SLS CGSConnectionInitialize
+SLS CGSDisplayInitialize
+SLS CGSScoreboard
+SLS SLSServerPort
+SLS CGSLookupServerRootPort
+SLS SLSServerPortCheckError
+SLS CGSEventScoreboardCreateFromShmemEntries
+SLS CGSEventSourceShmemCreateFromMemoryEntry
+SLS CGSDecoder::decode(CGRect*)
+SLS CGSDecoder::decode(CGSize*)
+SLS SLSCurrentRealTime
+SLS CGSUnlockShmemLock
+SLS SLSDisplayChangedSeed
+SLS SLSDisplayMappingChangedSeed
+SLS CGSWindowInitialize
+SLS CGSKnownConnectionCount()
 OPEN /System/Library/CoreServices/Dock.app
 OPEN /System/Library/CoreServices/Dock.app/Contents
 OPEN /System/Library/CoreServices/Dock.app/Contents/Info.plist
 OPEN /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+SLS SLSNewConnection
 XPCSVC com.apple.coreservices.launchservicesd
 XPCSVC com.apple.cfprefsd.daemon
 XPCSVC com.apple.cfprefsd.agent
 OPEN /System/Library/CoreServices/Dock.app/Contents/Resources
 OPEN /usr/share/icu/icudt78l.dat
+SLS SLSRunningOnInstallerDisk
 LOOKUP com.apple.CARenderServer
 LOOKUP com.apple.CARenderServer
+SLS CGSBacktraceCreate
+SLS CGSConnectionByID
+SLS CGSGetKnownConnectionByID(unsigned int)
+SLS CGSConnectionRegistryCheckConnectionID
+SLS CGSGetMainConnectionMachPort
+SLS CGSPropertyListCreateWithSerializedBytesRequiringType
+SLS CGSPropertyListCreateWithSerializedBytes
+SLS CGSPropertyListCreateWithSerializedData
+SLS SLSLoggingCurrentRPCConnectionID
 PREF AppleLanguages
 OPEN /System/Library/CoreServices/Dock.app/Contents/Resources
 OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/en.lproj
@@ -68,17 +99,32 @@ XPCSVC com.apple.lsd.modifydb
 XPCSVC com.apple.distributed_notifications@Uv3
 OPEN /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/LaunchServices
 OPEN /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current
+SLS SLSRegisterConnectionNotifyProc
+SLS CGSConnectionGetNotifier
+SLS CGSConnectionNotifierAddCallback
+SLS CGSConnectionNotifier::notify() const
+SLS SLSPackagesEnableConnectionWindowModificationNotifications
+SLS CGSGetConnectionPortById
+SLS SLSPackagesEnableConnectionOcclusionNotifications
+SLS SLSMainDisplayID
+SLS CGSDisplaySystemStateGetMainDisplayID
+SLS SLSDisplayStatusQuery
+SLS CGSDisplaySystemState::displayByDisplayID(int) const
 XPCSVC com.apple.appsleep
 PREF NSAppNapLaunchDelay
+SLS SLSGetDenyWindowServerConnections
 XPCSVC com.apple.analyticsd
 LOOKUP com.apple.CoreServices.coreservicesd
 LOOKUP com.apple.CoreServices.coreservicesd
 XPCSVC com.apple.lsd.mapdb
+SLS SLSSetUniversalOwner
+SLS SLSUpdateSystemActivity
+SLS SLSUpdateSystemActivityWithLocation
 OPEN /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/Exceptions.plist
 OPEN /System/Library/CoreServices/CoreTypes.bundle/Contents/Library/AppExceptions.bundle/Exceptions.plist
-LOOKUP com.apple.PowerManagement.control
-LOOKUP com.apple.PowerManagement.control
 OPEN /System/Library/CoreServices/CoreTypes.bundle/Contents/Library/InternalAppExceptions.bundle/Contents/Resources/Exceptions.plist
+LOOKUP com.apple.PowerManagement.control
+LOOKUP com.apple.PowerManagement.control
 PREF autohide-immutable
 PREF position-immutable
 PREF mineffect-immutable
@@ -90,21 +136,49 @@ OPEN /System/Library/PrivateFrameworks/CoreUI.framework
 OPEN /System/Library/PrivateFrameworks/CoreUI.framework/Resources
 OPEN /System/Library/PrivateFrameworks/CoreUI.framework/Resources/Info.plist
 OPEN /System/Library/PrivateFrameworks/CoreUI.framework/Resources/DesignLibrary-macOS.bundle/Contents/Resources/macOSRepositories/LightStandard.car
+SLS SLSGetActiveDisplayList
+SLS SLSGetDisplayBounds
+SLS CGSDisplaySystemStateGetBounds
+SLS SLSGetDisplayMenubarHeight
+SLS SLSGetDisplayAppleThemeLegacyRect
+SLS SLSGetCurrentDisplayMode
+SLS SLSGetDisplayModeDescriptionOfLength
+SLS CGSDisplaySystemStateGetDescription
+SLS SLSServerMightHaveAcceleration
 LOOKUP com.apple.dock.server
 LOOKUP com.apple.dock.server
 XPCSVC com.apple.uninstall.service
+SLS SLSGetAppearanceThemeLegacy
 OPEN /System/Library/Frameworks/Foundation.framework
 OPEN /System/Library/Frameworks/Foundation.framework/Resources
 OPEN /System/Library/Frameworks/Foundation.framework/Resources/Info.plist
 OPEN /System/Library/Frameworks/Foundation.framework/Resources
+SLS SLSServerOperationState
+SLS SLSGetMenuBarAutohideEnabled
+SLS SLSSessionCopyCurrentSessionProperties
+SLS SLSCopyCurrentSessionPropertiesInternalBridge
+SLS SLSCopySessionPropertiesTemporaryBridge
 LOOKUP com.apple.windowserver.active
 LOOKUP com.apple.windowserver.active
+SLS SLSGetSystemUIHasRTLDirectionLegacy
 XPCSVC com.apple.dock.notificationcenter
 PREF workspaces-edge-modifier-binding
 LOOKUP com.apple.windowserver.active
 LOOKUP com.apple.windowserver.active
+SLS SLSIsScreenWatcherPresent
+SLS SLSGetSpaceManagementMode
+SLS SLSWindowManagementClientOperationsEnabled
+SLS SLSWMBridgeDelegate()
+SLS SLSWindowServerClientGetSpaceManagementMode
 XPCSVC com.apple.dock.fullscreen
 XPCSVC com.apple.dock.spaces
+SLS SLSSpaceCreate
+SLS SLSWindowServerClientSpaceCreate
+SLS CGSPropertyListPerformWithSerializedBytes
+SLS CGSPropertyListCreateSerializedBytes
+SLS CGSPropertyListCreateSerializedData
+SLS SLSWindowQueryCreate
+SLS SLSWindowQuerySetValue
 PREF wvous-tl-corner
 PREF wvous-tr-corner
 PREF wvous-bl-corner
@@ -113,7 +187,25 @@ PREF wvous-tl-modifier
 PREF wvous-tr-modifier
 PREF wvous-bl-modifier
 PREF wvous-br-modifier
+SLS SLSGetEventPort
+SLS SLSSetConnectionProperty
+SLS SLSGetPotentiallyActiveDisplayList
+SLS SLSGetDisplaysWithRect
+SLS SLSSetBackgroundEventMaskAndShape
+SLS SLSRegionPerformWithSerializedBytes
+SLS SLSCopyRegionSerializedBytes
 PREF orientation
+SLS SLSCreateLayerContext
+SLS SLSNewWindowWithOpaqueShapeAndContext
+SLS SLSSetWindowClientPerceivedType
+SLS CGSWindowConstructInternal
+SLS CGSWindowSetCachedWindowRelativeShape
+SLS SLSSetWindowOpaqueShape
+SLS CGSWindowGetMappedImpl
+SLS SLSSetWindowLevel
+SLS SLSSetWindowProperty
+SLS SLSCopyDisplayColorSpace
+SLS CGSColorSpaceRegistryCopyColorSpace
 LOOKUP com.apple.fonts
 LOOKUP com.apple.fonts
 OPEN /System/Library/Fonts/SFNS.ttf
@@ -123,19 +215,72 @@ PREF largesize
 PREF magnification
 PREF autohide
 PREF launchanim
+SLS SLSCopyManagedDisplaySpaces
+SLS SLSWindowServerClientCopyManagedDisplaySpaces
+SLS SLSGetDisplaysWithUUID
+SLS SLSCopySpaces
+SLS SLSWindowServerClientCopySpaces
+SLS SLSSetWindowDidOrderInOnNonCurrentManagedSpacesOnlyNotificationBlock
+SLS SLSDisplayRegisterReconfigurationCallbackWithUUID
+SLS SLSGetDisplayList
+SLS SLSCopyDisplayUUID
 XPCSVC com.apple.dock.remotedesktoppicture
+SLS SLSCoordinatedLocalNotificationCenter
 XPCSVC com.apple.wallpaper
+SLS SLSSpaceWithName
+SLS SLSWindowServerClientSpaceWithName
+SLS SLSTransactionCreate
+SLS SLSTransactionSetWindowLevel
+SLS SLSTransactionSetWindowSubLevel
+SLS SLSTransactionSetWindowResolution
+SLS SLSTransactionAddWindowToSpace
+SLS SLSTransactionOrderWindow
+SLS SLSTransactionSetWindowProperty
+SLS SLSTransactionSetSurfaceLayerBackingOptions
+SLS SLSTransactionCommitUsingMethod
+SLS SLSTransactionGetFencingContext
+SLS SLSWindowBridgedOrder
+SLS SLSTransactionPostCommit(_SLSTransaction*, int, bool)
+SLS SLSTransactionCommit
+SLS SLSGetNextEventRecordInternal
+SLS CGSConnectionGetEventQueue
+SLS CGSEventQueueDequeueEvent
+SLS CGSSnarfAndDispatchDatagrams
+SLS CGSDatagramReadStream::dispatchMainQueueDatagrams()
+SLS CGSDatagramReadStream::popMainQueueInvocations()
+SLS CGSPostLocalNotification
+SLS CGSDatagramReadStream::VMData::release()
+SLS CGSDatagramReadStream::VMData::~VMData()
+SLS CGSDatagramReadStream::release()
+SLS SLSInitialEnableOfDisplayUpdates
 PREF autohide-delay
 PREF digduration-duration
 PREF digduration-perframe
 PREF digduration-angle
 PREF digduration-log
+SLS SLSSetSymbolicHotKey
+SLS SLSSetSymbolicHotKeyWithOptions
+SLS SLSGetHotKeyHandleForID
+SLS SLSSetSymbolicHotKeyWithExclusion
+SLS SLSGetCoalesceEventsMask
+SLS SLSCoalesceEventsInMask
+SLS SLSSetGestureEventSubmask
 CHECKIN EyeCandyDiagnose
 CHECKIN EyeCandyDiagnose
+SLS SLSSessionSetCurrentSessionWorkspacePreferences
+SLS SLSSessionSetCurrentSessionWorkspaceNotificationConnectionID
 CHECKIN com.apple.dock.server
 CHECKIN com.apple.dock.server
+SLS SLSPostBroadcastNotification
 XPCSVC com.apple.coreservices.appleevents
 XPCSVC com.apple.usernoted.dock
+SLS SLSWindowSetTrustedForObscuring
+SLS SLSAddWindowsToSpaces
+SLS SLSWindowServerClientAddWindowsToSpaces
+SLS SLSShowSpaces
+SLS SLSWindowServerClientShowSpaces
+SLS SLSOrderWindow
+SLS SLSOrderWindowList
 PREF version
 PREF static-apps
 PREF static-others
@@ -149,51 +294,49 @@ OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/en.lproj/Localizab
 XPCSVC com.apple.coreservices.sharedfilelistd.xpc
 XPCSVC com.apple.backgroundtaskmanagement
 OPEN /System/Applications/FaceTime.app
-OPEN /System/Applications/Phone.app
-OPEN /System/Applications/Calendar.app
-OPEN /System/Applications/Calendar.app/Contents
-OPEN /System/Applications/Calendar.app/Contents/Info.plist
 OPEN /System/Applications/FaceTime.app/Contents
+OPEN /System/Applications/FaceTime.app/Contents/Info.plist
+OPEN /System/Applications/Phone.app
 OPEN /System/Applications/Phone.app/Contents
 OPEN /System/Applications/Phone.app/Contents/Info.plist
+OPEN /System/Applications/FaceTime.app
+OPEN /System/Applications/Phone.app
+OPEN /System/Applications/Phone.app/Contents
+OPEN /System/Applications/FaceTime.app/Contents
 OPEN /System/Applications/FaceTime.app/Contents/Info.plist
+OPEN /System/Applications/Phone.app/Contents/Info.plist
+OPEN /System/Applications/FaceTime.app
+OPEN /System/Applications/FaceTime.app/Contents/MacOS/FaceTime
+OPEN /System/Applications/Phone.app
+OPEN /System/Applications/FaceTime.app/Contents/MacOS/FaceTime
+OPEN /System/Applications/Phone.app/Contents/MacOS/Phone
+OPEN /System/Applications/Phone.app/Contents/MacOS/Phone
+OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/FaceTime.app/Contents/CodeResources
+OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/Phone.app/Contents/CodeResources
+OPEN /System/Applications/Calendar.app
+OPEN /System/Applications/Calendar.app/Contents
+OPEN /System/Applications/Calendar.app/Contents/Info.plist
 OPEN /System/Applications/Calendar.app
 OPEN /System/Applications/Calendar.app/Contents
 OPEN /System/Applications/Calendar.app/Contents/Info.plist
 OPEN /System/Applications/Calendar.app/Contents/Resources
 OPEN /System/Applications/Calendar.app/Contents/Resources
+XPCSVC com.apple.trustd.agent
 OPEN /System/Applications/Calendar.app/Contents/Resources/en.lproj
-OPEN /System/Applications/FaceTime.app
-OPEN /System/Applications/FaceTime.app/Contents
-OPEN /System/Applications/FaceTime.app/Contents/Info.plist
-OPEN /System/Applications/Phone.app
-OPEN /System/Applications/Phone.app/Contents
-OPEN /System/Applications/Phone.app/Contents/Info.plist
 OPEN /System/Applications/Calendar.app/Contents/Resources/Base.lproj
-OPEN /System/Applications/FaceTime.app
-OPEN /System/Applications/Phone.app
-OPEN /System/Applications/Phone.app/Contents/MacOS/Phone
 OPEN /System/Applications/Calendar.app/Contents/Resources/English.lproj
-OPEN /System/Applications/Phone.app/Contents/MacOS/Phone
-OPEN /System/Applications/FaceTime.app/Contents/MacOS/FaceTime
-OPEN /System/Applications/FaceTime.app/Contents/MacOS/FaceTime
 OPEN /System/Applications/Calendar.app
 OPEN /System/Applications/Calendar.app/Contents
-OPEN /System/Applications/Calendar.app/Contents/Info.plist
 OPEN /System/Applications/App Store.app
+OPEN /System/Applications/Calendar.app/Contents/Info.plist
 OPEN /System/Applications/App Store.app/Contents
 OPEN /System/Applications/App Store.app/Contents/Info.plist
 OPEN /System/Applications/Calendar.app
 OPEN /System/Applications/Calendar.app/Contents/MacOS/Calendar
 OPEN /System/Applications/Calendar.app/Contents/MacOS/Calendar
-OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/Phone.app/Contents/CodeResources
-OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/FaceTime.app/Contents/CodeResources
-OPEN /System/Applications/System Settings.app
-OPEN /System/Applications/System Settings.app/Contents
 OPEN /System/Applications/Calendar.app/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/System Settings.app/Contents/Info.plist
 OPEN /System/Applications/Calendar.app/Contents/CodeResources
 OPEN /System/Applications/App Store.app
 OPEN /System/Applications/App Store.app/Contents
@@ -203,71 +346,81 @@ OPEN /System/Applications/App Store.app/Contents/MacOS/App Store
 OPEN /System/Applications/App Store.app/Contents/MacOS/App Store
 OPEN /System/Library/CoreServices/RawCamera.bundle/RawCamera
 OPEN /System/Library/CoreServices/RawCamera.bundle
+OPEN /System/Applications/System Settings.app
 OPEN /System/Library/CoreServices/RawCamera.bundle/RawCamera
 OPEN /System/Library/CoreServices/RawCamera.bundle
-OPEN /System/Applications/System Settings.app
 OPEN /dev/dtracehelper
-XPCSVC com.apple.trustd.agent
+OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeRepSpecific
+OPEN /System/Applications/System Settings.app/Contents
+OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/FaceTime.app/Contents/Info.plist
+OPEN /System/Applications/System Settings.app/Contents/Info.plist
+OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeRepSpecific
+OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/Phone.app/Contents/Info.plist
+OPEN /System/Applications/System Settings.app
 OPEN /System/Applications/System Settings.app/Contents
 OPEN /System/Applications/System Settings.app/Contents/Info.plist
 OPEN /System/Applications/System Settings.app
 OPEN /System/Applications/System Settings.app/Contents/MacOS/System Settings
 OPEN /System/Applications/System Settings.app/Contents/MacOS/System Settings
-OPEN /Users/USER/Downloads/
-OPEN /Users/USER/Downloads
 OPEN /System/Applications/Calendar.app/Contents/_CodeSignature/CodeRepSpecific
 OPEN /System/Applications/Calendar.app/Contents/_CodeSignature/CodeTopDirectory
 OPEN /System/Applications/Calendar.app/Contents/Info.plist
-OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeRepSpecific
-OPEN /System/Applications/FaceTime.app/Contents/_CodeSignature/CodeTopDirectory
-OPEN /System/Applications/FaceTime.app/Contents/Info.plist
-OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeRepSpecific
-OPEN /System/Applications/Phone.app/Contents/_CodeSignature/CodeTopDirectory
-OPEN /System/Applications/Phone.app/Contents/Info.plist
-OPEN /System/Applications/System Settings.app/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/System Settings.app/Contents/CodeResources
-OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty.png
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/Info.plist
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin
-OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/App Store.app/Contents/CodeResources
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/MacOS/Calendar
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/MacOS/Calendar
-PREF IIOEnableOOP
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/CodeResources
+OPEN /Users/USER/Downloads/
+OPEN /Users/USER/Downloads
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/Info.plist
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/MacOS/FaceTimeCatalyst
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/MacOS/FaceTimeCatalyst
-OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty-sdf.png
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/Info.plist
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/MacOS/PhoneDockTile
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/MacOS/PhoneDockTile
+OPEN /System/Applications/System Settings.app/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin
+OPEN /System/Applications/System Settings.app/Contents/CodeResources
+OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/App Store.app/Contents/CodeResources
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/Info.plist
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin
+OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty.png
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/CodeResources
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/MacOS/Calendar
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/CodeResources
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/MacOS/Calendar
+PREF IIOEnableOOP
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/CodeResources
+OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty-sdf.png
 OPEN /System/Applications/System Settings.app/Contents/_CodeSignature/CodeRepSpecific
 OPEN /System/Applications/System Settings.app/Contents/_CodeSignature/CodeTopDirectory
 OPEN /System/Applications/System Settings.app/Contents/Info.plist
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/Info.plist
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/Info.plist
-OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeRepSpecific
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/MacOS/PhoneDockTile
-OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeTopDirectory
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/MacOS/PhoneDockTile
-OPEN /System/Applications/App Store.app/Contents/Info.plist
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/MacOS/SystemPreferencesDockTile
 OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/MacOS/SystemPreferencesDockTile
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/CodeResources
+OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
+OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/CodeResources
+OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeRepSpecific
+OPEN /System/Applications/App Store.app/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/App Store.app/Contents/Info.plist
+SLS SLSEventIsAppUnresponsive
+SLS SLSEventAppUnresponsiveStatus
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/Info.plist
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin
+OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlements
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/Info.plist
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin
@@ -275,27 +428,17 @@ OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugi
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/MacOS/DockTile
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
 OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/CodeResources
-OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/_CodeSignature/CodeRequirements-1
-OPEN /System/Applications/System Settings.app//Contents/PlugIns/SystemPreferencesDockTile.docktileplugin/Contents/CodeResources
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/Info.plist
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
-OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeEntitlements
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/Info.plist
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
 OPEN /System/Applications/FaceTime.app//Contents/PlugIns/FaceTimeCatalyst.docktileplugin/Contents/_CodeSignature/CodeEntitlements
 OPEN /System/Library/CoreServices/Install Command Line Developer Tools.app/Contents/PkgInfo
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/Info.plist
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
 OPEN /System/Library/CoreServices/ServerVersion.plist
 OPEN /System/Library/CoreServices/SystemVersion.plist
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
-OPEN /System/Applications/Phone.app//Contents/PlugIns/PhoneDockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlements
-OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/Info.plist
-OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
-OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
-OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlements
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/Info.plist
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
+OPEN /System/Applications/Calendar.app/Contents/Resources/Calendar.docktileplugin/Contents/_CodeSignature/CodeEntitlements
 PREF Session Language
 PREF Additional Languages
 OPEN /AppleInternal/Library/Assistant/InternalConfig.plist
@@ -309,8 +452,12 @@ PREF Assistant Enabled
 PREF Session Language
 PREF Assistant Enabled
 OPEN //private/var/db/eligibilityd/eligibility.plist
+OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/Info.plist
 OPEN /usr/lib/libMobileGestaltExtensions.dylib
 OPEN /usr/lib
+OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeTopDirectory
+OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlementDER
+OPEN /System/Applications/App Store.app//Contents/PlugIns/DockTile.docktileplugin/Contents/_CodeSignature/CodeEntitlements
 OPEN /usr/lib/libMobileGestaltExtensions.dylib
 OPEN /usr/lib
 OPEN //private/var/db/eligibilityd/eligibility.plist
@@ -336,5 +483,7 @@ OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty.png
 OPEN /etc/localtime
 OPEN /var/db/timezone/zoneinfo/posixrules
 OPEN /System/Library/CoreServices/Dock.app/Contents/Resources/s-trashempty-sdf.png
+SLS SLSTransactionOrderWindowGroup
 XPCSVC com.apple.ProgressReporting
 PREF use-unique-internal-dockextras
+SLS SLSSetDockRectWithOrientation
