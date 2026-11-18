@@ -1,6 +1,6 @@
 #!/bin/sh
 # Startup trace of OUR ControlCenter on the Mac VM (same dtrace script as capture.sh): the real job com.apple.controlcenter is replaced by a launchd job com.pearos.controlcenter
-# (same MachServices as Apple's plist) that runs ~/cc-cocoa/ControlCenter.app, dtrace -W waits for it.  Prints the trace; restore with  sh cc-switch.sh real
+# (same MachServices as Apple's plist) that runs ~/cc-all/controlcenter-cocoa/ControlCenter.app, dtrace -W waits for it.  Prints the trace; restore with  sh cc-switch.sh real
 D="$(cd "$(dirname "$0")" && pwd)"
 sh "$D/cc-switch.sh" stop >/dev/null 2>&1
 M="ssh -p 2229 -i $HOME/fbsd-vm/id_ed25519 -o IdentitiesOnly=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q alex@localhost"

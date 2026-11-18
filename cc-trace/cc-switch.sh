@@ -1,11 +1,11 @@
 #!/bin/sh
 # Which ControlCenter runs on the Mac VM:  sh cc-switch.sh ours | real | stop
-#   ours: launchd job com.pearos.controlcenter (~/cc-cocoa/ControlCenter.app, KeepAlive, same MachServices as Apple's com.apple.controlcenter); Apple's job is booted out
+#   ours: launchd job com.pearos.controlcenter (~/cc-all/controlcenter-cocoa/ControlCenter.app, KeepAlive, same MachServices as Apple's com.apple.controlcenter); Apple's job is booted out
 #   stop: both booted out (used before a trace)      real: back to Apple's job.  Nothing under /System is touched.
 M="ssh -p 2229 -i $HOME/fbsd-vm/id_ed25519 -o IdentitiesOnly=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q alex@localhost"
 PL='cat > /tmp/com.pearos.controlcenter.plist <<EOF
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><dict>
-<key>Label</key><string>com.pearos.controlcenter</string><key>Program</key><string>/Users/alex/cc-cocoa/ControlCenter.app/Contents/MacOS/ControlCenter</string>
+<key>Label</key><string>com.pearos.controlcenter</string><key>Program</key><string>/Users/alex/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/MacOS/ControlCenter</string>
 <key>RunAtLoad</key><true/><key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict><key>ProcessType</key><string>App</string><key>ThrottleInterval</key><integer>1</integer>
 <key>LimitLoadToSessionType</key><array><string>Aqua</string></array>
 <key>StandardErrorPath</key><string>/tmp/pearos-cc.err</string>
