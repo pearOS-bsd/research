@@ -1,0 +1,26 @@
+TITLE wid=3e heèEø
+PROP wid=3e heèEø
+PROP wid=3e heèEø
+METRICS ret=60000271c9c0 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+PROP wid=3e heèEø
+METRICS ret=6000027cfd00 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+TITLE wid=3f heèEø
+PROP wid=3f heèEø
+PROP wid=3f heèEø
+METRICS ret=6000027de300 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+TITLE wid=3f ¨ öEø
+PROP wid=3f heèEø
+METRICS ret=6000027de000 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+METRICS ret=6000027f3e40 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+METRICS ret=6000027f9380 args 7ff84620daf0 7ff82531540b 7ff845eb8ec8 2 out 0 0
+SHADOW wid=3f a2 51dfff845e85579 800000000000005 7ff843225570 7ff842ffc0a0 a3 280000000 a4 7fffffff00000002 a5 10
+SHADOW wid=3e a2 51dfff845e85579 800000000000005 7ff843225570 7ff842ffc0a0 a3 280000000 a4 7fffffff00000002 a5 10
+REG wid=3e key=7ffffff5 a4=590 a5=0 | 11dfff845e865b9 10000000078c 4646464646464624 462d464646462d46 464646462d464646 464646464646462d 4646464646 0
+REG wid=3f key=7fffffe1 a4=490 a5=2 | 11dfff845e865b9 10000000078c 4646464646464624 462d464646462d46 464646462d464646 464646464646462d 4646464646 0
+PREFPOS wid=3e ret=c825360cb78300bb out 0 9520a4f0 7fca bc250e80
+PREFPOS wid=3f ret=c825360cb78300bb out 43070000 93f2e510 7fca bc250e80
+
+
+dtrace: error on enabled probe ID 17 (ID 1732: pid1571:SkyLight:SLSSetWindowTitle:entry): invalid address (0x6c2ef13e89bdd5ed) in action #2 at DIF offset 12
+dtrace: error on enabled probe ID 17 (ID 1732: pid1571:SkyLight:SLSSetWindowTitle:entry): invalid address (0x6c1eb73083a5dfdd) in action #2 at DIF offset 12
+dtrace: error on enabled probe ID 17 (ID 1732: pid1571:SkyLight:SLSSetWindowTitle:entry): invalid address (0x6c2ff13e89bdd5ed) in action #2 at DIF offset 12
