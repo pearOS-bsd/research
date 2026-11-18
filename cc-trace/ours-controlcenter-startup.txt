@@ -114,6 +114,59 @@ XPCSVC com.apple.dock.fullscreen
 LOOKUP com.apple.fonts
 LOOKUP com.apple.fonts
 XPCSVC com.apple.spotlight.IndexAgent
+PREF AppleLanguages
+OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app
+OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents
+OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/Info.plist
+OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/MacOS/ControlCenter
+XPCSVC com.apple.cfprefsd.daemon
+XPCSVC com.apple.cfprefsd.agent
+PREF IIOEnableOOP
+PREF NSTallLocalizedStrings
+PREF NSAppNapLaunchDelay
+PREF AppleReduceDesktopTinting
+PREF automatic_fig_notes
+PREF avauvoiceiochatflavor_trace
+PREF avcaptureproprietarydefaultssingleton_trace
+PREF gm_signpost
+PREF classroomRoles
+PREF avcapturedevice_trace
+PREF avcapturedaldevice_trace
+PREF camera_stack_initiator_logging
+PREF cmcaptureframereceiver_trace
+PREF gestures-enabled-default
+PREF Device Access Allowed
+PREF Assistant Enabled
+PREF AppleICUForce12HourTime
+PREF AppleICUForce24HourTime
+PREF AppleFirstWeekday
+PREF AppleCollationOrder
+PREF AppleICUNumberSymbols
+PREF AppleMetricUnits
+PREF AppleMeasurementUnits
+PREF AppleICUDateFormatStrings
+PREF AppleICUTimeFormatStrings
+PREF AppleICUDateTimeSymbols
+PREF NSUserKeyEquivalents
+PREF ImageIO_CopyInputData
+PREF AppleTISLocalCFPrefsRead
+PREF AppleTestLiveResize
+PREF AppleDebugPrintWindowList
+PREF CUIHotKeys
+PREF TSMTraceInputSourceNotifications
+PREF FloatingIndicatorEnabled
+PREF TSMLanguageIndicatorEnabled
+PREF TISDisableAbortOnNonMainThread
+PREF AppleTISTraceCacheRebuild
+PREF ABDefaultSourceID
+PREF AppleEnabledThirdPartyInputSources
+PREF TSMTraceInputSourceSelection
+PREF AppleTISAllowCapsLockLayoutSwitching
+PREF Session Language
+PREF Additional Languages
+PREF TSMTraceCapsLockPressAndHold
+PREF ABMetadataValidationLogLevel
+PREF ABMetadataLastOilChange
 SLS SLSMainConnectionID
 SLS SLSMainConnection
 SLS CGS_CHECK_INIT
@@ -135,14 +188,8 @@ SLS SLSDisplayChangedSeed
 SLS SLSDisplayMappingChangedSeed
 SLS CGSWindowInitialize
 SLS CGSKnownConnectionCount()
-OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app
-OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents
-OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/Info.plist
-OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/MacOS/ControlCenter
 SLS SLSNewConnection
 XPCSVC com.apple.coreservices.launchservicesd
-XPCSVC com.apple.cfprefsd.daemon
-XPCSVC com.apple.cfprefsd.agent
 OPEN /Users/USER/cc-all/controlcenter-cocoa/ControlCenter.app/Contents/Resources
 OPEN /usr/share/icu/icudt78l.dat
 SLS SLSRunningOnInstallerDisk
@@ -158,10 +205,10 @@ SLS CGSConnectionByID
 SLS CGSGetKnownConnectionByID(unsigned int)
 SLS CGSConnectionRegistryCheckConnectionID
 SLS CGSGetMainConnectionMachPort
-SLS SLSLoggingCurrentRPCConnectionID
 SLS CGSPropertyListCreateWithSerializedBytesRequiringType
-SLS CGSPropertyListCreateWithSerializedBytes
+SLS SLSLoggingCurrentRPCConnectionID
 SLS SLSMainDisplayID
+SLS CGSPropertyListCreateWithSerializedBytes
 SLS CGSPropertyListCreateWithSerializedData
 SLS CGSDisplaySystemStateGetMainDisplayID
 SLS SLSPackagesEnableConnectionWindowModificationNotifications
@@ -236,6 +283,11 @@ SLS CGSWindowSetCachedWindowRelativeShape
 SLS SLSSetWindowOpaqueShape
 SLS CGSWindowGetMappedImpl
 OBJC CAContext -setLayer:
+OBJC CAContext -layer
+OBJC CAContext -setContentsFormat:
+OBJC CAContext -setColorSpace:
+OBJC CAContext -GPURegistryID
+OBJC CAContext -setGPURegistryID:
 SLS SLSSetWindowEventMask
 SLS SLSSetWindowTitle
 SLS SLSSetWindowProperty
