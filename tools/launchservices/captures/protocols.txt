@@ -1,0 +1,512 @@
+SERVICE _LSDTrustedSignatureService
+  connectionType=8 isEnabled=1 alwaysPrivileged=0 clientClass=_LSDTrustedSignatureClient
+  serviceName=(null)
+  PROTOCOL _LSDTrustedSignatureProtocol
+  req getIsTrustedForURL:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSURL"16@?<v@?@"NSNumber"@"NSError">24
+    arg0 classes: NSURL
+    reply0 classes: NSNumber
+    reply1 classes: NSError
+  req trust:URL:completionHandler:
+    type=v36@0:8c16@20@?28
+    ext=v36@0:8c16@"NSURL"20@?<v@?c@"NSError">28
+    arg1 classes: NSURL
+    reply1 classes: NSError
+  req updateTrustExpirationDateForURL:
+    type=v24@0:8@16
+    ext=v24@0:8@"NSURL"16
+    arg0 classes: NSURL
+SERVICE _LSDReadService
+  connectionType=0 isEnabled=1 alwaysPrivileged=0 clientClass=_LSDReadClient
+  serviceName=(null)
+  PROTOCOL _LSDReadProtocol
+  req getApplicationCategoryIdentifiersSetWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSSet"@"NSError">16
+    reply0 classes: NSSet, NSString
+    reply1 classes: NSError
+  req getCurrentApplicationDefaultInfoForCategory:completion:
+    type=v32@0:8Q16@?24
+    ext=v32@0:8Q16@?<v@?@"LSDefaultApplicationQueryResult"@"NSError">24
+    reply0 classes: LSDefaultApplicationQueryResult
+    reply1 classes: NSError
+  req getEligibilityAnswerForDomain:withCompletionHandler:
+    type=v32@0:8Q16@?24
+    ext=v32@0:8Q16@?<v@?@"NSNumber"@"NSError">24
+    reply0 classes: NSNumber
+    reply1 classes: NSError
+  req getKernelPackageExtensionsWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSArray"@"NSError">16
+    reply0 classes: NSArray, NSString
+    reply1 classes: NSError
+  req getPreferencesWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSDictionary"@"NSError">16
+    reply0 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    reply1 classes: NSError
+  req getRedactedAppexRecordForSystemAppexWithUUID:node:bundleIdentifier:platform:completionHandler:
+    type=v52@0:8@16@24@32I40@?44
+    ext=v52@0:8@"NSUUID"16@"FSNode"24@"NSString"32I40@?<v@?@"LSApplicationExtensionRecord"@"NSError">44
+    arg0 classes: NSUUID
+    arg1 classes: FSNode
+    arg2 classes: NSString
+    reply0 classes: LSApplicationExtensionRecord
+    reply1 classes: NSError
+  req getRedactedPluginProxyForSystemAppexWithUUID:node:bundleIdentifier:platform:completionHandler:
+    type=v52@0:8@16@24@32I40@?44
+    ext=v52@0:8@"NSUUID"16@"FSNode"24@"NSString"32I40@?<v@?@"LSPlugInKitProxy"@"NSError">44
+    arg0 classes: NSUUID
+    arg1 classes: FSNode
+    arg2 classes: NSString
+    reply0 classes: LSPlugInKitProxy
+    reply1 classes: NSError
+  req getSelectedDeveloperDirectoryURLWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSURL">16
+    reply0 classes: NSURL
+  req getServerStatusWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?I>16
+  req getServerStoreNonBlockingWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@@"FSNode"@"NSXPCListenerEndpoint"c@"NSError">16
+    reply0 classes: _CSStore
+    reply1 classes: FSNode
+    reply2 classes: NSXPCListenerEndpoint
+    reply4 classes: NSError
+  req getSessionLanguagesForImproperlyLocalizedProcessWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSArray"@"NSError">16
+    reply0 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    reply1 classes: NSError
+  req getSettingsStoreConfigurationWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"LSSettingsStoreConfiguration"@"NSError">16
+    reply0 classes: LSSettingsStoreConfiguration
+    reply1 classes: NSError
+  req getSystemContentStoreWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@@"FSNode"@"NSError">16
+    reply0 classes: _CSStore
+    reply1 classes: FSNode
+    reply2 classes: NSError
+  req getSystemModeWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSString"@"NSError">16
+    reply0 classes: NSString
+    reply1 classes: NSError
+  req mapBundleIdentifiers:orMachOUUIDs:completionHandler:
+    type=v40@0:8@16@24@?32
+    ext=v40@0:8@"NSSet"16@"NSSet"24@?<v@?@"NSArray"@"NSArray"@"NSError">32
+    arg0 classes: NSSet, NSString
+    arg1 classes: NSSet, NSUUID
+    reply0 classes: NSArray, NSUUID
+    reply1 classes: NSArray, NSString
+    reply2 classes: NSError
+  req mapPlugInBundleIdentifiersToContainingBundleIdentifiers:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSSet"16@?<v@?@"NSDictionary"@"NSError">24
+    arg0 classes: NSSet, NSString
+    reply0 classes: NSDictionary, NSString
+    reply1 classes: NSError
+SERVICE _LSDOpenService
+  connectionType=3 isEnabled=1 alwaysPrivileged=0 clientClass=_LSDOpenClient
+  serviceName=(null)
+  PROTOCOL _LSDOpenProtocol
+  req failedToOpenApplication:withURL:completionHandler:
+    type=v40@0:8@16@24@?32
+    ext=v40@0:8@"NSString"16@"NSURL"24@?<v@?c@"NSError">32
+    arg0 classes: NSString
+    arg1 classes: NSURL
+    reply1 classes: NSError
+  req getURLOverrideForURL:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSURL"16@?<v@?@"NSURL"@"NSError">24
+    arg0 classes: NSURL
+    reply0 classes: NSURL
+    reply1 classes: NSError
+  req getiCloudHostNamesWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSSet">16
+    reply0 classes: NSSet, NSString
+  req openUserActivityWithUniqueIdentifier:activityData:activityType:bundleIdentifier:options:completionHandler:
+    type=v64@0:8@16@24@32@40@48@?56
+    ext=v64@0:8@"NSUUID"16@"NSData"24@"NSString"32@"NSString"40@"NSDictionary"48@?<v@?c@"NSError">56
+    arg0 classes: NSUUID
+    arg1 classes: NSData
+    arg2 classes: NSString
+    arg3 classes: NSString
+    arg4 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSString, NSURL
+    reply1 classes: NSError
+  req updateRestrictionKnowledgeWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?c@"NSError">16
+    reply1 classes: NSError
+SERVICE _LSDModifyService
+  connectionType=1 isEnabled=1 alwaysPrivileged=0 clientClass=_LSDModifyClient
+  serviceName=(null)
+  PROTOCOL _LSDModifyProtocol
+  req forceSaveForTestingWithCompletion:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSError">16
+    reply0 classes: NSError
+  req garbageCollectDatabaseWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?c@"NSError">16
+    reply1 classes: NSError
+  req performPostInstallationRegistration:personaUniqueStrings:operationUUID:reply:
+    type=v48@0:8@16@24@32@?40
+    ext=v48@0:8@"NSArray"16@"NSArray"24@"NSUUID"32@?<v@?@"LSRecordPromise"@"<_LSPendingSaveToken>"@"NSError">40
+    arg0 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg1 classes: NSArray, NSString
+    arg2 classes: NSUUID
+    reply0 classes: LSRecordPromise
+    reply1 proxy interface: _LSPendingSaveToken
+    reply2 classes: NSError
+  req performPostUninstallationUnregistrationOfBundleID:operationUUID:unregisterType:precondition:reply:
+    type=v52@0:8@16@24I32@36@?44
+    ext=v52@0:8@"NSString"16@"NSUUID"24I32@"LSPrecondition"36@?<v@?@"<_LSPendingSaveToken>"@"NSError">44
+    arg0 classes: NSString
+    arg1 classes: NSUUID
+    arg3 classes: LSPrecondition
+    reply0 proxy interface: _LSPendingSaveToken
+    reply1 classes: NSError
+  req performUpdateOfPersonasOfBundleIDs:toPersonaUniqueStrings:operationUUID:reply:
+    type=v48@0:8@16@24@32@?40
+    ext=v48@0:8@"NSSet"16@"NSSet"24@"NSUUID"32@?<v@?@"<_LSPendingSaveToken>"@"NSError">40
+    arg0 classes: NSSet, NSString
+    arg1 classes: NSSet, NSString
+    arg2 classes: NSUUID
+    reply0 proxy interface: _LSPendingSaveToken
+    reply1 classes: NSError
+  req registerContainerURL:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSURL"16@?<v@?I@"NSError">24
+    arg0 classes: NSURL
+    reply1 classes: NSError
+  req registerExtensionPoint:platform:declaringURL:withInfo:completionHandler:
+    type=v52@0:8@16I24@28@36@?44
+    ext=v52@0:8@"NSString"16I24@"NSURL"28@"NSDictionary"36@?<v@?c@"NSError">44
+    arg0 classes: NSString
+    arg2 classes: NSURL
+    arg3 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    reply1 classes: NSError
+  req registerItemInfo:alias:diskImageAlias:bundleURL:installationPlist:completionHandler:
+    type=v64@0:8@16@24@32@40@48@?56
+    ext=v64@0:8@"LSRegistrationInfo"16@"NSData"24@"NSData"32@"NSURL"40@"NSDictionary"48@?<v@?cI@"NSArray"c@"NSError">56
+    arg0 classes: LSRegistrationInfo
+    arg1 classes: NSData
+    arg2 classes: NSData
+    arg3 classes: NSURL
+    arg4 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    reply2 classes: NSArray, NSURL
+    reply4 classes: NSError
+  req registerSelf
+    type=v16@0:8
+    ext=v16@0:8
+  req removeAllHandlerPrefsForBundleID:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?c@"NSError">24
+    arg0 classes: NSString
+    reply1 classes: NSError
+  req removeAllHandlersWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?c@"NSError">16
+    reply1 classes: NSError
+  req removeContainer:
+    type=v20@0:8I16
+    ext=v20@0:8I16
+  req removeDatabaseStoreOnNextOpportunity:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?c@"NSError">16
+    reply1 classes: NSError
+  req removeHandlerForContentType:roles:completionHandler:
+    type=v36@0:8@16I24@?28
+    ext=v36@0:8@"NSString"16I24@?<v@?c@"NSError">28
+    arg0 classes: NSString
+    reply1 classes: NSError
+  req removeHandlerForURLScheme:completionHandler:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?c@"NSError">24
+    arg0 classes: NSString
+    reply1 classes: NSError
+  req requestLSDExitSafely:completionHandler:
+    type=v32@0:8d16@?24
+    ext=v32@0:8d16@?<v@?c@"NSError">24
+    reply1 classes: NSError
+  req resetServerStoreWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?c@"NSError">16
+    reply1 classes: NSError
+  req setDatabaseIsSeeded:completionHandler:
+    type=v28@0:8c16@?20
+    ext=v28@0:8c16@?<v@?c@"NSError">20
+    reply1 classes: NSError
+  req setHandler:version:forURLScheme:completionHandler:
+    type=v72@0:8@16{LSVersionNumber=[32C]}24@56@?64
+    ext=v72@0:8@"NSString"16{LSVersionNumber=[32C]}24@"NSString"56@?<v@?c@"NSError">64
+    arg0 classes: NSString
+    arg2 classes: NSString
+    reply1 classes: NSError
+  req setHandler:version:roles:forContentType:completionHandler:
+    type=v76@0:8@16{LSVersionNumber=[32C]}24I56@60@?68
+    ext=v76@0:8@"NSString"16{LSVersionNumber=[32C]}24I56@"NSString"60@?<v@?c@"NSError">68
+    arg0 classes: NSString
+    arg3 classes: NSString
+    reply1 classes: NSError
+  req setPreferenceValue:forKey:forApplicationAtURL:completionHandler:
+    type=v48@0:8@16@24@32@?40
+    ext=v48@0:8@16@"NSString"24@"NSURL"32@?<v@?c@"NSError">40
+    arg0 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg1 classes: NSString
+    arg2 classes: NSURL
+    reply1 classes: NSError
+  req setPreferenceValueForCallingApplication:forKey:completionHandler:
+    type=v40@0:8@16@24@?32
+    ext=v40@0:8@16@"NSString"24@?<v@?c@"NSError">32
+    arg0 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg1 classes: NSString
+    reply1 classes: NSError
+  req synchronizeWithMobileInstallation
+    type=v16@0:8
+    ext=v16@0:8
+  req unregisterBundleUnit:options:completionHandler:
+    type=v32@0:8I16I20@?24
+    ext=v32@0:8I16I20@?<v@?c@"NSError">24
+    reply1 classes: NSError
+  req unregisterExtensionPoint:platform:withVersion:parentBundleUnit:completionHandler:
+    type=v48@0:8@16I24@28I36@?40
+    ext=v48@0:8@"NSString"16I24@"NSString"28I36@?<v@?c@"NSError">40
+    arg0 classes: NSString
+    arg2 classes: NSString
+    reply1 classes: NSError
+  req updateContainerUnit:completionHandler:
+    type=v28@0:8I16@?20
+    ext=v28@0:8I16@?<v@?@"NSData"@"NSError">20
+    reply0 classes: NSData
+    reply1 classes: NSError
+  req updateRecordForApp:withSINF:iTunesMetadata:placeholderMetadata:sendNotification:operationUUID:returnSaveToken:completionHandler:
+    type=v72@0:8@16@24@32@40i48@52c60@?64
+    ext=v72@0:8@"NSString"16@"NSDictionary"24@"NSDictionary"32@"NSDictionary"40i48@"NSUUID"52c60@?<v@?c@"<_LSPendingSaveToken>"@"NSError">64
+    arg0 classes: NSString
+    arg1 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg2 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg3 classes: NSArray, NSData, NSDate, NSDictionary, NSNumber, NSString
+    arg5 classes: NSUUID
+    reply1 proxy interface: _LSPendingSaveToken
+    reply2 classes: NSError
+SERVICE _LSDDeviceIdentifierService
+  connectionType=7 isEnabled=1 alwaysPrivileged=0 clientClass=_LSDDeviceIdentifierClient
+  serviceName=(null)
+  PROTOCOL _LSDDeviceIdentifierProtocol
+  req clearAllIdentifiersOfType:
+    type=v24@0:8q16
+    ext=v24@0:8q16
+  req getIdentifierOfType:completionHandler:
+    type=v32@0:8q16@?24
+    ext=v32@0:8q16@?<v@?@"NSUUID">24
+    reply0 classes: NSUUID
+  req getIdentifierOfType:forApplicationAtURL:completionHandler:
+    type=v40@0:8q16@24@?32
+    ext=v40@0:8q16@"NSURL"24@?<v@?@"NSUUID">32
+    arg1 classes: NSURL
+    reply0 classes: NSUUID
+  req getIdentifierOfType:vendorName:completionHandler:
+    type=v40@0:8q16@24@?32
+    ext=v40@0:8q16@"NSString"24@?<v@?@"NSUUID">32
+    arg1 classes: NSString
+    reply0 classes: NSUUID
+SERVICE _LSDDeviceEncryptionService
+  connectionType=12 isEnabled=1 alwaysPrivileged=1 clientClass=_LSDDeviceEncryptionClient
+  serviceName=(null)
+  PROTOCOL _LSDDeviceEncryptionServiceProtocol
+  req decryptData:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSData"16@?<v@?@"NSData"@"NSError">24
+    arg0 classes: NSData
+    reply0 classes: NSData
+    reply1 classes: NSError
+  req encryptData:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSData"16@?<v@?@"NSData"@"NSError">24
+    arg0 classes: NSData
+    reply0 classes: NSData
+    reply1 classes: NSError
+EXTRA _LSDDisseminationServerProtocol
+  PROTOCOL _LSDDisseminationServerProtocol
+  req registerDisseminationSinkWithReply:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSDictionary"@"NSError">16
+    reply0 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    reply1 classes: NSError
+EXTRA _LSDDisseminationClientProtocol
+  PROTOCOL _LSDDisseminationClientProtocol
+  req bundleContainerizedBundleModifiedWithIdentifier:completion:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?@"NSError">24
+    arg0 classes: NSString
+    reply0 classes: NSError
+  req bundleMetadataUpdatedForIdentifier:SINF:iTunesPlist:placeholderMetadata:completion:
+    type=v56@0:8@16@24@32@40@?48
+    ext=v56@0:8@"NSString"16@"NSDictionary"24@"NSDictionary"32@"NSDictionary"40@?<v@?@"NSError">48
+    arg0 classes: NSString
+    arg1 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    arg2 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    arg3 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    reply0 classes: NSError
+EXTRA LSDPluginProtocol
+  PROTOCOL LSDPluginProtocol
+  req XPCListenerEndpoint
+    type=@16@0:8
+    ext=@"NSXPCListenerEndpoint"16@0:8
+  req start
+    type=v16@0:8
+    ext=v16@0:8
+EXTRA LSDPluginServiceProtocol
+  PROTOCOL LSDPluginServiceProtocol
+  req endpointForServiceIdentifier:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?@"NSXPCListenerEndpoint">24
+    arg0 classes: NSString
+    reply0 classes: NSXPCListenerEndpoint
+EXTRA LSDatabaseBlockingFetchProtocol
+  PROTOCOL LSDatabaseBlockingFetchProtocol
+  req getServerStoreBlockingWithCompletionHandler:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@@"FSNode"@"NSError">16
+    reply0 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    reply1 classes: FSNode
+    reply2 classes: NSError
+EXTRA _LSServerSettingsStoreXPCProtocol
+  PROTOCOL _LSServerSettingsStoreXPCProtocol
+  req resetUserElectionsWithReply:
+    type=v24@0:8@?16
+    ext=v24@0:8@?<v@?@"NSError">16
+    reply0 classes: NSError
+  req setUserElection:forExtensionKey:reply:
+    type=v36@0:8C16@20@?28
+    ext=v36@0:8C16@"NSString"20@?<v@?@"NSError">28
+    arg1 classes: NSString
+    reply0 classes: NSError
+  req userElectionForExtensionKey:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?C@"NSError">24
+    arg0 classes: NSString
+    reply1 classes: NSError
+EXTRA LSCodeEvaluationServerProtocol
+  PROTOCOL LSCodeEvaluationServerProtocol
+  req closeProgressForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req ejectVolumeForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req moveItemToTrashForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req moveItemToTrashForInfo:withReply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"LSCodeEvaluationInfo"16@?<v@?@"NSError"@"NSURL">24
+    arg0 classes: LSCodeEvaluationInfo
+    reply0 classes: NSError
+    reply1 classes: NSURL
+  req presentPromptOfType:options:info:identifier:
+    type=v48@0:8q16q24@32@40
+    ext=v48@0:8q16q24@"LSCodeEvaluationInfo"32@"NSUUID"40
+    arg2 classes: LSCodeEvaluationInfo
+    arg3 classes: NSUUID
+  req registerWithLaunchServicesForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req restoreOriginalNameAndIconForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req showInFinderForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req showInTestFlightForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req showOriginForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req showSecurityPreferencesAnchor:
+    type=v24@0:8@16
+    ext=v24@0:8@"NSString"16
+    arg0 classes: NSString
+  req startProgressForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req updateProgressForInfo:
+    type=v24@0:8@16
+    ext=v24@0:8@"LSCodeEvaluationInfo"16
+    arg0 classes: LSCodeEvaluationInfo
+  req updateQuarantineFlagsForInfo:setFlags:clearFlags:reply:
+    type=v40@0:8@16i24i28@?32
+    ext=v40@0:8@"LSCodeEvaluationInfo"16i24i28@?<v@?>32
+    arg0 classes: LSCodeEvaluationInfo
+EXTRA LSCodeEvaluationClientProtocol
+  PROTOCOL LSCodeEvaluationClientProtocol
+  req handleProgressCancelForIdentifier:
+    type=v24@0:8@16
+    ext=v24@0:8@"NSUUID"16
+    arg0 classes: NSUUID
+  req handlePromptResponse:info:identifier:
+    type=v40@0:8q16@24@32
+    ext=v40@0:8q16@"LSCodeEvaluationInfo"24@"NSUUID"32
+    arg1 classes: LSCodeEvaluationInfo
+    arg2 classes: NSUUID
+EXTRA LSInstallProgressProtocol
+  PROTOCOL LSInstallProgressProtocol
+  ADOPTS NSObject
+  req sendNotification:forApplicationWithBundleIdentifier:completion:
+    type=v36@0:8i16@20@?28
+    ext=v36@0:8i16@"NSString"20@?<v@?@"NSError">28
+    arg1 classes: NSString
+    reply0 classes: NSError
+  req _lsPing:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?@"NSString">24
+    arg0 classes: NSString
+    reply0 classes: NSString
+  req addObserver
+    type=v16@0:8
+    ext=v16@0:8
+  req createInstallProgressForApplication:withPhase:andPublishingString:reply:
+    type=v48@0:8@16Q24@32@?40
+    ext=v48@0:8@"LSApplicationProxy"16Q24@"NSString"32@?<v@?@"NSError">40
+    arg0 classes: LSApplicationProxy
+    arg2 classes: NSString
+    reply0 classes: NSError
+  req installationEndedForApplication:withState:
+    type=v32@0:8@16Q24
+    ext=v32@0:8@"NSString"16Q24
+    arg0 classes: NSString
+  req installationFailedForApplication:reply:
+    type=v32@0:8@16@?24
+    ext=v32@0:8@"NSString"16@?<v@?c>24
+    arg0 classes: NSString
+  req removeObserver
+    type=v16@0:8
+    ext=v16@0:8
+  req sendNotification:forApplications:withPlugins:
+    type=v32@0:8i16@20c28
+    ext=v32@0:8i16@"NSArray"20c28
+    arg1 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+  req setProgressProportionsByPhase:forInstallOfApplicationWithIdentifier:completion:
+    type=v40@0:8@16@24@?32
+    ext=v40@0:8@"NSDictionary"16@"NSString"24@?<v@?@"NSError">32
+    arg0 classes: NSArray, NSData, NSDate, NSDictionary, NSNull, NSNumber, NSOrderedSet, NSSet, NSString
+    arg1 classes: NSString
+    reply0 classes: NSError

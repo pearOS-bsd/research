@@ -1,0 +1,35 @@
+== lscap/000_ssend.root 91
+[
+  str@17 'getServerStoreNonBlockingWithCompletionHandler:'
+  str@68 'v24@0:8@?16'
+  [
+    ('nil',)
+  ]
+]
+consumed 91 of 91
+== lscap/001_sreply.root 495
+[
+  ('nil',)
+  str@18 'v@?@@"FSNode"@"NSXPCListenerEndpoint"c@"NSError"'
+  [
+    {
+      $class: str@96 '_CSStore'
+      XPCRepresentation: 0
+    }
+    {
+      $class(ref@88): str@140 'FSNode'
+      URL:
+        {
+          $class(ref@88): str@164 'NSURL'
+          NS.base: ('nil',)
+          NS.relative: u16 'file:///var/folders/qw/kcrgf49d0mz21m74tsv6q6fr0000gn/0/com.apple.LaunchServices.dv/com.apple.LaunchServices-20971545-v2...'
+        }
+      isDirectory: 0
+      referringAliasNode: ('nil',)
+    }
+    ('nil',)
+    0
+    ('nil',)
+  ]
+]
+consumed 495 of 495

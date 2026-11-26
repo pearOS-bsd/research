@@ -1,0 +1,347 @@
+# plain-XPC conversation of a minimal AppKit client (probes/a.m) with com.apple.coreservices.launchservicesd, one block per message
+CAP#004 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 100
+	"session" => <int64:>: -2
+	"clientversion" => <uint64:>: 277872640
+}
+
+CAP#005 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"serverversion" => <uint64:>: 277872640
+	"success" => <bool:>: true
+	"session" => <int64:>: 100001
+}
+
+CAP#006 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 110
+	"session" => <int64:>: -2
+}
+
+CAP#007 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"lsinfopage" => <shmem:>: 61440 bytes (15 pages)
+	"success" => <bool:>: true
+}
+
+CAP#008 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"asn2" => <uint64:>: 4295013348
+	"command" => <int64:>: 130
+	"session" => <int64:>: 100728
+	"asn1" => <uint64:>: 417894
+}
+
+CAP#009 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"success" => <bool:>: false
+}
+
+CAP#018 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 360
+	"restrictto" => <array:> { count = 1, capacity = 8, contents =
+		0: <string:> { string cache = 0x0, length = 25, contents = "BundleIdentifierLowerCase" }
+	}
+	"asn" => <uint64:>: 4295013348
+	"session" => <int64:>: 100728
+}
+
+CAP#030 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 505
+	"session" => <int64:>: -2
+}
+
+CAP#032 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"info" => <dictionary:> { count = 11, transaction: 0, voucher = 0x0, contents =
+		"LSDisplayName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"CFBundleSignature" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"LSExecutableFileName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"CFBundleExecutablePath" => <string:> { string cache = 0x0, length = 8, contents = "/tmp/lsa" }
+		"LSExecutableSDKVersion" => <string:> { string cache = 0x0, length = 4, contents = "26.5" }
+		"LSCheckInTime*" => <date:> Thu Nov 26 12:54:02 2026 PST (approx)
+		"LSArchitecture" => <string:> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundlePackageType" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"LSDYLDPlatformKey" => <int64:>: 1
+		"Flavor" => <int64:>: 3
+		"ApplicationType" => <string:> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+	}
+	"command" => <int64:>: 500
+	"deathport" => <mach send right:> { name = 16659, right = send, urefs = 3 }
+	"session" => <int64:>: -2
+}
+
+CAP#033 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"success" => <bool:>: true
+	"result" => <dictionary:> { count = 20, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data:>: { length = 32 bytes, contents =... }
+		"LSExecutableFileName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSDisplayName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"CFBundleSignature" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"LSExecutableSDKVersion" => <string:> { string cache = 0x0, length = 4, contents = "26.5" }
+		"LSExecutableFilenameLowerCaseKey" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSApplicationMemberCoalitionIDKey" => <int64:>: 4652
+		"CFBundleExecutablePath" => <string:> { string cache = 0x0, length = 8, contents = "/tmp/lsa" }
+		"LSASN" => <dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64:>: 430185
+			"com.apple.coreservices.asn" => <uuid:> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64:>: 0
+		}
+		"LSArchitecture" => <string:> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"pid" => <int64:>: 46052
+		"LSCheckInTime*" => <date:> Thu Nov 26 12:54:02 2026 PST (approx)
+		"LSApplicationHasRegistered" => <bool:>: true
+		"ChangeCount" => <int64:>: 515
+		"CFBundlePackageType" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"Flavor" => <int64:>: 3
+		"CFBundleExecutablePathDeviceID" => <int64:>: 16777226
+		"LSDYLDPlatformKey" => <int64:>: 1
+		"CFBundleExecutablePathINode" => <int64:>: 757733
+		"ApplicationType" => <string:> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+	}
+}
+
+CAP#035 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 300
+	"session" => <int64:>: 100728
+}
+
+CAP#037 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 410
+	"listener" => <endpoint>
+	"needsassertions" => <bool:>: false
+	"session" => <int64:>: -2
+	"clientid" => <uint64:>: 105553171622016
+	"addasn" => <array:> { count = 1, capacity = 8, contents =
+		0: <uint64:>: 4295013348
+	}
+}
+
+CAP#038 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"id" => <uint64:>: 10371
+	"success" => <bool:>: true
+	"affectedasns" => <array:> { count = 1, capacity = 1, contents =
+		0: <uint64:>: 430185
+	}
+	"session" => <int64:>: 100001
+}
+
+CAP#039 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 5, transaction: 0, voucher = 0x0, contents =
+	"id" => <uint64:>: 10371
+	"command" => <int64:>: 410
+	"session" => <int64:>: 100001
+	"set" => <array:> { count = 3, capacity = 8, contents =
+		0: <uint64:>: 512
+		1: <uint64:>: 513
+		2: <uint64:>: 561
+	}
+	"clientid" => <uint64:>: 105553171622016
+}
+
+CAP#041 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 200
+	"wanted" => <array:> { count = 1, capacity = 8, contents =
+		0: <string:> { string cache = 0x0, length = 11, contents = "LSSessionID" }
+	}
+	"session" => <int64:>: -2
+}
+
+CAP#042 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"metainfo" => <dictionary:> { count = 1, transaction: 0, voucher = 0x0, contents =
+		"LSSessionID" => <int64:>: 100001
+	}
+	"success" => <bool:>: true
+}
+
+CAP#044 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"info" => <dictionary:> { count = 1, transaction: 0, voucher = 0x0, contents =
+		"LSNotifyApplicationFrontable" => <bool:>: true
+	}
+	"command" => <int64:>: 510
+	"asn" => <uint64:>: 430185
+	"session" => <int64:>: -2
+}
+
+CAP#046 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"info" => <dictionary:> { count = 21, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data:>: { length = 32 bytes, contents =... }
+		"LSExecutableFileName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSDisplayName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"CFBundleSignature" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"LSExecutableSDKVersion" => <string:> { string cache = 0x0, length = 4, contents = "26.5" }
+		"LSExecutableFilenameLowerCaseKey" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSApplicationMemberCoalitionIDKey" => <int64:>: 4652
+		"CFBundleExecutablePath" => <string:> { string cache = 0x0, length = 8, contents = "/tmp/lsa" }
+		"LSApplicationReadyToBeFrontableKey" => <bool:>: true
+		"LSASN" => <dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64:>: 430185
+			"com.apple.coreservices.asn" => <uuid:> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64:>: 0
+		}
+		"LSArchitecture" => <string:> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"pid" => <int64:>: 46052
+		"LSCheckInTime*" => <date:> Thu Nov 26 12:54:02 2026 PST (approx)
+		"LSApplicationHasRegistered" => <bool:>: true
+		"ChangeCount" => <int64:>: 517
+		"CFBundlePackageType" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"Flavor" => <int64:>: 3
+		"CFBundleExecutablePathDeviceID" => <int64:>: 16777226
+		"LSDYLDPlatformKey" => <int64:>: 1
+		"CFBundleExecutablePathINode" => <int64:>: 757733
+		"ApplicationType" => <string:> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+	}
+	"success" => <bool:>: true
+}
+
+CAP#055 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 360
+	"asn" => <uint64:>: 4295013348
+	"session" => <int64:>: -2
+}
+
+CAP#056 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"cacheable" => <bool:>: true
+	"success" => <bool:>: true
+	"result" => <dictionary:> { count = 21, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data:>: { length = 32 bytes, contents =... }
+		"LSExecutableFileName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSDisplayName" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"CFBundleSignature" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"LSExecutableSDKVersion" => <string:> { string cache = 0x0, length = 4, contents = "26.5" }
+		"LSExecutableFilenameLowerCaseKey" => <string:> { string cache = 0x0, length = 3, contents = "lsa" }
+		"LSApplicationMemberCoalitionIDKey" => <int64:>: 4652
+		"CFBundleExecutablePath" => <string:> { string cache = 0x0, length = 8, contents = "/tmp/lsa" }
+		"LSApplicationReadyToBeFrontableKey" => <bool:>: true
+		"LSASN" => <dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64:>: 430185
+			"com.apple.coreservices.asn" => <uuid:> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64:>: 0
+		}
+		"LSArchitecture" => <string:> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"pid" => <int64:>: 46052
+		"LSCheckInTime*" => <date:> Thu Nov 26 12:54:02 2026 PST (approx)
+		"LSApplicationHasRegistered" => <bool:>: true
+		"ChangeCount" => <int64:>: 517
+		"CFBundlePackageType" => <string:> { string cache = 0x0, length = 4, contents = "????" }
+		"Flavor" => <int64:>: 3
+		"CFBundleExecutablePathDeviceID" => <int64:>: 16777226
+		"LSDYLDPlatformKey" => <int64:>: 1
+		"CFBundleExecutablePathINode" => <int64:>: 757733
+		"ApplicationType" => <string:> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+	}
+}
+
+CAP#066 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 7, transaction: 0, voucher = 0x0, contents =
+	"options" => <uint64:>: 524289
+	"object" => <string:> { string cache = 0x0, length = 24, contents = "kCFNotificationAnyObject" }
+	"token" => <uint64:>: 21474836484
+	"name" => <string:> { string cache = 0x0, length = 28, contents = "AppleAquaColorVariantChanged" }
+	"pn" => <string:> { string cache = 0x0, length = 8, contents = "/tmp/lsa" }
+	"method" => <string:> { string cache = 0x0, length = 8, contents = "register" }
+	"version" => <uint64:>: 1
+}
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"info" => <dictionary:> { count = 1, transaction: 0, voucher = 0x0, contents =
+		"LSPersistenceSuppressRelaunchAtLogin" => <bool:>: true
+	}
+	"command" => <int64:>: 510
+	"asn" => <uint64:>: 4295013348
+	"session" => <int64:>: -2
+}
+
+CAP#094 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 410
+	"listener" => <endpoint>
+	"needsassertions" => <bool:>: false
+	"session" => <int64:>: -2
+	"set" => <array:> { count = 1, capacity = 8, contents =
+		0: <uint64:>: 640
+	}
+	"clientid" => <uint64:>: 105553171623024
+}
+
+CAP#096 sreply conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"id" => <uint64:>: 10373
+	"success" => <bool:>: true
+	"session" => <int64:>: 100001
+}
+
+CAP#121 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 360
+	"restrictto" => <array:> { count = 6, capacity = 8, contents =
+		0: <string:> { string cache = 0x0, length = 6, contents = "Hidden" }
+		1: <string:> { string cache = 0x0, length = 34, contents = "LSApplicationHasSignalledItIsReady" }
+		2: <string:> { string cache = 0x0, length = 13, contents = "LSDisplayName" }
+		3: <string:> { string cache = 0x0, length = 15, contents = "ApplicationType" }
+		4: <string:> { string cache = 0x0, length = 3, contents = "pid" }
+		5: <string:> { string cache = 0x0, length = 11, contents = "ChangeCount" }
+	}
+	"asn" => <uint64:>: 4295013348
+	"session" => <int64:>: -2
+}
+  root_len=151 replysig=v24@?0@"NSString"8@"NSError"16 seq=1
+<dictionary:> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"f" => <uint64:>: 33
+	"ool" => <array:> { count = 1, capacity = 10, contents =
+		0: <endpoint>
+	}
+	"root" => <data:>: { length = 151 bytes, contents =... }
+	"proxynum" => <uint64:>: 1
+	"replysig" => <string:> { string cache = 0x0, length = 30, contents = "v24@?0@"NSString"8@"NSError"16" }
+	"sequence" => <uint64:>: 1
+}
+
+CAP#126 ssend conn=com.apple.coreservices.launchservicesd
+<dictionary:> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64:>: 110
+	"session" => <int64:>: -2
+}
+<dictionary:> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"XPCErrorDescription" => <string:> { string cache = 0x0, length = 22, contents = "Connection interrupted" }
+}
+
+CAP#137 ssend conn=com.apple.coreservices.launchservicesd
+  root_len=151 replysig=v24@?0@"NSString"8@"NSError"16 seq=1
+<dictionary:> { count = 5, transaction: 0, voucher = 0x0, contents =
+	"id" => <uint64:>: 10372
+	"command" => <int64:>: 410
+	"session" => <int64:>: 100001
+	"set" => <array:> { count = 4, capacity = 8, contents =
+		0: <uint64:>: 515
+		1: <uint64:>: 536
+		2: <uint64:>: 537
+		3: <uint64:>: 784
+	}
+	"clientid" => <uint64:>: 105553171629472
+}
+<dictionary:> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"f" => <uint64:>: 33
+	"ool" => <array:> { count = 1, capacity = 10, contents =
+		0: <endpoint>
+	}
+	"root" => <data:>: { length = 151 bytes, contents =... }
+	"proxynum" => <uint64:>: 1
+	"replysig" => <string:> { string cache = 0x0, length = 30, contents = "v24@?0@"NSString"8@"NSError"16" }
+	"sequence" => <uint64:>: 1
+}
+
+CAP#141 ssend conn=com.apple.coreservices.launchservicesd
+

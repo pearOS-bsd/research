@@ -1,0 +1,53 @@
+== lscap2/008_ssend.root 1154
+[
+  str@17 'registerItemInfo:alias:diskImageAlias:bundleURL:installationPlist:completionHandler:'
+  str@105 'v64@0:8@16@24@32@40@48@?56'
+  [
+    {
+      $class: str@161 'LSRegistrationInfo'
+      version: 7
+      action: 203
+      options: 33554432
+      itemFlags: 1048590
+      containerUnit: 4
+      bundleUnit: 0
+      bundleClass: 2
+      inoBundle: 757702
+      inoExec: 0
+      contentModDate: 817419193.2239317
+      execContentModDate: 0.0
+    }
+    data[692] 626f6f6bb402000000000510400000000000000000000000000000000000000000000000000000000000000000000000...
+    ('nil',)
+    {
+      $class(ref@153): str@1073 'NSURL'
+      NS.base: ('nil',)
+      NS.relative: u16 'file:///tmp/lsq/T2.app/'
+    }
+    ('nil',)
+    ('nil',)
+  ]
+]
+consumed 1154 of 1154
+== lscap2/009_sreply.root 66
+[
+  ('nil',)
+  str@18 'v@?cI@"NSArray"c@"NSError"'
+  [
+    1
+    2160
+    ('nil',)
+    0
+    ('nil',)
+  ]
+]
+consumed 66 of 66
+== lscap2/010_ssend.root 91
+[
+  str@17 'getServerStoreNonBlockingWithCompletionHandler:'
+  str@68 'v24@0:8@?16'
+  [
+    ('nil',)
+  ]
+]
+consumed 91 of 91

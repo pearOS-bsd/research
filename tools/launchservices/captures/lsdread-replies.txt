@@ -1,0 +1,150 @@
+== lscap4/001_sreply.root 36
+[
+  ('nil',)
+  str@18 'v@?I'
+  [
+    256
+  ]
+]
+consumed 36 of 36
+== lscap4/003_sreply.root 36
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    ('nil',)
+    ('nil',)
+  ]
+]
+consumed 36 of 36
+== lscap4/005_sreply.root 105
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    {
+      $class: str@51 'NSDictionary'
+      NS.keys:
+        [
+        ]
+      NS.objects:
+        [
+        ]
+    }
+    ('nil',)
+  ]
+]
+consumed 105 of 105
+== lscap4/007_sreply.root 136
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    {
+      $class: str@51 'LSSettingsStoreConfiguration'
+      endpoint:
+        {
+          $class(ref@43): str@104 'NSXPCListenerEndpoint'
+          ep: 0
+        }
+    }
+    ('nil',)
+  ]
+]
+consumed 136 of 136
+== lscap4/009_sreply.root 169
+[
+  ('nil',)
+  str@18 'v@?@'
+  [
+    {
+      $class: str@50 'NSURL'
+      NS.base: ('nil',)
+    }
+  ]
+]
+consumed 169 of 169
+== lscap4/011_sreply.root 1801
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    {
+      $class: str@51 'NSArray'
+      NS.objects:
+        [
+        ]
+    }
+    ('nil',)
+  ]
+]
+consumed 1801 of 1801
+== lscap4/013_sreply.root 3153
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    {
+      $class: str@51 'NSSet'
+      NS.objects:
+        [
+        ]
+    }
+    ('nil',)
+  ]
+]
+consumed 3153 of 3153
+== lscap4/015_sreply.root 93
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    {
+      $class: str@51 'NSArray'
+      NS.objects:
+        [
+        ]
+    }
+    ('nil',)
+  ]
+]
+consumed 93 of 93
+== lscap4/017_sreply.root 478
+[
+  ('nil',)
+  str@18 'v@?@@@'
+  [
+    {
+      $class: str@52 '_CSStore'
+      XPCRepresentation: 0
+    }
+    {
+      $class(ref@44): str@96 'FSNode'
+      URL:
+        {
+          $class(ref@44): str@120 'NSURL'
+          NS.base: ('nil',)
+        }
+      isDirectory: 0
+      referringAliasNode: ('nil',)
+    }
+    ('nil',)
+  ]
+]
+consumed 478 of 478
+== lscap4/019_sreply.root 597
+[
+  ('nil',)
+  str@18 'v@?@@'
+  [
+    ('nil',)
+    {
+      $class: str@52 'NSError'
+      NSCode: 18446744073709551566
+      NSUserInfo:
+        {
+          $class(ref@44): str@156 'NSDictionary'
+          NS.keys:
+            [
+            ]
+          NS.objects:
