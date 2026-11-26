@@ -21,7 +21,8 @@ def db_header(seq, uid, build=b'25G332', model=b'/iMac19,1', xcode=b'2416', sysv
     assert len(h) == 0xc0 + 0, len(h)
     return h[:0xc0]
 
-def build(seq=1, uid=None, when=None):
+def tables(seq=1, uid=None, when=None):
+    """the 33 empty tables as csstore_write.Table objects (the extension point of lsbuild.py)"""
     uid = uid or uuid.uuid4()
     tabs = [w.Table('DB Header', 4, db_header(seq, uid, when=when))]
     for tid, n in PLAIN: tabs.append(w.Table(n, tid))
@@ -31,7 +32,10 @@ def build(seq=1, uid=None, when=None):
     s = w.Table('<string>', 124, b'\xff\xff\xff\xff'); s.nbuckets = 8192; tabs.append(s)
     a = w.Table('<array>', 128); a.nbuckets = 8192; tabs.append(a)
     tabs.append(w.Table('<dictionary>', 132))
-    return w.build(tabs, generation=1)
+    return tabs
+
+def build(seq=1, uid=None, when=None):
+    return w.build(tables(seq, uid, when), generation=1)
 
 if __name__ == '__main__':
     open(sys.argv[1], 'wb').write(build(int(sys.argv[2]) if len(sys.argv) > 2 else 1, uuid.UUID(sys.argv[3]) if len(sys.argv) > 3 else None))

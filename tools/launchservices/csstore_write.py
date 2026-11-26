@@ -12,6 +12,7 @@ class Table:
         self.name, self.id, self.extra, self.nextid = name, tid, extra, nextid
         self.units = {}            # unit id -> payload bytes
         self.nbuckets = 0          # id map size (0 = number of units, at least 16)
+        self.raw = None            # optional callable(file_offset) -> bytes: a raw block (not a unit) placed after the units; its offset becomes the 4-byte extra of the table (the <string> cache)
     def add(self, payload, uid=None):
         if uid is None:
             self.nextid += 1; uid = self.nextid * 4
@@ -50,6 +51,8 @@ def build(tables, generation=1):
         for uid, payload in sorted(t.units.items()):
             uo = put(unit(uid >> 2, payload)); ents.append((uid, uo))
         im = idmap(ents, t.nbuckets or None)
+        if t.raw:
+            base = len(out) + (-len(out) % 4); t.extra = struct.pack('<I', put(t.raw(base)))
         placed.append((t, off, im))
     for t, off, im in placed:
         name = t.name.encode().ljust(48, b'\0')
