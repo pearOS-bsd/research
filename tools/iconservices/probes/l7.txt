@@ -1,0 +1,4 @@
+settings set target.env-vars DYLD_INSERT_LIBRARIES=/tmp/cap.dylib
+br set -n xpc_connection_send_message_with_reply_sync -G true -C "expr -- (void)cap_dump((void*)$rsi,\"send\",(void*)$rdi)"
+br set -r "NSXPCConnection _decodeAndInvokeReplyBlockWithEvent" -G true -C "expr -- (void)cap_dump((void*)$rdx,\"reply\",(void*)0)"
+br set -n "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]" -G true -C "expr -- (void)printf(\"INVOKE\\n\")"
