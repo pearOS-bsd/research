@@ -103,6 +103,9 @@ class LSDB:
                 self.binds[tname] = {ws[i]: ws[n + i] for i in range(n) if ws[i] not in (EMPTY, DELETED)}
         hdr = self.tabs['DB Header'].extra; self.seq = struct.unpack_from('<Q', hdr, 0x80)[0] if seq is None else seq
         return self
+    def set_sequence(self, seq):
+        """the database sequence number (DB header +0x80), bumped by every change of the store"""
+        self.seq = seq; t = self.tabs['DB Header']; e = bytearray(t.extra); struct.pack_into('<Q', e, 0x80, seq); t.extra = bytes(e)
     def add(self, table, payload):
         return self.tabs[table].add(payload)
     def string(self, s):
