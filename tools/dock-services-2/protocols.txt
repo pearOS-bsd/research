@@ -1,0 +1,97 @@
+@protocol NSProgressRegistrar
+  req addPublisher:forID:acknowledgementAppBundleIDs:category:fileURL:initialValues:completionHandler: | Vv72@0:8@"<NSProgressPublisher>"16@"NSString"24@"NSSet"32@"NSString"40@"NSURL"48@"NSProgressValues"56@?<v@?@"NSSet">64
+  req addSubscriber:forID:appBundleID:category:completionHandler: | Vv56@0:8@"<NSProgressSubscriber>"16@"NSString"24@"NSString"32@"NSString"40@?<v@?>48
+  req addSubscriber:forID:appBundleID:fileURL:completionHandler: | Vv56@0:8@"<NSProgressSubscriber>"16@"NSString"24@"NSString"32@"NSURL"40@?<v@?>48
+  req observePublisherForID:values:forKeys: | Vv40@0:8@"NSString"16@"NSArray"24@"NSArray"32
+  req observePublisherUserInfoForID:value:forKey: | Vv40@0:8@"NSString"16@24@"NSString"32
+  req removePublisherForID: | Vv24@0:8@"NSString"16
+  req removeSubscriberForID: | Vv24@0:8@"NSString"16
+@protocol UABestAppSuggestionManagerProtocol
+  req doConnected | v16@0:8
+  req doDetermineBestAppSuggestionWithCompletionHandler: | v24@0:8@?<v@?@"NSArray"@"NSDate"d>16
+  req doDetermineBestAppSuggestions:completionHandler: | v32@0:8q16@?<v@?@"NSArray"@"NSError">24
+  req doLaunchFollowUp:interactionType:cancelled: | v36@0:8@"NSUUID"16Q24c32
+  req doQueueFetchOfPayloadForBestAppSuggestion:completionHandler: | v32@0:8@"NSUUID"16@?<v@?@"NSError">24
+  req doRegisterForBestAppChangeNotification | v16@0:8
+  req doRemoveBestAppSuggestion:options: | v32@0:8@"NSUUID"16@"NSDictionary"24
+  req doStartBestAppSuggestion: | v24@0:8d16
+  req doUnregisterForBestAppChangeNotification | v16@0:8
+  req fetchAllNearbyAppSuggestions: | v24@0:8@?<v@?c>16
+@protocol DMFPolicyRemoteInterface
+  req addRegistration:replyHandler: | v32@0:8@"DMFPolicyRegistration"16@?<v@?@"NSDictionary"@"NSError">24
+  req allExpiredScreenTimeBudgetsShouldBeSynchronous:replyHandler: | v28@0:8c16@?<v@?@"NSArray"@"NSError">20
+  req requestCommunicationPoliciesForBundleIdentifiers:replyHandler: | v32@0:8@"NSArray"16@?<v@?@"NSDictionary"@"NSError">24
+  req requestPoliciesForBundleIdentifiers:replyHandler: | v32@0:8@"NSArray"16@?<v@?@"NSDictionary"@"NSError">24
+  req requestPoliciesForCategoryIdentifiers:replyHandler: | v32@0:8@"NSArray"16@?<v@?@"NSDictionary"@"NSError">24
+  req requestPoliciesForTypes:replyHandler: | v32@0:8@"NSArray"16@?<v@?@"NSDictionary"@"NSError">24
+  req requestPoliciesForWebsiteURLs:replyHandler: | v32@0:8@"NSArray"16@?<v@?@"NSDictionary"@"NSError">24
+@protocol UNUninstallServiceProtocol
+  req abortRequest:reply: | v32@0:8@"UNUninstallClientRequest"16@?<v@?c>24
+  req queueRequest:withPriority:reply: | v40@0:8@"UNUninstallClientRequest"16q24@?<v@?c@"NSError">32
+@protocol UABestAppSuggestionManagerResponseProtocol
+  opt notifyBestAppsChanged:when:confidence: | v40@0:8@"NSArray"16@"NSDate"24d32
+@protocol NSProgressPublisher
+  req resume | Vv16@0:8
+  req cancel | Vv16@0:8
+  req pause | Vv16@0:8
+  req appWithBundleID:didAcknowledgeWithSuccess: | Vv28@0:8@"NSString"16c24
+  req prioritize | Vv16@0:8
+@protocol LSInstallProgressProtocol
+  req sendNotification:forApplicationWithBundleIdentifier:completion: | v36@0:8i16@"NSString"20@?<v@?@"NSError">28
+  req _lsPing:reply: | v32@0:8@"NSString"16@?<v@?@"NSString">24
+  req addObserver | v16@0:8
+  req createInstallProgressForApplication:withPhase:andPublishingString:reply: | v48@0:8@"LSApplicationProxy"16Q24@"NSString"32@?<v@?@"NSError">40
+  req installationEndedForApplication:withState: | v32@0:8@"NSString"16Q24
+  req installationFailedForApplication:reply: | v32@0:8@"NSString"16@?<v@?c>24
+  req removeObserver | v16@0:8
+  req sendNotification:forApplications:withPlugins: | v32@0:8i16@"NSArray"20c28
+  req setProgressProportionsByPhase:forInstallOfApplicationWithIdentifier:completion: | v40@0:8@"NSDictionary"16@"NSString"24@?<v@?@"NSError">32
+@protocol NSProgressReporting
+  req progress | @"NSProgress"16@0:8
+@protocol NSProgressSubscriber
+  req addPublisher:forID:withValues:isOld: | Vv44@0:8@"<NSProgressPublisher>"16@"NSString"24@"NSProgressValues"32c40
+  req observePublisherForID:values:forKeys: | Vv40@0:8@"NSString"16@"NSArray"24@"NSArray"32
+  req observePublisherUserInfoForID:value:forKey: | Vv40@0:8@"NSString"16@24@"NSString"32
+  req removePublisherForID: | Vv24@0:8@"NSString"16
+@protocol UNUninstallClientProtocol
+  req completedUninstallOfBundlePaths: | v24@0:8@"NSArray"16
+  req uninstallRequest:didMakeProgress: | v28@0:8@"UNUninstallClientRequest"16i24
+  req uninstallRequestCannotBeAborted: | v24@0:8@"UNUninstallClientRequest"16
+  req uninstallRequestDidBegin: | v24@0:8@"UNUninstallClientRequest"16
+@protocol NSCloudKitMirroringDelegateProgressProvider
+  req eventUpdated: | v24@0:8@"NSPersistentCloudKitContainerEvent"16
+  req publishActivity: | v24@0:8@"NSPersistentCloudKitContainerActivity"16
+@protocol PFCoreAnalyticsMetric
+  req name | @"NSString"16@0:8
+  req createPayload | @"NSMutableDictionary"16@0:8
+@protocol AudioAnalytics.ServerProtocol
+  req stopSessionFor: | v24@0:8q16
+  req createSessionWith: | v24@0:8q16
+  req destroySessionFor: | v24@0:8q16
+  req getServiceNameFor:completion: | v32@0:8q16@?<v@?@"NSError"S>24
+  req getTailspinSessionIDFor:reply: | v32@0:8q16@?<v@?@"NSError"cI>24
+  req requestMessageFor:category:type:reply: | v40@0:8q16I24S28@?<v@?@"NSError"@"NSDictionary">32
+  req sendWithMessage:with:and:for: | v40@0:8@"NSDictionary"16I24S28q32
+  req setWithConfiguration:for: | v32@0:8@"NSDictionary"16q24
+  req setWithServiceType:for: | v28@0:8S16q20
+  req startSessionFor: | v24@0:8q16
+  req validateFor:completion: | v32@0:8q16@?<v@?@"NSError"@"NSDictionary">24
+@protocol _CSNamedDataReadWriteProtocol
+  req terminate | v16@0:8
+  req flushNamedData: | v24@0:8@"NSString"16
+  req flushNamedData:withReply: | v32@0:8@"NSString"16@?<v@?c@"NSError">24
+  req getDataItemsWithReply: | v24@0:8@?<v@?@"NSDictionary"@"NSError">16
+  req getDataKeysWithReply: | v24@0:8@?<v@?@"NSArray"@"NSError">16
+  req getNamedData:withReply: | v32@0:8@"NSString"16@?<v@?@"NSData"@"NSError">24
+  req setNamedData:data: | v32@0:8@"NSString"16@"NSData"24
+  req setNamedData:data:withReply: | v40@0:8@"NSString"16@"NSData"24@?<v@?c@"NSError">32
+@protocol SFAnalyticsProtocol
+  req AddMultiSamplerForName:withTimeInterval:block: | @"SFAnalyticsMultiSampler"40@0:8@"NSString"16d24@?<@"NSDictionary"@?>32
+  req logResultForEvent:hardFailure:result: | v36@0:8@"NSString"16B24@"NSError"28
+  req logResultForEvent:hardFailure:result:withAttributes: | v44@0:8@"NSString"16B24@"NSError"28@"NSDictionary"36
+  req logSystemMetricsForActivityNamed:withAction: | @"SFAnalyticsActivityTracker"32@0:8@"NSString"16@?<v@?>24
+  req startLogSystemMetricsForActivityNamed: | @"SFAnalyticsActivityTracker"24@0:8@"NSString"16
+@protocol SFAnalyticsCollectionAction
+  req autoBugCaptureWithType:subType:domain: | v40@0:8@"NSString"16@"NSString"24@"NSString"32
+  req shouldRatelimit:rule: | c32@0:8@"SFAnalytics"16@"SFAnalyticsMatchingRule"24
+  req tapToRadar:description:radar:componentName:componentVersion:componentID:attributes: | v72@0:8@"NSString"16@"NSString"24@"NSString"32@"NSString"40@"NSString"48@"NSString"56@"NSDictionary"64
