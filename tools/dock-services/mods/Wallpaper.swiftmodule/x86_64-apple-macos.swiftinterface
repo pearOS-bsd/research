@@ -1,0 +1,15 @@
+// swift-interface-format-version: 1.0
+// swift-module-flags: -target x86_64-apple-macos26.0 -enable-library-evolution -module-name Wallpaper -swift-version 5
+// Test-only declarations of the few Wallpaper.framework (macOS 26.7.2) entry points the Dock imports (names from its imports). Not Apple's file.
+import Foundation
+import QuartzCore
+import Swift
+open class WallpaperManager {
+  public init()
+  final public func makeMainDisplay(_ display: Foundation.UUID)
+  final public func makeFirstSpace(space: Swift.String, display: Foundation.UUID) throws
+}
+open class WallpaperDisplayAssertion {
+  public init(display: Foundation.UUID, spaceName: Swift.String) async throws
+  final public var layer: QuartzCore.CALayer { get }
+}

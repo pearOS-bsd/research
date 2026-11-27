@@ -1,0 +1,12 @@
+// swift-interface-format-version: 1.0
+// swift-module-flags: -target x86_64-apple-macos26.0 -enable-library-evolution -module-name WindowManager -swift-version 5
+// Test-only declarations of WindowManager.framework (macOS 26.7.2) entry points the Dock imports. Not Apple's file.
+import Foundation
+import Swift
+public class WindowManager {
+  public static var shared: WindowManager { get }
+  final public func createDesktopPeekMonitor() -> WindowManagerDesktopPeekMonitor
+}
+public class WindowManagerDesktopPeekMonitor {
+  public func begin() throws
+}
