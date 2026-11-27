@@ -1,0 +1,1887 @@
+# notifications a 410 listener (every code, no addasn) gets from the Mac's launchservicesd while Calculator is launched (open -a), Terminal is brought forward, Calculator quits (osascript checks in and out on the way); probes/lsx.c, addresses stripped
+SEND t=0.001 <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64>: 100
+	"session" => <int64>: -2
+	"clientversion" => <uint64>: 277872640
+}
+REPLY <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"serverversion" => <uint64>: 277872640
+	"success" => <bool>: true
+	"session" => <int64>: 100001
+}
+SEND t=0.002 <dictionary> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"command" => <int64>: 410
+	"listener" => <endpoint>
+	"needsassertions" => <bool>: false
+	"set" => <array> { count = 165, capacity = 256, contents =
+		0: <uint64>: 256
+		1: <uint64>: 257
+		2: <uint64>: 258
+		3: <uint64>: 259
+		4: <uint64>: 260
+		5: <uint64>: 261
+		6: <uint64>: 262
+		7: <uint64>: 263
+		8: <uint64>: 264
+		9: <uint64>: 265
+		10: <uint64>: 266
+		11: <uint64>: 267
+		12: <uint64>: 268
+		13: <uint64>: 269
+		14: <uint64>: 270
+		15: <uint64>: 271
+		16: <uint64>: 272
+		17: <uint64>: 273
+		18: <uint64>: 274
+		19: <uint64>: 275
+		20: <uint64>: 276
+		21: <uint64>: 277
+		22: <uint64>: 278
+		23: <uint64>: 279
+		24: <uint64>: 280
+		25: <uint64>: 281
+		26: <uint64>: 282
+		27: <uint64>: 283
+		28: <uint64>: 284
+		29: <uint64>: 285
+		30: <uint64>: 286
+		31: <uint64>: 287
+		32: <uint64>: 288
+		33: <uint64>: 289
+		34: <uint64>: 384
+		35: <uint64>: 385
+		36: <uint64>: 386
+		37: <uint64>: 387
+		38: <uint64>: 388
+		39: <uint64>: 389
+		40: <uint64>: 390
+		41: <uint64>: 391
+		42: <uint64>: 392
+		43: <uint64>: 393
+		44: <uint64>: 394
+		45: <uint64>: 395
+		46: <uint64>: 396
+		47: <uint64>: 397
+		48: <uint64>: 398
+		49: <uint64>: 399
+		50: <uint64>: 400
+		51: <uint64>: 401
+		52: <uint64>: 402
+		53: <uint64>: 403
+		54: <uint64>: 404
+		55: <uint64>: 405
+		56: <uint64>: 406
+		57: <uint64>: 407
+		58: <uint64>: 408
+		59: <uint64>: 409
+		60: <uint64>: 410
+		61: <uint64>: 411
+		62: <uint64>: 412
+		63: <uint64>: 413
+		64: <uint64>: 414
+		65: <uint64>: 415
+		66: <uint64>: 416
+		67: <uint64>: 417
+		68: <uint64>: 418
+		69: <uint64>: 419
+		70: <uint64>: 420
+		71: <uint64>: 421
+		72: <uint64>: 422
+		73: <uint64>: 423
+		74: <uint64>: 424
+		75: <uint64>: 425
+		76: <uint64>: 426
+		77: <uint64>: 427
+		78: <uint64>: 428
+		79: <uint64>: 429
+		80: <uint64>: 430
+		81: <uint64>: 431
+		82: <uint64>: 432
+		83: <uint64>: 433
+		84: <uint64>: 434
+		85: <uint64>: 435
+		86: <uint64>: 436
+		87: <uint64>: 437
+		88: <uint64>: 438
+		89: <uint64>: 439
+		90: <uint64>: 512
+		91: <uint64>: 513
+		92: <uint64>: 514
+		93: <uint64>: 515
+		94: <uint64>: 516
+		95: <uint64>: 517
+		96: <uint64>: 518
+		97: <uint64>: 519
+		98: <uint64>: 520
+		99: <uint64>: 521
+		100: <uint64>: 522
+		101: <uint64>: 523
+		102: <uint64>: 524
+		103: <uint64>: 525
+		104: <uint64>: 526
+		105: <uint64>: 527
+		106: <uint64>: 528
+		107: <uint64>: 529
+		108: <uint64>: 530
+		109: <uint64>: 531
+		110: <uint64>: 532
+		111: <uint64>: 533
+		112: <uint64>: 534
+		113: <uint64>: 535
+		114: <uint64>: 536
+		115: <uint64>: 537
+		116: <uint64>: 538
+		117: <uint64>: 539
+		118: <uint64>: 540
+		119: <uint64>: 541
+		120: <uint64>: 542
+		121: <uint64>: 543
+		122: <uint64>: 544
+		123: <uint64>: 545
+		124: <uint64>: 546
+		125: <uint64>: 547
+		126: <uint64>: 548
+		127: <uint64>: 549
+		128: <uint64>: 550
+		129: <uint64>: 551
+		130: <uint64>: 552
+		131: <uint64>: 553
+		132: <uint64>: 554
+		133: <uint64>: 555
+		134: <uint64>: 556
+		135: <uint64>: 557
+		136: <uint64>: 558
+		137: <uint64>: 559
+		138: <uint64>: 560
+		139: <uint64>: 561
+		140: <uint64>: 562
+		141: <uint64>: 563
+		142: <uint64>: 564
+		143: <uint64>: 565
+		144: <uint64>: 566
+		145: <uint64>: 567
+		146: <uint64>: 568
+		147: <uint64>: 569
+		148: <uint64>: 570
+		149: <uint64>: 571
+		150: <uint64>: 640
+		151: <uint64>: 641
+		152: <uint64>: 656
+		153: <uint64>: 657
+		154: <uint64>: 658
+		155: <uint64>: 659
+		156: <uint64>: 660
+		157: <uint64>: 672
+		158: <uint64>: 673
+		159: <uint64>: 674
+		160: <uint64>: 675
+		161: <uint64>: 769
+		162: <uint64>: 784
+		163: <uint64>: 1025
+		164: <uint64>: 1152
+	}
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: -2
+}
+NOTE-PEER pid=141
+NOTE t=0.005 wantsreply=0 <dictionary> { count = 1, transaction: 0, voucher = 0x600000bcc0f0, contents =
+	"nop" => <bool>: true
+}
+NOTE t=0.005 wantsreply=0 <dictionary> { count = 6, transaction: 0, voucher = 0x600000bcc0f0, contents =
+	"msgid" => <uint64>: 100
+	"id" => <uint64>: 12404
+	"code" => <int64>: 2147483645
+	"when" => <double>: 817477629.349502
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+}
+REPLY <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"id" => <uint64>: 12404
+	"success" => <bool>: true
+	"session" => <int64>: 100001
+}
+NOTE t=3.081 wantsreply=0 <dictionary> { count = 7, transaction: 0, voucher = 0x600000bc80a0, contents =
+	"msgid" => <uint64>: 101
+	"info" => <dictionary> { count = 16, transaction: 0, voucher = 0x0, contents =
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSUserActivityCount" => <int64>: 0
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 267
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.425770
+}
+NOTE t=3.124 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8050, contents =
+	"msgid" => <uint64>: 102
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 43, contents = "LSApplicationInThrottledStateAfterLaunchKey" }
+		"LSApplicationInThrottledStateAfterLaunchKey" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 514
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 659
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.468913
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.124 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc81e0, contents =
+	"msgid" => <uint64>: 103
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 43, contents = "LSApplicationInThrottledStateAfterLaunchKey" }
+		"LSApplicationInThrottledStateAfterLaunchKey" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 514
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 545
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.468992
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.137 wantsreply=0 <dictionary> { count = 7, transaction: 0, voucher = 0x600000bc0050, contents =
+	"msgid" => <uint64>: 104
+	"info" => <dictionary> { count = 32, transaction: 0, voucher = 0x0, contents =
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"Hidden" => <bool>: false
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"pid" => <int64>: 94044
+		"LSLaunchModifiers" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+		}
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"LSFrontApplicationSeed" => <int64>: 150
+		"LSStoppedState" => <bool>: true
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"ChangeCount" => <int64>: 516
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 256
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.473331
+}
+NOTE t=3.137 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 105
+	"info" => <dictionary> { count = 32, transaction: 0, voucher = 0x0, contents =
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"Hidden" => <bool>: false
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"pid" => <int64>: 94044
+		"LSLaunchModifiers" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+		}
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"LSFrontApplicationSeed" => <int64>: 150
+		"LSStoppedState" => <bool>: true
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"ChangeCount" => <int64>: 516
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 263
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.473645
+	"affected" => <uint64>: 40970
+}
+NOTE t=3.138 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8410, contents =
+	"msgid" => <uint64>: 106
+	"info" => <dictionary> { count = 5, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingChanged" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSPreviousValue" => <bool>: true
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 518
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 416
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.478852
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.138 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc80f0, contents =
+	"msgid" => <uint64>: 107
+	"info" => <dictionary> { count = 5, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingChanged" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSPreviousValue" => <bool>: true
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 518
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 546
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.478898
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.138 wantsreply=0 <dictionary> { count = 7, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 108
+	"info" => <dictionary> { count = 25, transaction: 0, voucher = 0x0, contents =
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"LSParentASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 94043
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 1
+		}
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"pid" => <int64>: 94044
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"LSFrontApplicationSeed" => <int64>: 150
+		"LSStoppedState" => <bool>: true
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 268
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.480238
+}
+NOTE t=3.389 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 109
+	"info" => <dictionary> { count = 5, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSKeyBeingChanged" => <string> { string cache = 0x0, length = 12, contents = "LSAuditToken" }
+		"LSPreviousValue" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 520
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 569
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.729494
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.390 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 110
+	"info" => <dictionary> { count = 5, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSKeyBeingChanged" => <string> { string cache = 0x0, length = 12, contents = "LSAuditToken" }
+		"LSPreviousValue" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 520
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 546
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.729565
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.390 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 111
+	"info" => <dictionary> { count = 72, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"CanBecomeFrontmost" => <bool>: true
+		"UIApplicationSceneManifest" => <dictionary> { count = 2, transaction: 0, voucher = 0x0, contents =
+			"UISceneConfigurations" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+			}
+			"UIApplicationSupportsMultipleScenes" => <bool>: false
+		}
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"CFBundleExecutable" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSApplicationInSandboxKey" => <bool>: true
+		"UISupportedInterfaceOrientations~iphone" => <array> { count = 3, capacity = 3, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			2: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 14, contents = "calculator.app" }
+		"DTSDKName" => <string> { string cache = 0x0, length = 19, contents = "macosx26.7.internal" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIApplicationSupportsIndirectInputEvents" => <bool>: false
+		"BuildMachineOSBuild" => <string> { string cache = 0x0, length = 9, contents = "23A344017" }
+		"UISupportedInterfaceOrientations~ipad" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 40, contents = "UIInterfaceOrientationPortraitUpsideDown" }
+			2: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			3: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"CFBundleShortVersionString" => <string> { string cache = 0x0, length = 4, contents = "12.0" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"SBMatchingApplicationGenres" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 9, contents = "Utilities" }
+			1: <string> { string cache = 0x0, length = 12, contents = "Productivity" }
+			2: <string> { string cache = 0x0, length = 9, contents = "Education" }
+			3: <string> { string cache = 0x0, length = 7, contents = "Finance" }
+		}
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"UILaunchScreen" => <dictionary> { count = 1, transaction: 0, voucher = 0x0, contents =
+			"UIColorName" => <string> { string cache = 0x0, length = 17, contents = "LaunchScreenColor" }
+		}
+		"Hidden" => <bool>: false
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"DTCompiler" => <string> { string cache = 0x0, length = 34, contents = "com.apple.compilers.llvm.clang.1_0" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationSandboxedInformationItemsKey" => <array> { count = 37, capacity = 37, contents =
+			0: <string> { string cache = 0x0, length = 29, contents = "CFBundleInfoDictionaryVersion" }
+			1: <string> { string cache = 0x0, length = 37, contents = "UISupportedInterfaceOrientations~ipad" }
+			2: <string> { string cache = 0x0, length = 17, contents = "DTPlatformVersion" }
+			3: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconFile" }
+			4: <string> { string cache = 0x0, length = 12, contents = "CFBundleName" }
+			5: <string> { string cache = 0x0, length = 9, contents = "DTSDKName" }
+			6: <string> { string cache = 0x0, length = 24, contents = "LSCounterpartIdentifiers" }
+			7: <string> { string cache = 0x0, length = 16, contents = "UIStatusBarStyle" }
+			8: <string> { string cache = 0x0, length = 14, contents = "UILaunchScreen" }
+			9: <string> { string cache = 0x0, length = 19, contents = "CFBundleDisplayName" }
+			10: <string> { string cache = 0x0, length = 17, contents = "PrivateURLSchemes" }
+			11: <string> { string cache = 0x0, length = 10, contents = "DTSDKBuild" }
+			12: <string> { string cache = 0x0, length = 17, contents = "NSAccentColorName" }
+			13: <string> { string cache = 0x0, length = 26, contents = "CFBundleShortVersionString" }
+			14: <string> { string cache = 0x0, length = 26, contents = "CFBundleSupportedPlatforms" }
+			15: <string> { string cache = 0x0, length = 19, contents = "BuildMachineOSBuild" }
+			16: <string> { string cache = 0x0, length = 15, contents = "DTPlatformBuild" }
+			17: <string> { string cache = 0x0, length = 19, contents = "CFBundlePackageType" }
+			18: <string> { string cache = 0x0, length = 12, contents = "DTXcodeBuild" }
+			19: <string> { string cache = 0x0, length = 25, contents = "CFBundleDevelopmentRegion" }
+			20: <string> { string cache = 0x0, length = 15, contents = "CFBundleVersion" }
+			21: <string> { string cache = 0x0, length = 27, contents = "SBMatchingApplicationGenres" }
+			22: <string> { string cache = 0x0, length = 18, contents = "CFBundleIdentifier" }
+			23: <string> { string cache = 0x0, length = 24, contents = "HPDHelpProjectIdentifier" }
+			24: <string> { string cache = 0x0, length = 31, contents = "LSBundlePathSandboxExtensionKey" }
+			25: <string> { string cache = 0x0, length = 26, contents = "UIApplicationSceneManifest" }
+			26: <string> { string cache = 0x0, length = 7, contents = "DTXcode" }
+			27: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconName" }
+			28: <string> { string cache = 0x0, length = 20, contents = "CFBundleHelpBookName" }
+			29: <string> { string cache = 0x0, length = 22, contents = "CFBundleHelpBookFolder" }
+			30: <string> { string cache = 0x0, length = 40, contents = "UIApplicationSupportsIndirectInputEvents" }
+			31: <string> { string cache = 0x0, length = 18, contents = "CFBundleExecutable" }
+			32: <string> { string cache = 0x0, length = 39, contents = "UISupportedInterfaceOrientations~iphone" }
+			33: <string> { string cache = 0x0, length = 22, contents = "LSMinimumSystemVersion" }
+			34: <string> { string cache = 0x0, length = 25, contents = "LSApplicationInSandboxKey" }
+			35: <string> { string cache = 0x0, length = 14, contents = "DTPlatformName" }
+			36: <string> { string cache = 0x0, length = 10, contents = "DTCompiler" }
+		}
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"DTPlatformVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"CFBundleDevelopmentRegion" => <string> { string cache = 0x0, length = 2, contents = "en" }
+		"PrivateURLSchemes" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 4, contents = "calc" }
+		}
+		"DTPlatformName" => <string> { string cache = 0x0, length = 6, contents = "macosx" }
+		"NSAccentColorName" => <string> { string cache = 0x0, length = 11, contents = "AccentColor" }
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"DTXcodeBuild" => <string> { string cache = 0x0, length = 7, contents = "17E6107" }
+		"DTSDKBuild" => <string> { string cache = 0x0, length = 6, contents = "25G325" }
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleIconFile" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundleIconName" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"pid" => <int64>: 94044
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSMinimumSystemVersion" => <string> { string cache = 0x0, length = 4, contents = "26.7" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"HPDHelpProjectIdentifier" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"DTXcode" => <string> { string cache = 0x0, length = 4, contents = "2630" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"Flavor" => <int64>: 3
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathSandboxExtensionKey" => <string> { string cache = 0x0, length = 206, contents = "848c08bd725919f9489cd2c3bff260d07f796582018b27d43ccb66cbe2a4293d;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000c;0fffffff00000cc0;04;/system/applications/calculator.app" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"ChangeCount" => <int64>: 524
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSCounterpartIdentifiers" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 36, contents = "com.apple.NanoCalculator.watchkitapp" }
+		}
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"DTPlatformBuild" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"CFBundleHelpBookFolder" => <string> { string cache = 0x0, length = 15, contents = "calculator.help" }
+		"CFBundleVersion" => <string> { string cache = 0x0, length = 3, contents = "225" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleSupportedPlatforms" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 6, contents = "MacOSX" }
+		}
+		"CFBundleInfoDictionaryVersion" => <string> { string cache = 0x0, length = 3, contents = "6.0" }
+		"CFBundleHelpBookName" => <string> { string cache = 0x0, length = 25, contents = "com.apple.calculator.help" }
+		"UIStatusBarStyle" => <string> { string cache = 0x0, length = 0, contents = "" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 257
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.730892
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.392 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 112
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 526
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 416
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.732341
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.397 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 113
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 526
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 545
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.732402
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.397 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 114
+	"info" => <dictionary> { count = 8, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationCoalitionPIDsKey" => <array> { count = 1, capacity = 1, contents =
+			0: <int64>: 94044
+		}
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSApplicationCoalitionNonForegroundApplicationPIDsKey" => <array> { count = 0, capacity = 0, contents =
+		}
+		"LSApplicationCoalitionNonApplicationPIDsKey" => <array> { count = 0, capacity = 0, contents =
+		}
+		"pid" => <int64>: 94044
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 672
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.732545
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.404 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 115
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 527
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 275
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.745907
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.428 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 116
+	"info" => <dictionary> { count = 7, transaction: 0, voucher = 0x0, contents =
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 113
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSFrontApplicationSeed" => <int64>: 151
+		"LSMenuBarOwnerASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 512
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.768252
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.429 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 117
+	"info" => <dictionary> { count = 7, transaction: 0, voucher = 0x0, contents =
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 113
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSFrontApplicationSeed" => <int64>: 151
+		"LSMenuBarOwnerASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 513
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.768564
+	"affected" => <uint64>: 114716
+}
+NOTE t=3.429 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 118
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 113
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 516
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.768680
+	"affected" => <uint64>: 606356
+}
+NOTE t=3.429 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 119
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 113
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 517
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477632.768776
+	"affected" => <uint64>: 114716
+}
+NOTE t=4.413 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 120
+	"info" => <dictionary> { count = 78, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"CanBecomeFrontmost" => <bool>: true
+		"UIApplicationSceneManifest" => <dictionary> { count = 2, transaction: 0, voucher = 0x0, contents =
+			"UISceneConfigurations" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+			}
+			"UIApplicationSupportsMultipleScenes" => <bool>: false
+		}
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"CFBundleExecutable" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSApplicationInSandboxKey" => <bool>: true
+		"UISupportedInterfaceOrientations~iphone" => <array> { count = 3, capacity = 3, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			2: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 14, contents = "calculator.app" }
+		"DTSDKName" => <string> { string cache = 0x0, length = 19, contents = "macosx26.7.internal" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIApplicationSupportsIndirectInputEvents" => <bool>: false
+		"BuildMachineOSBuild" => <string> { string cache = 0x0, length = 9, contents = "23A344017" }
+		"UISupportedInterfaceOrientations~ipad" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 40, contents = "UIInterfaceOrientationPortraitUpsideDown" }
+			2: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			3: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"CFBundleShortVersionString" => <string> { string cache = 0x0, length = 4, contents = "12.0" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"SBMatchingApplicationGenres" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 9, contents = "Utilities" }
+			1: <string> { string cache = 0x0, length = 12, contents = "Productivity" }
+			2: <string> { string cache = 0x0, length = 9, contents = "Education" }
+			3: <string> { string cache = 0x0, length = 7, contents = "Finance" }
+		}
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"UILaunchScreen" => <dictionary> { count = 1, transaction: 0, voucher = 0x0, contents =
+			"UIColorName" => <string> { string cache = 0x0, length = 17, contents = "LaunchScreenColor" }
+		}
+		"Hidden" => <bool>: false
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"DTCompiler" => <string> { string cache = 0x0, length = 34, contents = "com.apple.compilers.llvm.clang.1_0" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationSandboxedInformationItemsKey" => <array> { count = 37, capacity = 37, contents =
+			0: <string> { string cache = 0x0, length = 29, contents = "CFBundleInfoDictionaryVersion" }
+			1: <string> { string cache = 0x0, length = 37, contents = "UISupportedInterfaceOrientations~ipad" }
+			2: <string> { string cache = 0x0, length = 17, contents = "DTPlatformVersion" }
+			3: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconFile" }
+			4: <string> { string cache = 0x0, length = 12, contents = "CFBundleName" }
+			5: <string> { string cache = 0x0, length = 9, contents = "DTSDKName" }
+			6: <string> { string cache = 0x0, length = 24, contents = "LSCounterpartIdentifiers" }
+			7: <string> { string cache = 0x0, length = 16, contents = "UIStatusBarStyle" }
+			8: <string> { string cache = 0x0, length = 14, contents = "UILaunchScreen" }
+			9: <string> { string cache = 0x0, length = 19, contents = "CFBundleDisplayName" }
+			10: <string> { string cache = 0x0, length = 17, contents = "PrivateURLSchemes" }
+			11: <string> { string cache = 0x0, length = 10, contents = "DTSDKBuild" }
+			12: <string> { string cache = 0x0, length = 17, contents = "NSAccentColorName" }
+			13: <string> { string cache = 0x0, length = 26, contents = "CFBundleShortVersionString" }
+			14: <string> { string cache = 0x0, length = 26, contents = "CFBundleSupportedPlatforms" }
+			15: <string> { string cache = 0x0, length = 19, contents = "BuildMachineOSBuild" }
+			16: <string> { string cache = 0x0, length = 15, contents = "DTPlatformBuild" }
+			17: <string> { string cache = 0x0, length = 19, contents = "CFBundlePackageType" }
+			18: <string> { string cache = 0x0, length = 12, contents = "DTXcodeBuild" }
+			19: <string> { string cache = 0x0, length = 25, contents = "CFBundleDevelopmentRegion" }
+			20: <string> { string cache = 0x0, length = 15, contents = "CFBundleVersion" }
+			21: <string> { string cache = 0x0, length = 27, contents = "SBMatchingApplicationGenres" }
+			22: <string> { string cache = 0x0, length = 18, contents = "CFBundleIdentifier" }
+			23: <string> { string cache = 0x0, length = 24, contents = "HPDHelpProjectIdentifier" }
+			24: <string> { string cache = 0x0, length = 31, contents = "LSBundlePathSandboxExtensionKey" }
+			25: <string> { string cache = 0x0, length = 26, contents = "UIApplicationSceneManifest" }
+			26: <string> { string cache = 0x0, length = 7, contents = "DTXcode" }
+			27: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconName" }
+			28: <string> { string cache = 0x0, length = 20, contents = "CFBundleHelpBookName" }
+			29: <string> { string cache = 0x0, length = 22, contents = "CFBundleHelpBookFolder" }
+			30: <string> { string cache = 0x0, length = 40, contents = "UIApplicationSupportsIndirectInputEvents" }
+			31: <string> { string cache = 0x0, length = 18, contents = "CFBundleExecutable" }
+			32: <string> { string cache = 0x0, length = 39, contents = "UISupportedInterfaceOrientations~iphone" }
+			33: <string> { string cache = 0x0, length = 22, contents = "LSMinimumSystemVersion" }
+			34: <string> { string cache = 0x0, length = 25, contents = "LSApplicationInSandboxKey" }
+			35: <string> { string cache = 0x0, length = 14, contents = "DTPlatformName" }
+			36: <string> { string cache = 0x0, length = 10, contents = "DTCompiler" }
+		}
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"DTPlatformVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"UIPresentationOptions" => <int64>: 0
+		"CFBundleDevelopmentRegion" => <string> { string cache = 0x0, length = 2, contents = "en" }
+		"PrivateURLSchemes" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 4, contents = "calc" }
+		}
+		"DTPlatformName" => <string> { string cache = 0x0, length = 6, contents = "macosx" }
+		"NSAccentColorName" => <string> { string cache = 0x0, length = 11, contents = "AccentColor" }
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"DTXcodeBuild" => <string> { string cache = 0x0, length = 7, contents = "17E6107" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"DTSDKBuild" => <string> { string cache = 0x0, length = 6, contents = "25G325" }
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleIconFile" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundleIconName" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"pid" => <int64>: 94044
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIPresentationMode" => <string> { string cache = 0x0, length = 6, contents = "Normal" }
+		"LSMinimumSystemVersion" => <string> { string cache = 0x0, length = 4, contents = "26.7" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"HPDHelpProjectIdentifier" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"DTXcode" => <string> { string cache = 0x0, length = 4, contents = "2630" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"Flavor" => <int64>: 3
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathSandboxExtensionKey" => <string> { string cache = 0x0, length = 206, contents = "848c08bd725919f9489cd2c3bff260d07f796582018b27d43ccb66cbe2a4293d;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000c;0fffffff00000cc0;04;/system/applications/calculator.app" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSApplicationHasRegistered" => <bool>: true
+		"ChangeCount" => <int64>: 534
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSCounterpartIdentifiers" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 36, contents = "com.apple.NanoCalculator.watchkitapp" }
+		}
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"DTPlatformBuild" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"CFBundleHelpBookFolder" => <string> { string cache = 0x0, length = 15, contents = "calculator.help" }
+		"CFBundleVersion" => <string> { string cache = 0x0, length = 3, contents = "225" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleSupportedPlatforms" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 6, contents = "MacOSX" }
+		}
+		"CFBundleInfoDictionaryVersion" => <string> { string cache = 0x0, length = 3, contents = "6.0" }
+		"CFBundleHelpBookName" => <string> { string cache = 0x0, length = 25, contents = "com.apple.calculator.help" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"UIStatusBarStyle" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"LSLaunchedHidden" => <bool>: false
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 272
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477633.752390
+	"affected" => <uint64>: 606356
+}
+NOTE t=4.415 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 121
+	"info" => <dictionary> { count = 78, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"CanBecomeFrontmost" => <bool>: true
+		"UIApplicationSceneManifest" => <dictionary> { count = 2, transaction: 0, voucher = 0x0, contents =
+			"UISceneConfigurations" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+			}
+			"UIApplicationSupportsMultipleScenes" => <bool>: false
+		}
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"CFBundleExecutable" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSApplicationInSandboxKey" => <bool>: true
+		"UISupportedInterfaceOrientations~iphone" => <array> { count = 3, capacity = 3, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			2: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 14, contents = "calculator.app" }
+		"DTSDKName" => <string> { string cache = 0x0, length = 19, contents = "macosx26.7.internal" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIApplicationSupportsIndirectInputEvents" => <bool>: false
+		"BuildMachineOSBuild" => <string> { string cache = 0x0, length = 9, contents = "23A344017" }
+		"UISupportedInterfaceOrientations~ipad" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 40, contents = "UIInterfaceOrientationPortraitUpsideDown" }
+			2: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			3: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"CFBundleShortVersionString" => <string> { string cache = 0x0, length = 4, contents = "12.0" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"SBMatchingApplicationGenres" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 9, contents = "Utilities" }
+			1: <string> { string cache = 0x0, length = 12, contents = "Productivity" }
+			2: <string> { string cache = 0x0, length = 9, contents = "Education" }
+			3: <string> { string cache = 0x0, length = 7, contents = "Finance" }
+		}
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"UILaunchScreen" => <dictionary> { count = 1, transaction: 0, voucher = 0x0, contents =
+			"UIColorName" => <string> { string cache = 0x0, length = 17, contents = "LaunchScreenColor" }
+		}
+		"Hidden" => <bool>: false
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"DTCompiler" => <string> { string cache = 0x0, length = 34, contents = "com.apple.compilers.llvm.clang.1_0" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationSandboxedInformationItemsKey" => <array> { count = 37, capacity = 37, contents =
+			0: <string> { string cache = 0x0, length = 29, contents = "CFBundleInfoDictionaryVersion" }
+			1: <string> { string cache = 0x0, length = 37, contents = "UISupportedInterfaceOrientations~ipad" }
+			2: <string> { string cache = 0x0, length = 17, contents = "DTPlatformVersion" }
+			3: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconFile" }
+			4: <string> { string cache = 0x0, length = 12, contents = "CFBundleName" }
+			5: <string> { string cache = 0x0, length = 9, contents = "DTSDKName" }
+			6: <string> { string cache = 0x0, length = 24, contents = "LSCounterpartIdentifiers" }
+			7: <string> { string cache = 0x0, length = 16, contents = "UIStatusBarStyle" }
+			8: <string> { string cache = 0x0, length = 14, contents = "UILaunchScreen" }
+			9: <string> { string cache = 0x0, length = 19, contents = "CFBundleDisplayName" }
+			10: <string> { string cache = 0x0, length = 17, contents = "PrivateURLSchemes" }
+			11: <string> { string cache = 0x0, length = 10, contents = "DTSDKBuild" }
+			12: <string> { string cache = 0x0, length = 17, contents = "NSAccentColorName" }
+			13: <string> { string cache = 0x0, length = 26, contents = "CFBundleShortVersionString" }
+			14: <string> { string cache = 0x0, length = 26, contents = "CFBundleSupportedPlatforms" }
+			15: <string> { string cache = 0x0, length = 19, contents = "BuildMachineOSBuild" }
+			16: <string> { string cache = 0x0, length = 15, contents = "DTPlatformBuild" }
+			17: <string> { string cache = 0x0, length = 19, contents = "CFBundlePackageType" }
+			18: <string> { string cache = 0x0, length = 12, contents = "DTXcodeBuild" }
+			19: <string> { string cache = 0x0, length = 25, contents = "CFBundleDevelopmentRegion" }
+			20: <string> { string cache = 0x0, length = 15, contents = "CFBundleVersion" }
+			21: <string> { string cache = 0x0, length = 27, contents = "SBMatchingApplicationGenres" }
+			22: <string> { string cache = 0x0, length = 18, contents = "CFBundleIdentifier" }
+			23: <string> { string cache = 0x0, length = 24, contents = "HPDHelpProjectIdentifier" }
+			24: <string> { string cache = 0x0, length = 31, contents = "LSBundlePathSandboxExtensionKey" }
+			25: <string> { string cache = 0x0, length = 26, contents = "UIApplicationSceneManifest" }
+			26: <string> { string cache = 0x0, length = 7, contents = "DTXcode" }
+			27: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconName" }
+			28: <string> { string cache = 0x0, length = 20, contents = "CFBundleHelpBookName" }
+			29: <string> { string cache = 0x0, length = 22, contents = "CFBundleHelpBookFolder" }
+			30: <string> { string cache = 0x0, length = 40, contents = "UIApplicationSupportsIndirectInputEvents" }
+			31: <string> { string cache = 0x0, length = 18, contents = "CFBundleExecutable" }
+			32: <string> { string cache = 0x0, length = 39, contents = "UISupportedInterfaceOrientations~iphone" }
+			33: <string> { string cache = 0x0, length = 22, contents = "LSMinimumSystemVersion" }
+			34: <string> { string cache = 0x0, length = 25, contents = "LSApplicationInSandboxKey" }
+			35: <string> { string cache = 0x0, length = 14, contents = "DTPlatformName" }
+			36: <string> { string cache = 0x0, length = 10, contents = "DTCompiler" }
+		}
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"DTPlatformVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"UIPresentationOptions" => <int64>: 0
+		"CFBundleDevelopmentRegion" => <string> { string cache = 0x0, length = 2, contents = "en" }
+		"PrivateURLSchemes" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 4, contents = "calc" }
+		}
+		"DTPlatformName" => <string> { string cache = 0x0, length = 6, contents = "macosx" }
+		"NSAccentColorName" => <string> { string cache = 0x0, length = 11, contents = "AccentColor" }
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"DTXcodeBuild" => <string> { string cache = 0x0, length = 7, contents = "17E6107" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"DTSDKBuild" => <string> { string cache = 0x0, length = 6, contents = "25G325" }
+		"DTXcode" => <string> { string cache = 0x0, length = 4, contents = "2630" }
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleIconFile" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundleIconName" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"pid" => <int64>: 94044
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIPresentationMode" => <string> { string cache = 0x0, length = 6, contents = "Normal" }
+		"LSMinimumSystemVersion" => <string> { string cache = 0x0, length = 4, contents = "26.7" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"HPDHelpProjectIdentifier" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"Flavor" => <int64>: 3
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathSandboxExtensionKey" => <string> { string cache = 0x0, length = 206, contents = "848c08bd725919f9489cd2c3bff260d07f796582018b27d43ccb66cbe2a4293d;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000c;0fffffff00000cc0;04;/system/applications/calculator.app" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSApplicationHasRegistered" => <bool>: true
+		"ChangeCount" => <int64>: 534
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSCounterpartIdentifiers" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 36, contents = "com.apple.NanoCalculator.watchkitapp" }
+		}
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"CFBundleHelpBookFolder" => <string> { string cache = 0x0, length = 15, contents = "calculator.help" }
+		"CFBundleVersion" => <string> { string cache = 0x0, length = 3, contents = "225" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleSupportedPlatforms" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 6, contents = "MacOSX" }
+		}
+		"CFBundleInfoDictionaryVersion" => <string> { string cache = 0x0, length = 3, contents = "6.0" }
+		"CFBundleHelpBookName" => <string> { string cache = 0x0, length = 25, contents = "com.apple.calculator.help" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"UIStatusBarStyle" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"DTPlatformBuild" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"LSLaunchedHidden" => <bool>: false
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 274
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477633.754899
+	"affected" => <uint64>: 606356
+}
+NOTE t=6.029 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bcc0a0, contents =
+	"msgid" => <uint64>: 122
+	"info" => <dictionary> { count = 78, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"CanBecomeFrontmost" => <bool>: true
+		"UIApplicationSceneManifest" => <dictionary> { count = 2, transaction: 0, voucher = 0x0, contents =
+			"UISceneConfigurations" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+			}
+			"UIApplicationSupportsMultipleScenes" => <bool>: false
+		}
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"CFBundleExecutable" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSApplicationInSandboxKey" => <bool>: true
+		"UISupportedInterfaceOrientations~iphone" => <array> { count = 3, capacity = 3, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			2: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 14, contents = "calculator.app" }
+		"DTSDKName" => <string> { string cache = 0x0, length = 19, contents = "macosx26.7.internal" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIApplicationSupportsIndirectInputEvents" => <bool>: false
+		"BuildMachineOSBuild" => <string> { string cache = 0x0, length = 9, contents = "23A344017" }
+		"UISupportedInterfaceOrientations~ipad" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 40, contents = "UIInterfaceOrientationPortraitUpsideDown" }
+			2: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			3: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"CFBundleShortVersionString" => <string> { string cache = 0x0, length = 4, contents = "12.0" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"SBMatchingApplicationGenres" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 9, contents = "Utilities" }
+			1: <string> { string cache = 0x0, length = 12, contents = "Productivity" }
+			2: <string> { string cache = 0x0, length = 9, contents = "Education" }
+			3: <string> { string cache = 0x0, length = 7, contents = "Finance" }
+		}
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"UILaunchScreen" => <dictionary> { count = 1, transaction: 0, voucher = 0x0, contents =
+			"UIColorName" => <string> { string cache = 0x0, length = 17, contents = "LaunchScreenColor" }
+		}
+		"Hidden" => <bool>: false
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"DTCompiler" => <string> { string cache = 0x0, length = 34, contents = "com.apple.compilers.llvm.clang.1_0" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationSandboxedInformationItemsKey" => <array> { count = 37, capacity = 37, contents =
+			0: <string> { string cache = 0x0, length = 29, contents = "CFBundleInfoDictionaryVersion" }
+			1: <string> { string cache = 0x0, length = 37, contents = "UISupportedInterfaceOrientations~ipad" }
+			2: <string> { string cache = 0x0, length = 17, contents = "DTPlatformVersion" }
+			3: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconFile" }
+			4: <string> { string cache = 0x0, length = 12, contents = "CFBundleName" }
+			5: <string> { string cache = 0x0, length = 9, contents = "DTSDKName" }
+			6: <string> { string cache = 0x0, length = 24, contents = "LSCounterpartIdentifiers" }
+			7: <string> { string cache = 0x0, length = 16, contents = "UIStatusBarStyle" }
+			8: <string> { string cache = 0x0, length = 14, contents = "UILaunchScreen" }
+			9: <string> { string cache = 0x0, length = 19, contents = "CFBundleDisplayName" }
+			10: <string> { string cache = 0x0, length = 17, contents = "PrivateURLSchemes" }
+			11: <string> { string cache = 0x0, length = 10, contents = "DTSDKBuild" }
+			12: <string> { string cache = 0x0, length = 17, contents = "NSAccentColorName" }
+			13: <string> { string cache = 0x0, length = 26, contents = "CFBundleShortVersionString" }
+			14: <string> { string cache = 0x0, length = 26, contents = "CFBundleSupportedPlatforms" }
+			15: <string> { string cache = 0x0, length = 19, contents = "BuildMachineOSBuild" }
+			16: <string> { string cache = 0x0, length = 15, contents = "DTPlatformBuild" }
+			17: <string> { string cache = 0x0, length = 19, contents = "CFBundlePackageType" }
+			18: <string> { string cache = 0x0, length = 12, contents = "DTXcodeBuild" }
+			19: <string> { string cache = 0x0, length = 25, contents = "CFBundleDevelopmentRegion" }
+			20: <string> { string cache = 0x0, length = 15, contents = "CFBundleVersion" }
+			21: <string> { string cache = 0x0, length = 27, contents = "SBMatchingApplicationGenres" }
+			22: <string> { string cache = 0x0, length = 18, contents = "CFBundleIdentifier" }
+			23: <string> { string cache = 0x0, length = 24, contents = "HPDHelpProjectIdentifier" }
+			24: <string> { string cache = 0x0, length = 31, contents = "LSBundlePathSandboxExtensionKey" }
+			25: <string> { string cache = 0x0, length = 26, contents = "UIApplicationSceneManifest" }
+			26: <string> { string cache = 0x0, length = 7, contents = "DTXcode" }
+			27: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconName" }
+			28: <string> { string cache = 0x0, length = 20, contents = "CFBundleHelpBookName" }
+			29: <string> { string cache = 0x0, length = 22, contents = "CFBundleHelpBookFolder" }
+			30: <string> { string cache = 0x0, length = 40, contents = "UIApplicationSupportsIndirectInputEvents" }
+			31: <string> { string cache = 0x0, length = 18, contents = "CFBundleExecutable" }
+			32: <string> { string cache = 0x0, length = 39, contents = "UISupportedInterfaceOrientations~iphone" }
+			33: <string> { string cache = 0x0, length = 22, contents = "LSMinimumSystemVersion" }
+			34: <string> { string cache = 0x0, length = 25, contents = "LSApplicationInSandboxKey" }
+			35: <string> { string cache = 0x0, length = 14, contents = "DTPlatformName" }
+			36: <string> { string cache = 0x0, length = 10, contents = "DTCompiler" }
+		}
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"DTPlatformVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"UIPresentationOptions" => <int64>: 0
+		"CFBundleDevelopmentRegion" => <string> { string cache = 0x0, length = 2, contents = "en" }
+		"PrivateURLSchemes" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 4, contents = "calc" }
+		}
+		"DTPlatformName" => <string> { string cache = 0x0, length = 6, contents = "macosx" }
+		"NSAccentColorName" => <string> { string cache = 0x0, length = 11, contents = "AccentColor" }
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"DTXcodeBuild" => <string> { string cache = 0x0, length = 7, contents = "17E6107" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"DTSDKBuild" => <string> { string cache = 0x0, length = 6, contents = "25G325" }
+		"DTXcode" => <string> { string cache = 0x0, length = 4, contents = "2630" }
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleIconFile" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundleIconName" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"pid" => <int64>: 94044
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIPresentationMode" => <string> { string cache = 0x0, length = 6, contents = "Normal" }
+		"LSMinimumSystemVersion" => <string> { string cache = 0x0, length = 4, contents = "26.7" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"HPDHelpProjectIdentifier" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"Flavor" => <int64>: 3
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathSandboxExtensionKey" => <string> { string cache = 0x0, length = 206, contents = "848c08bd725919f9489cd2c3bff260d07f796582018b27d43ccb66cbe2a4293d;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000c;0fffffff00000cc0;04;/system/applications/calculator.app" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSApplicationHasRegistered" => <bool>: true
+		"ChangeCount" => <int64>: 534
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSCounterpartIdentifiers" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 36, contents = "com.apple.NanoCalculator.watchkitapp" }
+		}
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"CFBundleHelpBookFolder" => <string> { string cache = 0x0, length = 15, contents = "calculator.help" }
+		"CFBundleVersion" => <string> { string cache = 0x0, length = 3, contents = "225" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleSupportedPlatforms" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 6, contents = "MacOSX" }
+		}
+		"CFBundleInfoDictionaryVersion" => <string> { string cache = 0x0, length = 3, contents = "6.0" }
+		"CFBundleHelpBookName" => <string> { string cache = 0x0, length = 25, contents = "com.apple.calculator.help" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"UIStatusBarStyle" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"DTPlatformBuild" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"LSLaunchedHidden" => <bool>: false
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 288
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477635.372490
+	"affected" => <uint64>: 606356
+}
+NOTE t=6.254 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 123
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 38, contents = "LSApplicationWouldBeTerminatedByTALKey" }
+		"LSApplicationWouldBeTerminatedByTALKey" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 536
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 660
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477635.598391
+	"affected" => <uint64>: 606356
+}
+NOTE t=6.254 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 124
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 38, contents = "LSApplicationWouldBeTerminatedByTALKey" }
+		"LSApplicationWouldBeTerminatedByTALKey" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 536
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 545
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477635.598451
+	"affected" => <uint64>: 606356
+}
+NOTE t=9.254 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4050, contents =
+	"msgid" => <uint64>: 125
+	"info" => <dictionary> { count = 7, transaction: 0, voucher = 0x0, contents =
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 18, contents = "com.apple.Terminal" }
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 114
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSFrontApplicationSeed" => <int64>: 152
+		"LSMenuBarOwnerASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 512
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477638.596431
+	"affected" => <uint64>: 114716
+}
+NOTE t=9.254 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4280, contents =
+	"msgid" => <uint64>: 126
+	"info" => <dictionary> { count = 7, transaction: 0, voucher = 0x0, contents =
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 18, contents = "com.apple.Terminal" }
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 114
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSFrontApplicationSeed" => <int64>: 152
+		"LSMenuBarOwnerASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 513
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477638.596729
+	"affected" => <uint64>: 606356
+}
+NOTE t=9.254 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4190, contents =
+	"msgid" => <uint64>: 127
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 114
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 516
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477638.596912
+	"affected" => <uint64>: 114716
+}
+NOTE t=9.255 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4370, contents =
+	"msgid" => <uint64>: 128
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSMenuBarOwnerApplicationSeed" => <int64>: 114
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 114716
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSOtherASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 517
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477638.597068
+	"affected" => <uint64>: 606356
+}
+NOTE t=13.809 wantsreply=0 <dictionary> { count = 7, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 129
+	"info" => <dictionary> { count = 13, transaction: 0, voucher = 0x0, contents =
+		"LSDisplayName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleSignature" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:23 2026 PST (approx)
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"pid" => <int64>: 94049
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"Flavor" => <int64>: 2
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"ApplicationType" => <string> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 265
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.154017
+}
+NOTE t=13.811 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4000, contents =
+	"msgid" => <uint64>: 130
+	"info" => <dictionary> { count = 23, transaction: 0, voucher = 0x0, contents =
+		"LSBundlePathINode" => <int64>: 1152921500312572488
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f501000014000000616f0100... }
+		"CFBundleSignature" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13214
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:23 2026 PST (approx)
+		"pid" => <int64>: 94049
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSDYLDPlatformKey" => <int64>: 1
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"Flavor" => <int64>: 2
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"ChangeCount" => <int64>: 514
+		"ApplicationType" => <string> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+		"CFBundleExecutablePathINode" => <int64>: 1152921500312572488
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 257
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.155001
+	"affected" => <uint64>: 610453
+}
+NOTE t=13.812 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4000, contents =
+	"msgid" => <uint64>: 131
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 516
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 416
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.155331
+	"affected" => <uint64>: 610453
+}
+NOTE t=13.812 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4000, contents =
+	"msgid" => <uint64>: 132
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 516
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 545
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.155361
+	"affected" => <uint64>: 610453
+}
+NOTE t=13.820 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc4000, contents =
+	"msgid" => <uint64>: 133
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"ChangeCount" => <int64>: 517
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 275
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.165023
+	"affected" => <uint64>: 610453
+}
+NOTE t=13.824 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 134
+	"info" => <dictionary> { count = 27, transaction: 0, voucher = 0x0, contents =
+		"LSBundlePathINode" => <int64>: 1152921500312572488
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f501000014000000616f0100... }
+		"CFBundleSignature" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13214
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:23 2026 PST (approx)
+		"pid" => <int64>: 94049
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSDYLDPlatformKey" => <int64>: 1
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"Flavor" => <int64>: 2
+		"ChangeCount" => <int64>: 520
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSLaunchedHidden" => <bool>: false
+		"ApplicationType" => <string> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"CFBundleExecutablePathINode" => <int64>: 1152921500312572488
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 272
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.168534
+	"affected" => <uint64>: 610453
+}
+NOTE t=13.826 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 135
+	"info" => <dictionary> { count = 27, transaction: 0, voucher = 0x0, contents =
+		"LSBundlePathINode" => <int64>: 1152921500312572488
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f501000014000000616f0100... }
+		"CFBundleSignature" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13214
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:23 2026 PST (approx)
+		"pid" => <int64>: 94049
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSDYLDPlatformKey" => <int64>: 1
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"Flavor" => <int64>: 2
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"ChangeCount" => <int64>: 520
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSLaunchedHidden" => <bool>: false
+		"ApplicationType" => <string> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"CFBundleExecutablePathINode" => <int64>: 1152921500312572488
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 274
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.170368
+	"affected" => <uint64>: 4295061345
+}
+NOTE t=14.000 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 136
+	"info" => <dictionary> { count = 30, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationCoalitionIDKey" => <int64>: 0
+		"LSBundlePathINode" => <int64>: 1152921500312572488
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f501000014000000616f0100... }
+		"CFBundleSignature" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSBundlePath" => <string> { string cache = 0x0, length = 18, contents = "/usr/bin/osascript" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13214
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 9, contents = "osascript" }
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:23 2026 PST (approx)
+		"pid" => <int64>: 94049
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"LSExitStatus" => <int64>: 0
+		"LSDYLDPlatformKey" => <int64>: 1
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"Flavor" => <int64>: 2
+		"ChangeCount" => <int64>: 520
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "????" }
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationExitedButHasRemainingCoalitionPIDsOrNonForegroundChildrenApplicationsKey" => <bool>: false
+		"LSLaunchedHidden" => <bool>: false
+		"ApplicationType" => <string> { string cache = 0x0, length = 14, contents = "BackgroundOnly" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"CFBundleExecutablePathINode" => <int64>: 1152921500312572488
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 258
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.341542
+	"affected" => <uint64>: 610453
+}
+NOTE t=14.000 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc8280, contents =
+	"msgid" => <uint64>: 137
+	"info" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationCoalitionIDKey" => <int64>: 0
+		"pid" => <int64>: 94049
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 610453
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 269
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.341944
+	"affected" => <uint64>: 610453
+}
+NOTE t=14.081 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bcc320, contents =
+	"msgid" => <uint64>: 138
+	"info" => <dictionary> { count = 82, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xf5010000f501000014000000f5010000140000005c6f0100... }
+		"CanBecomeFrontmost" => <bool>: true
+		"UIApplicationSceneManifest" => <dictionary> { count = 2, transaction: 0, voucher = 0x0, contents =
+			"UISceneConfigurations" => <dictionary> { count = 0, transaction: 0, voucher = 0x0, contents =
+			}
+			"UIApplicationSupportsMultipleScenes" => <bool>: false
+		}
+		"LSBundlePathINode" => <int64>: 1152921500311882944
+		"LSLaunchEventRecordTime" => <int64>: 363856701297723
+		"CFBundleExecutable" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"LSApplicationInSandboxKey" => <bool>: true
+		"UISupportedInterfaceOrientations~iphone" => <array> { count = 3, capacity = 3, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			2: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"LSUserActivityCount" => <int64>: 0
+		"LSLaunchedWithLaunchD" => <bool>: true
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"LSBundlePathLastComponentLowerCaseKey" => <string> { string cache = 0x0, length = 14, contents = "calculator.app" }
+		"DTSDKName" => <string> { string cache = 0x0, length = 19, contents = "macosx26.7.internal" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIApplicationSupportsIndirectInputEvents" => <bool>: false
+		"BuildMachineOSBuild" => <string> { string cache = 0x0, length = 9, contents = "23A344017" }
+		"UISupportedInterfaceOrientations~ipad" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 30, contents = "UIInterfaceOrientationPortrait" }
+			1: <string> { string cache = 0x0, length = 40, contents = "UIInterfaceOrientationPortraitUpsideDown" }
+			2: <string> { string cache = 0x0, length = 35, contents = "UIInterfaceOrientationLandscapeLeft" }
+			3: <string> { string cache = 0x0, length = 36, contents = "UIInterfaceOrientationLandscapeRight" }
+		}
+		"CFBundleShortVersionString" => <string> { string cache = 0x0, length = 4, contents = "12.0" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"SBMatchingApplicationGenres" => <array> { count = 4, capacity = 4, contents =
+			0: <string> { string cache = 0x0, length = 9, contents = "Utilities" }
+			1: <string> { string cache = 0x0, length = 12, contents = "Productivity" }
+			2: <string> { string cache = 0x0, length = 9, contents = "Education" }
+			3: <string> { string cache = 0x0, length = 7, contents = "Finance" }
+		}
+		"LSLaunchedByLaunchServices" => <bool>: true
+		"UILaunchScreen" => <dictionary> { count = 1, transaction: 0, voucher = 0x0, contents =
+			"UIColorName" => <string> { string cache = 0x0, length = 17, contents = "LaunchScreenColor" }
+		}
+		"Hidden" => <bool>: false
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 61, contents = "/System/Applications/Calculator.app/Contents/MacOS/Calculator" }
+		"DTCompiler" => <string> { string cache = 0x0, length = 34, contents = "com.apple.compilers.llvm.clang.1_0" }
+		"LSApplicationMemberCoalitionIDKey" => <int64>: 13215
+		"LSApplicationWouldBeTerminatedByTALKey" => <bool>: false
+		"LSBundlePath" => <string> { string cache = 0x0, length = 35, contents = "/System/Applications/Calculator.app" }
+		"LSApplicationSandboxedInformationItemsKey" => <array> { count = 37, capacity = 37, contents =
+			0: <string> { string cache = 0x0, length = 29, contents = "CFBundleInfoDictionaryVersion" }
+			1: <string> { string cache = 0x0, length = 37, contents = "UISupportedInterfaceOrientations~ipad" }
+			2: <string> { string cache = 0x0, length = 17, contents = "DTPlatformVersion" }
+			3: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconFile" }
+			4: <string> { string cache = 0x0, length = 12, contents = "CFBundleName" }
+			5: <string> { string cache = 0x0, length = 9, contents = "DTSDKName" }
+			6: <string> { string cache = 0x0, length = 24, contents = "LSCounterpartIdentifiers" }
+			7: <string> { string cache = 0x0, length = 16, contents = "UIStatusBarStyle" }
+			8: <string> { string cache = 0x0, length = 14, contents = "UILaunchScreen" }
+			9: <string> { string cache = 0x0, length = 19, contents = "CFBundleDisplayName" }
+			10: <string> { string cache = 0x0, length = 17, contents = "PrivateURLSchemes" }
+			11: <string> { string cache = 0x0, length = 10, contents = "DTSDKBuild" }
+			12: <string> { string cache = 0x0, length = 17, contents = "NSAccentColorName" }
+			13: <string> { string cache = 0x0, length = 26, contents = "CFBundleShortVersionString" }
+			14: <string> { string cache = 0x0, length = 26, contents = "CFBundleSupportedPlatforms" }
+			15: <string> { string cache = 0x0, length = 19, contents = "BuildMachineOSBuild" }
+			16: <string> { string cache = 0x0, length = 15, contents = "DTPlatformBuild" }
+			17: <string> { string cache = 0x0, length = 19, contents = "CFBundlePackageType" }
+			18: <string> { string cache = 0x0, length = 12, contents = "DTXcodeBuild" }
+			19: <string> { string cache = 0x0, length = 25, contents = "CFBundleDevelopmentRegion" }
+			20: <string> { string cache = 0x0, length = 15, contents = "CFBundleVersion" }
+			21: <string> { string cache = 0x0, length = 27, contents = "SBMatchingApplicationGenres" }
+			22: <string> { string cache = 0x0, length = 18, contents = "CFBundleIdentifier" }
+			23: <string> { string cache = 0x0, length = 24, contents = "HPDHelpProjectIdentifier" }
+			24: <string> { string cache = 0x0, length = 31, contents = "LSBundlePathSandboxExtensionKey" }
+			25: <string> { string cache = 0x0, length = 26, contents = "UIApplicationSceneManifest" }
+			26: <string> { string cache = 0x0, length = 7, contents = "DTXcode" }
+			27: <string> { string cache = 0x0, length = 16, contents = "CFBundleIconName" }
+			28: <string> { string cache = 0x0, length = 20, contents = "CFBundleHelpBookName" }
+			29: <string> { string cache = 0x0, length = 22, contents = "CFBundleHelpBookFolder" }
+			30: <string> { string cache = 0x0, length = 40, contents = "UIApplicationSupportsIndirectInputEvents" }
+			31: <string> { string cache = 0x0, length = 18, contents = "CFBundleExecutable" }
+			32: <string> { string cache = 0x0, length = 39, contents = "UISupportedInterfaceOrientations~iphone" }
+			33: <string> { string cache = 0x0, length = 22, contents = "LSMinimumSystemVersion" }
+			34: <string> { string cache = 0x0, length = 25, contents = "LSApplicationInSandboxKey" }
+			35: <string> { string cache = 0x0, length = 14, contents = "DTPlatformName" }
+			36: <string> { string cache = 0x0, length = 10, contents = "DTCompiler" }
+		}
+		"LSExecutableSDKVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"LSLaunchDoNotBringFrontmost" => <bool>: false
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"DTPlatformVersion" => <string> { string cache = 0x0, length = 6, contents = "26.7.2" }
+		"UIPresentationOptions" => <int64>: 0
+		"CFBundleDevelopmentRegion" => <string> { string cache = 0x0, length = 2, contents = "en" }
+		"PrivateURLSchemes" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 4, contents = "calc" }
+		}
+		"DTPlatformName" => <string> { string cache = 0x0, length = 6, contents = "macosx" }
+		"NSAccentColorName" => <string> { string cache = 0x0, length = 11, contents = "AccentColor" }
+		"LSLaunchTime" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"DTXcodeBuild" => <string> { string cache = 0x0, length = 7, contents = "17E6107" }
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"DTSDKBuild" => <string> { string cache = 0x0, length = 6, contents = "25G325" }
+		"NSCanQuitQuietlyAndSafelyKey" => <bool>: true
+		"LSFrontApplicationSeed" => <int64>: 150
+		"CFBundleIconFile" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"LSCheckInTime*" => <date> Fri Nov 27 05:07:12 2026 PST (approx)
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"CFBundleIconName" => <string> { string cache = 0x0, length = 7, contents = "AppIcon" }
+		"pid" => <int64>: 94044
+		"CFBundleNameLowerCase" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"CFBundleName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"UIPresentationMode" => <string> { string cache = 0x0, length = 6, contents = "Normal" }
+		"LSMinimumSystemVersion" => <string> { string cache = 0x0, length = 4, contents = "26.7" }
+		"LSWantsToComeForwardAtRegistrationTimeKey" => <bool>: true
+		"HPDHelpProjectIdentifier" => <string> { string cache = 0x0, length = 10, contents = "calculator" }
+		"LSExitStatus" => <int64>: 0
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+		"CFBundleDisplayName" => <string> { string cache = 0x0, length = 10, contents = "Calculator" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"DTXcode" => <string> { string cache = 0x0, length = 4, contents = "2630" }
+		"LSDYLDPlatformKey" => <int64>: 1
+		"LSExecutableFormat" => <string> { string cache = 0x0, length = 23, contents = "LSExecutableMachOFormat" }
+		"LSApplicationExitedButHasRemainingCoalitionPIDsOrNonForegroundChildrenApplicationsKey" => <bool>: false
+		"Flavor" => <int64>: 3
+		"CFBundleExecutablePathDeviceID" => <int64>: 16777226
+		"LSBundlePathSandboxExtensionKey" => <string> { string cache = 0x0, length = 206, contents = "848c08bd725919f9489cd2c3bff260d07f796582018b27d43ccb66cbe2a4293d;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000c;0fffffff00000cc0;04;/system/applications/calculator.app" }
+		"LSBundlePathDeviceID" => <int64>: 16777226
+		"LSApplicationHasRegistered" => <bool>: true
+		"ChangeCount" => <int64>: 537
+		"CFBundlePackageType" => <string> { string cache = 0x0, length = 4, contents = "APPL" }
+		"LSCounterpartIdentifiers" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 36, contents = "com.apple.NanoCalculator.watchkitapp" }
+		}
+		"CFBundleExecutablePathINode" => <int64>: 1152921500311882949
+		"DTPlatformBuild" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"CFBundleHelpBookFolder" => <string> { string cache = 0x0, length = 15, contents = "calculator.help" }
+		"CFBundleVersion" => <string> { string cache = 0x0, length = 3, contents = "225" }
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleSupportedPlatforms" => <array> { count = 1, capacity = 1, contents =
+			0: <string> { string cache = 0x0, length = 6, contents = "MacOSX" }
+		}
+		"CFBundleInfoDictionaryVersion" => <string> { string cache = 0x0, length = 3, contents = "6.0" }
+		"CFBundleHelpBookName" => <string> { string cache = 0x0, length = 25, contents = "com.apple.calculator.help" }
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"UIStatusBarStyle" => <string> { string cache = 0x0, length = 0, contents = "" }
+		"LSLaunchedHidden" => <bool>: false
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 258
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.415038
+	"affected" => <uint64>: 606356
+}
+NOTE t=14.087 wantsreply=0 <dictionary> { count = 8, transaction: 0, voucher = 0x600000bc0000, contents =
+	"msgid" => <uint64>: 139
+	"info" => <dictionary> { count = 4, transaction: 0, voucher = 0x0, contents =
+		"LSApplicationCoalitionIDKey" => <int64>: 13215
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 20, contents = "com.apple.calculator" }
+		"pid" => <int64>: 94044
+		"LSASN" => <dictionary> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64>: 606356
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+		}
+	}
+	"id" => <uint64>: 12404
+	"code" => <int64>: 269
+	"clientid" => <uint64>: 4242
+	"session" => <int64>: 100001
+	"when" => <double>: 817477643.416736
+	"affected" => <uint64>: 606356
+}

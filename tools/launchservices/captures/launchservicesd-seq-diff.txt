@@ -1,0 +1,57 @@
+--- norm-apple.txt	2026-11-27 05:35:01
++++ norm-ours.txt	2026-11-27 05:35:06
+@@ -269,7 +269,7 @@
+ REPLY <dictionary> { count = 2, transaction, voucher, contents =
+ 	"metainfo" => <dictionary> { count = 2, transaction, voucher, contents =
+ 		"LSCGSSessionID" => <int64>: 257
+-		"LSSessionID" => <int64>: 100001
++		"LSSessionID" => <int64>: 102975
+ 	}
+ 	"success" => <bool>: true
+ }
+@@ -291,7 +291,7 @@
+ }
+ REPLY <dictionary> { count = 3, transaction, voucher, contents =
+ 	"result" => <array> { count = 1, capacity = 1, contents =
+-		0: <uint64>: 807109
++		0: <uint64>: 4097
+ 	}
+ 	"seed" => <uint64>: N
+ 	"success" => <bool>: true
+@@ -630,16 +630,16 @@
+ 		163: <uint64>: 1025
+ 		164: <uint64>: 1152
+ 	}
+-}
+-NOTE-PEER
+-NOTE t wantsreply=0 <dictionary> { count = 1, transaction, voucher, contents =
+-	"nop" => <bool>: true
+ }
+ REPLY <dictionary> { count = 3, transaction, voucher, contents =
+ 	"id" => <uint64>: N
+ 	"session" => <int64>: N
+ 	"success" => <bool>: true
+ }
++NOTE-PEER
++NOTE t wantsreply=0 <dictionary> { count = 1, transaction, voucher, contents =
++	"nop" => <bool>: true
++}
+ NOTE t wantsreply=0 <dictionary> { count = 6, transaction, voucher, contents =
+ 	"clientid" => <uint64>: N
+ 	"code" => <int64>: 2147483645
+@@ -794,6 +794,15 @@
+ 	"session" => <int64>: N
+ 	"when" => <double>: WHEN
+ }
++NOTE t wantsreply=0 <dictionary> { count = 7, transaction, voucher, contents =
++	"affected" => <uint64>: ASN1
++	"clientid" => <uint64>: N
++	"code" => <int64>: 515
++	"id" => <uint64>: N
++	"msgid" => <uint64>: N
++	"session" => <int64>: N
++	"when" => <double>: WHEN
++}
+ NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+ 	"affected" => <uint64>: ASN1
+ 	"clientid" => <uint64>: N

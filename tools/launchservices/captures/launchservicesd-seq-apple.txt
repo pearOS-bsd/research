@@ -1,0 +1,854 @@
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"clientversion" => <uint64>: 277872640
+	"command" => <int64>: 100
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"serverversion" => <uint64>: 277872640
+	"session" => <int64>: N
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"command" => <int64>: 500
+	"deathport" => <mach send right> { name = PORT, right = send, urefs = 2 }
+	"info" => <dictionary> { count = 6, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"result" => <dictionary> { count = 18, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 505
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"result" => <dictionary> { count = 18, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 505
+	"pid" => <int64>: N
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"result" => <dictionary> { count = 18, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 360
+	"restrictto" => <array> { count = 5, capacity = 8, contents =
+		0: <string> { string cache = 0x0, length = 3, contents = "pid" }
+		1: <string> { string cache = 0x0, length = 15, contents = "ApplicationType" }
+		2: <string> { string cache = 0x0, length = 13, contents = "LSDisplayName" }
+		3: <string> { string cache = 0x0, length = 11, contents = "ChangeCount" }
+		4: <string> { string cache = 0x0, length = 4, contents = "Nope" }
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"cacheable" => <bool>: false
+	"result" => <dictionary> { count = 4, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"ChangeCount" => <int64>: N
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 510
+	"info" => <dictionary> { count = 1, transaction, voucher, contents =
+		"LSNotifyApplicationFrontable" => <bool>: true
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"info" => <dictionary> { count = 19, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 520
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 370
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 380
+	"modifiers" => <dictionary> { count = 1, transaction, voucher, contents =
+		"LSFoo" => <bool>: true
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"error" => <int64>: -13053
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 370
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 910
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"errno" => <int64>: -54
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 920
+	"order" => <array> { count = 1, capacity = 8, contents =
+		0: <uint64>: 1
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"errno" => <int64>: -54
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 6, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"code" => <int64>: 561
+	"command" => <int64>: 450
+	"data" => <dictionary> { count = 1, transaction, voucher, contents =
+		"X" => <bool>: true
+	}
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 120
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"asn" => <uint64>: ASN2
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 210
+	"info" => <dictionary> { count = 1, transaction, voucher, contents =
+		"LSFooMeta" => <int64>: 7
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 200
+	"session" => <int64>: N
+	"wanted" => <array> { count = 3, capacity = 8, contents =
+		0: <string> { string cache = 0x0, length = 9, contents = "LSFooMeta" }
+		1: <string> { string cache = 0x0, length = 11, contents = "LSSessionID" }
+		2: <string> { string cache = 0x0, length = 14, contents = "LSCGSSessionID" }
+	}
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"metainfo" => <dictionary> { count = 2, transaction, voucher, contents =
+		"LSCGSSessionID" => <int64>: 257
+		"LSSessionID" => <int64>: 100001
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn1" => <uint64>: ASN4
+	"asn2" => <uint64>: ASN3
+	"command" => <int64>: 130
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 330
+	"criteria" => <dictionary> { count = 1, transaction, voucher, contents =
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"result" => <array> { count = 1, capacity = 1, contents =
+		0: <uint64>: 807109
+	}
+	"seed" => <uint64>: N
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 331
+	"path" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"asns" => <array> { count = 1, capacity = 1, contents =
+		0: <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 597
+	"info" => <dictionary> { count = 1, transaction, voucher, contents =
+		"LSDisplayName" => <string> { string cache = 0x0, length = 5, contents = "other" }
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"resendfullinfo" => <bool>: true
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 600
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"error" => <int64>: -600
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 610
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 2, transaction, voucher, contents =
+	"error" => <int64>: -13052
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 420
+	"id" => <uint64>: N
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 360
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"cacheable" => <bool>: true
+	"result" => <dictionary> { count = 21, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSLaunchedHidden" => <bool>: false
+		"pid" => <int64>: N
+	}
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 590
+	"exitstatus" => <int64>: 0
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 4, transaction, voucher, contents =
+	"asn" => <uint64>: ASN1
+	"command" => <int64>: 360
+	"restrictto" => <array> { count = 1, capacity = 8, contents =
+		0: <string> { string cache = 0x0, length = 3, contents = "pid" }
+	}
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"command" => <int64>: 700
+	"pid" => <int64>: N
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 12345
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 98
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 1000
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 595
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"success" => <bool>: false
+}
+SEND t <dictionary> { count = 2, transaction, voucher, contents =
+	"command" => <int64>: 140
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 1, transaction, voucher, contents =
+	"sucess" => <bool>: true
+}
+---- notifications
+SEND t <dictionary> { count = 3, transaction, voucher, contents =
+	"clientversion" => <uint64>: 277872640
+	"command" => <int64>: 100
+	"session" => <int64>: N
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"serverversion" => <uint64>: 277872640
+	"session" => <int64>: N
+	"success" => <bool>: true
+}
+SEND t <dictionary> { count = 6, transaction, voucher, contents =
+	"clientid" => <uint64>: N
+	"command" => <int64>: 410
+	"listener" => <endpoint>
+	"needsassertions" => <bool>: false
+	"session" => <int64>: N
+	"set" => <array> { count = 165, capacity = 256, contents =
+		0: <uint64>: 256
+		1: <uint64>: 257
+		2: <uint64>: 258
+		3: <uint64>: 259
+		4: <uint64>: 260
+		5: <uint64>: 261
+		6: <uint64>: 262
+		7: <uint64>: 263
+		8: <uint64>: 264
+		9: <uint64>: 265
+		10: <uint64>: 266
+		11: <uint64>: 267
+		12: <uint64>: 268
+		13: <uint64>: 269
+		14: <uint64>: 270
+		15: <uint64>: 271
+		16: <uint64>: 272
+		17: <uint64>: 273
+		18: <uint64>: 274
+		19: <uint64>: 275
+		20: <uint64>: 276
+		21: <uint64>: 277
+		22: <uint64>: 278
+		23: <uint64>: 279
+		24: <uint64>: 280
+		25: <uint64>: 281
+		26: <uint64>: 282
+		27: <uint64>: 283
+		28: <uint64>: 284
+		29: <uint64>: 285
+		30: <uint64>: 286
+		31: <uint64>: 287
+		32: <uint64>: 288
+		33: <uint64>: 289
+		34: <uint64>: 384
+		35: <uint64>: 385
+		36: <uint64>: 386
+		37: <uint64>: 387
+		38: <uint64>: 388
+		39: <uint64>: 389
+		40: <uint64>: 390
+		41: <uint64>: 391
+		42: <uint64>: 392
+		43: <uint64>: 393
+		44: <uint64>: 394
+		45: <uint64>: 395
+		46: <uint64>: 396
+		47: <uint64>: 397
+		48: <uint64>: 398
+		49: <uint64>: 399
+		50: <uint64>: 400
+		51: <uint64>: 401
+		52: <uint64>: 402
+		53: <uint64>: 403
+		54: <uint64>: 404
+		55: <uint64>: 405
+		56: <uint64>: 406
+		57: <uint64>: 407
+		58: <uint64>: 408
+		59: <uint64>: 409
+		60: <uint64>: 410
+		61: <uint64>: 411
+		62: <uint64>: 412
+		63: <uint64>: 413
+		64: <uint64>: 414
+		65: <uint64>: 415
+		66: <uint64>: 416
+		67: <uint64>: 417
+		68: <uint64>: 418
+		69: <uint64>: 419
+		70: <uint64>: 420
+		71: <uint64>: 421
+		72: <uint64>: 422
+		73: <uint64>: 423
+		74: <uint64>: 424
+		75: <uint64>: 425
+		76: <uint64>: 426
+		77: <uint64>: 427
+		78: <uint64>: 428
+		79: <uint64>: 429
+		80: <uint64>: 430
+		81: <uint64>: 431
+		82: <uint64>: 432
+		83: <uint64>: 433
+		84: <uint64>: 434
+		85: <uint64>: 435
+		86: <uint64>: 436
+		87: <uint64>: 437
+		88: <uint64>: 438
+		89: <uint64>: 439
+		90: <uint64>: 512
+		91: <uint64>: 513
+		92: <uint64>: 514
+		93: <uint64>: 515
+		94: <uint64>: 516
+		95: <uint64>: 517
+		96: <uint64>: 518
+		97: <uint64>: 519
+		98: <uint64>: 520
+		99: <uint64>: 521
+		100: <uint64>: 522
+		101: <uint64>: 523
+		102: <uint64>: 524
+		103: <uint64>: 525
+		104: <uint64>: 526
+		105: <uint64>: 527
+		106: <uint64>: 528
+		107: <uint64>: 529
+		108: <uint64>: 530
+		109: <uint64>: 531
+		110: <uint64>: 532
+		111: <uint64>: 533
+		112: <uint64>: 534
+		113: <uint64>: 535
+		114: <uint64>: 536
+		115: <uint64>: 537
+		116: <uint64>: 538
+		117: <uint64>: 539
+		118: <uint64>: 540
+		119: <uint64>: 541
+		120: <uint64>: 542
+		121: <uint64>: 543
+		122: <uint64>: 544
+		123: <uint64>: 545
+		124: <uint64>: 546
+		125: <uint64>: 547
+		126: <uint64>: 548
+		127: <uint64>: 549
+		128: <uint64>: 550
+		129: <uint64>: 551
+		130: <uint64>: 552
+		131: <uint64>: 553
+		132: <uint64>: 554
+		133: <uint64>: 555
+		134: <uint64>: 556
+		135: <uint64>: 557
+		136: <uint64>: 558
+		137: <uint64>: 559
+		138: <uint64>: 560
+		139: <uint64>: 561
+		140: <uint64>: 562
+		141: <uint64>: 563
+		142: <uint64>: 564
+		143: <uint64>: 565
+		144: <uint64>: 566
+		145: <uint64>: 567
+		146: <uint64>: 568
+		147: <uint64>: 569
+		148: <uint64>: 570
+		149: <uint64>: 571
+		150: <uint64>: 640
+		151: <uint64>: 641
+		152: <uint64>: 656
+		153: <uint64>: 657
+		154: <uint64>: 658
+		155: <uint64>: 659
+		156: <uint64>: 660
+		157: <uint64>: 672
+		158: <uint64>: 673
+		159: <uint64>: 674
+		160: <uint64>: 675
+		161: <uint64>: 769
+		162: <uint64>: 784
+		163: <uint64>: 1025
+		164: <uint64>: 1152
+	}
+}
+NOTE-PEER
+NOTE t wantsreply=0 <dictionary> { count = 1, transaction, voucher, contents =
+	"nop" => <bool>: true
+}
+REPLY <dictionary> { count = 3, transaction, voucher, contents =
+	"id" => <uint64>: N
+	"session" => <int64>: N
+	"success" => <bool>: true
+}
+NOTE t wantsreply=0 <dictionary> { count = 6, transaction, voucher, contents =
+	"clientid" => <uint64>: N
+	"code" => <int64>: 2147483645
+	"id" => <uint64>: N
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 7, transaction, voucher, contents =
+	"clientid" => <uint64>: N
+	"code" => <int64>: 265
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 8, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 257
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 17, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"pid" => <int64>: N
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 416
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 4, transaction, voucher, contents =
+		"ChangeCount" => <int64>: N
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 545
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 4, transaction, voucher, contents =
+		"ChangeCount" => <int64>: N
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSKeyBeingAdded" => <string> { string cache = 0x0, length = 14, contents = "LSStoppedState" }
+		"LSStoppedState" => <bool>: false
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 275
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 3, transaction, voucher, contents =
+		"ChangeCount" => <int64>: N
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 272
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 21, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSLaunchedHidden" => <bool>: false
+		"pid" => <int64>: N
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 258
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 24, transaction, voucher, contents =
+		"ApplicationType" => <string> { string cache = 0x0, length = 10, contents = "Foreground" }
+		"BundleIdentifierLowerCase" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"CFBundleExecutablePath" => <string> { string cache = 0x0, length = 13, contents = "/tmp/lsvd/lsx" }
+		"CFBundleExecutablePathDeviceID" => <int64>: N
+		"CFBundleExecutablePathINode" => <int64>: N
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"ChangeCount" => <int64>: N
+		"Hidden" => <bool>: false
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationCoalitionIDKey" => <int64>: N
+		"LSApplicationExitedButHasRemainingCoalitionPIDsOrNonForegroundChildrenApplicationsKey" => <bool>: false
+		"LSApplicationHasRegistered" => <bool>: true
+		"LSApplicationHasSignalledItIsReady" => <bool>: true
+		"LSApplicationMemberCoalitionIDKey" => <int64>: N
+		"LSApplicationReadyToBeFrontableKey" => <bool>: true
+		"LSArchitecture" => <string> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"LSAuditToken" => <data>: { length = 32 bytes, contents = 0xTOKEN }
+		"LSCheckInTime*" => <date> DATE
+		"LSDisplayName" => <string> { string cache = 0x0, length = 8, contents = "lsxprobe" }
+		"LSExecutableFileName" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExecutableFilenameLowerCaseKey" => <string> { string cache = 0x0, length = 3, contents = "lsx" }
+		"LSExitStatus" => <int64>: 0
+		"LSLaunchedHidden" => <bool>: false
+		"pid" => <int64>: N
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
+NOTE t wantsreply=0 <dictionary> { count = 8, transaction, voucher, contents =
+	"affected" => <uint64>: ASN1
+	"clientid" => <uint64>: N
+	"code" => <int64>: 269
+	"id" => <uint64>: N
+	"info" => <dictionary> { count = 4, transaction, voucher, contents =
+		"CFBundleIdentifier" => <string> { string cache = 0x0, length = 19, contents = "com.pearos.lsxprobe" }
+		"LSASN" => <dictionary> { count = 3, transaction, voucher, contents =
+			"com.apple.coreservices.asn" => <uuid> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64>: 0
+			"com.apple.coreservices.asn.lo" => <uint64>: ASN1
+		}
+		"LSApplicationCoalitionIDKey" => <int64>: N
+		"pid" => <int64>: N
+	}
+	"msgid" => <uint64>: N
+	"session" => <int64>: N
+	"when" => <double>: WHEN
+}
