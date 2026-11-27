@@ -1,0 +1,320 @@
+xcap loaded
+=== STEP copy-missing
+CONNECT com.apple.cfprefsd.daemon flags=2
+CAP#000 ssend conn=com.apple.cfprefsd.daemon
+CONNECT com.apple.cfprefsd.agent flags=0
+<dictionary: 0x600002868420> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a0005>: 5
+	"CFPreferencesMessages" => <array: 0x600000268ae0> { count = 13, capacity = 34, contents =
+		0: <null: 0x7ff845adc050>: null-object
+		1: <dictionary: 0x6000028682a0> { count = 5, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsManaged" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268ab0> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268a50> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+		}
+		2: <null: 0x7ff845adc050>: null-object
+		3: <null: 0x7ff845adc050>: null-object
+		4: <null: 0x7ff845adc050>: null-object
+		5: <null: 0x7ff845adc050>: null-object
+		6: <null: 0x7ff845adc050>: null-object
+		7: <null: 0x7ff845adc050>: null-object
+		8: <null: 0x7ff845adc050>: null-object
+		9: <dictionary: 0x600002868300> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268a20> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x6000002689c0> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+		}
+		10: <null: 0x7ff845adc050>: null-object
+		11: <dictionary: 0x6000028683c0> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x6000002689f0> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268a80> { string cache = 0x0, length = 28, contents = "kCFPreferencesAnyApplication" }
+		}
+		12: <null: 0x7ff845adc050>: null-object
+	}
+}
+CAP#001 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x6000028686c0> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a0005>: 5
+	"CFPreferencesMessages" => <array: 0x600000268e70> { count = 13, capacity = 34, contents =
+		0: <dictionary: 0x600002868480> { count = 6, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsManaged" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268b40> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268b70> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268b10> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+		}
+		1: <null: 0x7ff845adc050>: null-object
+		2: <null: 0x7ff845adc050>: null-object
+		3: <dictionary: 0x6000028684e0> { count = 5, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268bd0> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268c00> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268ba0> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+		}
+		4: <dictionary: 0x600002868540> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268c60> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268c90> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268c30> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+		}
+		5: <null: 0x7ff845adc050>: null-object
+		6: <dictionary: 0x6000028685a0> { count = 6, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsManaged" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268cf0> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268d20> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268cc0> { string cache = 0x0, length = 28, contents = "kCFPreferencesAnyApplication" }
+		}
+		7: <dictionary: 0x600002868600> { count = 5, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268d80> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268db0> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268d50> { string cache = 0x0, length = 28, contents = "kCFPreferencesAnyApplication" }
+		}
+		8: <dictionary: 0x600002868660> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268e10> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesUser" => <string: 0x600000268e40> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268de0> { string cache = 0x0, length = 28, contents = "kCFPreferencesAnyApplication" }
+		}
+		9: <null: 0x7ff845adc050>: null-object
+		10: <null: 0x7ff845adc050>: null-object
+		11: <null: 0x7ff845adc050>: null-object
+		12: <null: 0x7ff845adc050>: null-object
+	}
+}
+CAP#002 sreply conn=com.apple.cfprefsd.daemon
+<dictionary: 0x600003064000> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesMessages" => <array: 0x6000002640c0> { count = 13, capacity = 13, contents =
+		0: <null: 0x7ff845adc050>: null-object
+		1: <dictionary: 0x600002864120> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesShmemName" => <string: 0x6000002640f0> { string cache = 0x0, length = 22, contents = "apple.cfprefs.daemonv1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9e005>: 2619
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a5015>: 0
+		}
+		2: <null: 0x7ff845adc050>: null-object
+		3: <null: 0x7ff845adc050>: null-object
+		4: <null: 0x7ff845adc050>: null-object
+		5: <null: 0x7ff845adc050>: null-object
+		6: <null: 0x7ff845adc050>: null-object
+		7: <null: 0x7ff845adc050>: null-object
+		8: <null: 0x7ff845adc050>: null-object
+		9: <dictionary: 0x600002864180> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesShmemName" => <string: 0x600000264120> { string cache = 0x0, length = 22, contents = "apple.cfprefs.daemonv1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9c005>: 2617
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a0015>: 5
+		}
+		10: <null: 0x7ff845adc050>: null-object
+		11: <dictionary: 0x6000028641e0> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesPropertyList" => <data: 0x600001964480>: { length = 603 bytes, contents = 0x62706c6973743030d8010203040506070809130e14171819... }
+			"CFPreferencesShmemName" => <string: 0x600000264150> { string cache = 0x0, length = 22, contents = "apple.cfprefs.daemonv1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd339d005>: 1080
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a5015>: 0
+		}
+		12: <null: 0x7ff845adc050>: null-object
+	}
+}
+CAP#003 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003064000> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesMessages" => <array: 0x600000264000> { count = 13, capacity = 13, contents =
+		0: <dictionary: 0x600002864000> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesShmemName" => <string: 0x600000264090> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9f005>: 2618
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a5015>: 0
+		}
+		1: <null: 0x7ff845adc050>: null-object
+		2: <null: 0x7ff845adc050>: null-object
+		3: <dictionary: 0x600002864060> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesPropertyList" => <data: 0x600001964140>: { length = 42 bytes, contents = 0x62706c6973743030d0080000000000000101000000000000... }
+			"CFPreferencesShmemName" => <string: 0x600000264060> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d92005>: 2615
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a7015>: 2
+		}
+		4: <dictionary: 0x6000028640c0> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesPropertyList" => <data: 0x600001964040>: { length = 42 bytes, contents = 0x62706c6973743030d0080000000000000101000000000000... }
+			"CFPreferencesShmemName" => <string: 0x600000264030> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9d005>: 2616
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37ac015>: 9
+		}
+		5: <null: 0x7ff845adc050>: null-object
+		6: <dictionary: 0x600002864120> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesShmemName" => <string: 0x6000002640c0> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd339c005>: 1081
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a0015>: 5
+		}
+		7: <dictionary: 0x600002864180> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesPropertyList" => <data: 0x600001964300>: { length = 16941 bytes, contents = 0x62706c6973743030df10130102030405060708090a0b0c0d... }
+			"CFPreferencesShmemName" => <string: 0x600000264150> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3393005>: 1078
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a5015>: 0
+		}
+		8: <dictionary: 0x6000028641e0> { count = 5, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesPropertyList" => <data: 0x600001964700>: { length = 1216 bytes, contents = 0x62706c6973743030df10170102030405060708090a0b0c0d... }
+			"CFPreferencesShmemName" => <string: 0x600000264120> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd3392005>: 1079
+			"CFPreferencesValidationPropertyList" => <data: 0x6000019645c0>: { length = 259 bytes, contents = 0x62706c6973743030d401020304050607095b4170706c654c... }
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37a4015>: 1
+		}
+		9: <null: 0x7ff845adc050>: null-object
+		10: <null: 0x7ff845adc050>: null-object
+		11: <null: 0x7ff845adc050>: null-object
+		12: <null: 0x7ff845adc050>: null-object
+	}
+}
+=== STEP set
+CAP#004 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002864000> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesHostBundleIdentifier" => <string: 0x600000264000> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x600000264150> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <data: 0x6000019646c0>: { length = 43 bytes, contents = 0x62706c6973743030102a0800000000000001010000000000... }
+	"Key" => <string: 0x6000002640c0> { string cache = 0x0, length = 2, contents = "k1" }
+	"CFPreferencesDomain" => <string: 0x600000264120> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#005 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003064000> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000264060> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9d005>: 2616
+	"CFPreferencesByteCountThreshold" => <int64: 0x57c727abd37a5005>: 0
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37af015>: 10
+}
+CAP#006 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002864000> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesHostBundleIdentifier" => <string: 0x6000002640c0> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x600000264570> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <string: 0x600000264090> { string cache = 0x0, length = 5, contents = "hello" }
+	"Key" => <string: 0x600000264150> { string cache = 0x0, length = 2, contents = "k2" }
+	"CFPreferencesDomain" => <string: 0x600000264030> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#007 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003068700> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000268de0> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9d005>: 2616
+	"CFPreferencesByteCountThreshold" => <int64: 0x57c727abd37a5005>: 0
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37ae015>: 11
+}
+=== STEP sync
+=== STEP copy-after
+<CFNumber 0x57c727abd37a7a7d [0x7ff845b0d8c0]>{value = +42, type = kCFNumberSInt32Type}
+=== STEP keylist
+(
+    k2,
+    k1
+)
+=== STEP byhost-set
+CAP#008 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x6000028686c0> { count = 7, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+	"CFPreferencesHostBundleIdentifier" => <string: 0x600000268e70> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x600000268e40> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <string: 0x600000268db0> { string cache = 0x0, length = 7, contents = "hostval" }
+	"Key" => <string: 0x600000268e10> { string cache = 0x0, length = 2, contents = "h1" }
+	"CFPreferencesDomain" => <string: 0x600000268de0> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#009 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003068900> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000268d20> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d92005>: 2615
+	"CFPreferencesByteCountThreshold" => <int64: 0x57c727abd37a5005>: 0
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37a6015>: 3
+}
+=== STEP global-read
+CAP#010 ssend conn=com.apple.cfprefsd.daemon
+<dictionary: 0x600002868660> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a0005>: 5
+	"CFPreferencesMessages" => <array: 0x600000268d80> { count = 9, capacity = 26, contents =
+		0: <null: 0x7ff845adc050>: null-object
+		1: <dictionary: 0x6000028686c0> { count = 5, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesIsManaged" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+			"CFPreferencesHostBundleIdentifier" => <string: 0x600000268990> { string cache = 0x0, length = 2, contents = "p1" }
+			"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+			"CFPreferencesDomain" => <string: 0x600000268e10> { string cache = 0x0, length = 28, contents = "kCFPreferencesAnyApplication" }
+		}
+		2: <null: 0x7ff845adc050>: null-object
+		3: <null: 0x7ff845adc050>: null-object
+		4: <null: 0x7ff845adc050>: null-object
+		5: <null: 0x7ff845adc050>: null-object
+		6: <null: 0x7ff845adc050>: null-object
+		7: <null: 0x7ff845adc050>: null-object
+		8: <null: 0x7ff845adc050>: null-object
+	}
+}
+CAP#011 sreply conn=com.apple.cfprefsd.daemon
+<dictionary: 0x60000306c700> { count = 1, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesMessages" => <array: 0x60000026c600> { count = 9, capacity = 9, contents =
+		0: <null: 0x7ff845adc050>: null-object
+		1: <dictionary: 0x60000286c240> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"CFPreferencesShmemName" => <string: 0x60000026c660> { string cache = 0x0, length = 22, contents = "apple.cfprefs.daemonv1" }
+			"CFPreferencesShmemIndex" => <int64: 0x57c727abd339f005>: 1082
+			"CFPreferencesShmemState" => <uint64: 0x57c727abd37b4015>: 17
+		}
+		2: <null: 0x7ff845adc050>: null-object
+		3: <null: 0x7ff845adc050>: null-object
+		4: <null: 0x7ff845adc050>: null-object
+		5: <null: 0x7ff845adc050>: null-object
+		6: <null: 0x7ff845adc050>: null-object
+		7: <null: 0x7ff845adc050>: null-object
+		8: <null: 0x7ff845adc050>: null-object
+	}
+}
+en_US@rg=gbzzzz
+=== STEP delete
+CAP#012 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x60000286c1e0> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesHostBundleIdentifier" => <string: 0x60000026c5d0> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x60000026c600> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <null: 0x7ff845adc050>: null-object
+	"Key" => <string: 0x60000026c660> { string cache = 0x0, length = 2, contents = "k1" }
+	"CFPreferencesDomain" => <string: 0x60000026c630> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#013 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003068a00> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000268e10> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9d005>: 2616
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37a9015>: 12
+}
+CAP#014 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002868660> { count = 6, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesHostBundleIdentifier" => <string: 0x600000268e10> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x600000268990> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <null: 0x7ff845adc050>: null-object
+	"Key" => <string: 0x600000268db0> { string cache = 0x0, length = 2, contents = "k2" }
+	"CFPreferencesDomain" => <string: 0x600000268d80> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#015 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003068a00> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000268d20> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d9d005>: 2616
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37a8015>: 13
+}
+CAP#016 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002868660> { count = 7, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesIsByHost" => <bool: 0x7ff845adb820>: true
+	"CFPreferencesHostBundleIdentifier" => <string: 0x600000268e40> { string cache = 0x0, length = 2, contents = "p1" }
+	"CFPreferencesUser" => <string: 0x600000268db0> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0x57c727abd37a4005>: 1
+	"Value" => <null: 0x7ff845adc050>: null-object
+	"Key" => <string: 0x600000268e70> { string cache = 0x0, length = 2, contents = "h1" }
+	"CFPreferencesDomain" => <string: 0x600000268d80> { string cache = 0x0, length = 18, contents = "org.pearos.cfptest" }
+}
+CAP#017 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x600003068a00> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x600000268d20> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0x57c727abd3d92005>: 2615
+	"CFPreferencesShmemState" => <uint64: 0x57c727abd37a1015>: 4
+}
+=== STEP end

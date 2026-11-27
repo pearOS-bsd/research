@@ -1,0 +1,28 @@
+xcap loaded
+CONNECT com.apple.cfprefsd.agent flags=0
+CAP#000 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002df8060> { count = 8, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesAvoidCache" => <bool: 0x7ff845adb820>: true
+	"CFPreferencesHostBundleIdentifier" => <string: 0x6000007f80f0> { string cache = 0x0, length = 13, contents = "defaults-copy" }
+	"CFPreferencesUser" => <string: 0x6000007f8120> { string cache = 0x0, length = 25, contents = "kCFPreferencesCurrentUser" }
+	"CFPreferencesOperation" => <int64: 0xe6f7583c1a6301a3>: 1
+	"Value" => <data: 0x600001cf8480>: { length = 43 bytes, contents = 0x62706c697374303010030800000000000001010000000000... }
+	"Key" => <string: 0x6000007f81e0> { string cache = 0x0, length = 1, contents = "k" }
+	"CFPreferencesShouldWriteSynchronously" => <bool: 0x7ff845adb820>: true
+	"CFPreferencesDomain" => <string: 0x6000007f80c0> { string cache = 0x0, length = 19, contents = "org.pearos.cfptest4" }
+}
+CAP#001 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x6000035fc700> { count = 4, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesShmemName" => <string: 0x6000007fc690> { string cache = 0x0, length = 19, contents = "apple.cfprefs.501v1" }
+	"CFPreferencesShmemIndex" => <int64: 0xe6f7583c1a8ee1a3>: 3807
+	"CFPreferencesByteCountThreshold" => <int64: 0xe6f7583c1a6311a3>: 0
+	"CFPreferencesShmemState" => <uint64: 0xe6f7583c1a6301b3>: 1
+}
+CAP#002 ssend conn=com.apple.cfprefsd.agent
+<dictionary: 0x600002dfc000> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"CFPreferencesOperation" => <int64: 0xe6f7583c1a6351a3>: 4
+	"CFPreferencesDomain" => <string: 0x6000007fc690> { string cache = 0x0, length = 19, contents = "org.pearos.cfptest4" }
+}
+CAP#003 sreply conn=com.apple.cfprefsd.agent
+<dictionary: 0x6000035fc800> { count = 0, transaction: 0, voucher = 0x0, contents =
+}
