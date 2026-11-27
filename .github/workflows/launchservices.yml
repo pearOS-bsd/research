@@ -1,0 +1,8 @@
+name: launchservices
+on: [push, pull_request]
+jobs:
+  infopage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/launchservices/test_infopage.py
