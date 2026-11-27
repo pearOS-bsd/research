@@ -326,7 +326,7 @@ Full conversation of a minimal AppKit client (`probes/a.m`, `NSApplication share
 | command | request keys | reply | notes |
 |---|---|---|---|
 | 100 | `clientversion` (u64 277872640 = 0x10900000) | `serverversion` (same), `success` true, `session` int64 100001 | first message; client library version echo |
-| 110 | - | `lsinfopage` (xpc shmem, 61440 bytes = 15 pages), `success` | polled between almost all other calls; shared "info page", header `04 01 00 00 | 00 f0 00 00 (size 0xf000) | a1 86 01 00 (=100001, the session)` then 0x...-byte records of running applications (ASN, uuid, flags): layout not decoded (U5). The pearOS stub sends an all-zero page |
+| 110 | - | `lsinfopage` (xpc shmem, 61440 bytes = 15 pages), `success` | the shared "info page" of the session: layout in 6.3. Clients ask again before most other calls (seen with the Mac daemon too, reason in 6.3) |
 | 130 | `asn1`, `asn2` (u64) | `success` false (unknown ASN) | |
 | 200 | `wanted` array of key names (`LSSessionID`) | `metainfo` {LSSessionID: int64 100001}, `success` | stub answers `LSCGSSessionID` |
 | 300 | - | `success` false while no application is in front | front application |
@@ -336,7 +336,120 @@ Full conversation of a minimal AppKit client (`probes/a.m`, `NSApplication share
 | 505 | - | `success` false | |
 | 510 | `asn`, `info` {key: value to set} (e.g. `LSNotifyApplicationFrontable`, `LSPersistenceSuppressRelaunchAtLogin`, `ApplicationType`) | `success`, `info` = whole record after the change | `ChangeCount` grows by 2 per set |
 
-6.1 Check-in `info` of a plain Mach-O (`500`): `LSDisplayName`, `CFBundleSignature` "????", `LSExecutableFileName`, `CFBundleExecutablePath`, `LSExecutableSDKVersion` "26.5", `LSCheckInTime*` (xpc date), `LSArchitecture` "x86_64", `CFBundlePackageType` "????", `LSDYLDPlatformKey` 1, `Flavor` 3, `ApplicationType` "BackgroundOnly". The reply `result` adds `LSAuditToken` (32 bytes, the audit token), `LSExecutableFilenameLowerCaseKey`, `LSApplicationMemberCoalitionIDKey` (int64), `LSASN` {`com.apple.coreservices.asn.lo` u64, `com.apple.coreservices.asn.hi` u64 0, `com.apple.coreservices.asn` uuid C96172A0-CE74-4D62-AFEF-ECFE4D04D827}, `pid`, `LSApplicationHasRegistered` true, `ChangeCount` int64 (515, +2 per set), `CFBundleExecutablePathDeviceID`, `CFBundleExecutablePathINode`, later `LSApplicationReadyToBeFrontableKey`, `CanBecomeFrontmost`, `Hidden`, `LSApplicationHasSignalledItIsReady`. The ASN as a number is `hi << 32 | lo` (4295013348 = 0x10000b3e4 = 0x100000000 + 430180; the check-in reply shows `lo` 430185 for the same process: the request value `asn` is `hi<<32|lo` of the number the client was given by a previous call, exact relation to `LSASN.lo` not established).
+6.1 Check-in `info` of a plain Mach-O (`500`): `LSDisplayName`, `CFBundleSignature` "????", `LSExecutableFileName`, `CFBundleExecutablePath`, `LSExecutableSDKVersion` "26.5", `LSCheckInTime*` (xpc date), `LSArchitecture` "x86_64", `CFBundlePackageType` "????", `LSDYLDPlatformKey` 1, `Flavor` 3, `ApplicationType` "BackgroundOnly". The reply `result` adds `LSAuditToken` (32 bytes, the audit token), `LSExecutableFilenameLowerCaseKey`, `LSApplicationMemberCoalitionIDKey` (int64), `LSASN` {`com.apple.coreservices.asn.lo` u64, `com.apple.coreservices.asn.hi` u64 0, `com.apple.coreservices.asn` uuid C96172A0-CE74-4D62-AFEF-ECFE4D04D827}, `pid`, `LSApplicationHasRegistered` true, `ChangeCount` int64 (515, +2 per set), `CFBundleExecutablePathDeviceID`, `CFBundleExecutablePathINode`, later `LSApplicationReadyToBeFrontableKey`, `CanBecomeFrontmost`, `Hidden`, `LSApplicationHasSignalledItIsReady`. The ASN as a number is `hi << 32 | lo` (4295013348 = 0x10000b3e4 = 0x100000000 + 430180; the check-in reply shows `lo` 430185 for the same process: the request value `asn` is `hi<<32|lo` of the number the client was given by a previous call, exact relation to `LSASN.lo` not established). **[decompiled: `_LSASNCreateWithPid` = `_LSASNCreate(alloc, 1, pid)`, `_LSGetCurrentApplicationASN` = `_LSASNCreate(0, 0, 2)`]** an ASN with `hi` = 1 is a *pid ASN* (`lo` is a pid, 0xb3e4 = 46052 here), `hi` 0 `lo` 2 means "the current application"; a server must resolve a `hi` = 1 ASN by pid.
+
+### 6.2 Every command a client sends
+
+The numbers are the argument of `createLSMessage(command)` in each LaunchServices function **[decompiled: LaunchServices x86_64, `llvm-objdump` of the `mov $imm, %edi` before each call]**; request/reply keys come from section 6 **[captured]** where seen, otherwise from the decompiled sender **[decompiled]**. A server that wants to be wire-compatible must answer each with at least `success` (bool); a request whose reply does not come keeps the caller waiting.
+
+| command | client function | what it is | keys known |
+|---|---|---|---|
+| 98 | `handleSessionInformationMessage` block | answer to a session-information message of the server | - |
+| 99 | `_LSSetMetaApplicationInformationItem` | set one key of the session meta information | - |
+| 100 | `LSClientToServerConnection::setupServerConnection` | connection check-in, once per connection (again after `XPC_ERROR_CONNECTION_INTERRUPTED`) | req `clientversion` u64 0x10900000, `session`; reply `serverversion` **must equal 0x10900000** (else "bad version", the connection is used anyway but the client re-sends 100), `session`, optional `reconnectclient` bool + `reconnectoptions` dict + `reconnectflags` u64 |
+| 110 | `LSSharedMemoryPage::CopyForSessionID` | the info page, 6.3 | reply `success`, `lsinfopage` (shmem) |
+| 120 | `_LSAllocatePSN` | allocate a process serial number | - |
+| 130 | `_LSCompareASNsLong` | are two ASNs the same application | `asn1`, `asn2` u64 -> `success` |
+| 140 | `_LSSetApplicationLaunchServicesServerConnectionStatus` | tell the server the client's connection status flags | - |
+| 200 / 210 | `_LSCopyMetaApplicationInformation` / `_LSSetMetaApplicationInformation` | session meta information (`LSSessionID`, `LSCGSSessionID`, ...) | 200: `wanted` array -> `metainfo` dict |
+| 300 | `_LSCopyFrontApplication` | front application | -> `success` false when none, else an ASN |
+| 310 | `CopyApplicationArray` | list of applications | - |
+| 320 | `_LSCopyApplicationArrayInFrontToBackOrder` | applications front to back | - |
+| 330 / 331 | `_LSCopyMatchingApplications` / `_LSCopyApplicationsWithPath` | applications matching a dictionary / a path (the client first tries the page: pid and `CFBundleIdentifier` matches, 6.3) | - |
+| 360 | `_LSCopyApplicationInformation` | record of one application (only when the page and the local cache have nothing) | `asn`, `restrictto` -> `result`, `cacheable` |
+| 370 / 380 | `_LSCopyLaunchModifiers` / `_LSPostLaunchModifiers` | launch modifiers of an application | - |
+| 410 / 420 | `LSNotificationReceiver::modify` / `_LSUnscheduleNotificationFunction` | register / drop a notification listener | 410: `listener` endpoint, `set`/`addasn`, `id` |
+| 450 | `_LSSendNotification` | the client sends a notification to the server | - |
+| 500 | `_LSApplicationCheckIn`, `_LSReCheckinApplication` | application check-in | `info`, `deathport` -> `result` with `LSASN` (6.1) |
+| 501 | `_LSApplicationCheckInProxy` | check-in for another process | - |
+| 505 | `_LSApplicationCheckIn` with a dictionary that only holds `pid` | "is this pid checked in?" | -> `result` |
+| 510 | `_LSSetApplicationInformation` | set keys of a record | `asn`, `info` -> `info` |
+| 520 | `_LSSignalApplicationReady` | the application is ready | - |
+| 590 | `_LSApplicationQuitting` | the application is quitting | - |
+| 595 / 596 | `_LSCreateCSUIConnectionForLaunching` / `_LSRegisterNamedXPCConnection` | named connections | - |
+| 597 | `_LSReCheckinApplication` | re-check-in after a server restart | - |
+| 598 / 599 | `_LSClientSideRegisterAsReconnectionHelper` blocks | reconnection helper | - |
+| 600 | `_CASNotifyServerSideAboutLaunchedApplication` | a launcher tells the server about a launched application | - |
+| 610 | `_LSWaitForApplicationCheckIn` | wait for an application to check in | - |
+| 700 | `_LSCopyApplicationDeathInformationForPid` | death information of a pid | - |
+| 900 | `_LSPassDownCurrentEventState` | current event state | - |
+| 910 | `_LSSetFrontApplicationLong(WithCompletion)`, `_LSRequestProcessBecomeFrontmost` | make an application front | - |
+| 920 | `_LSOrderApplications` | reorder applications | - |
+| 1000-1030 | `_LSGetCurrentActivationToken`, `_LSDonateActivationToken`, `_LSIsActivationTokenValidForTarget`, `_LSInvalidateActivationToken` | activation tokens | - |
+
+A message from the server with `shuttingdown` true makes the client set its connection status to 0x80000000 and stop connecting **[decompiled: event handler of `setupServerConnection`]**.
+
+### 6.3 `launchservicesd`: the info page (`lsinfopage`)
+
+**[decompiled: LaunchServices `LSSharedMemoryPage::LSSharedMemoryPage(LSSessionID)`, `CopyForSessionID`, `GetApplicationInformation`, `GetApplicationInformationForPid`, `GetIndexedApplicationInformation`, `GetIndexedApplicationAdditionalInformation`, `SetApplicationInformation`, every `_LSSharedMemoryGet*`; `copyMatchingApplicationsBasedOnSharedMemory`] [captured: `probes/ip.c` + `infopage.py` on the Mac VM, `captures/infopage.txt`]**
+
+What the client checks when it gets the page (`CopyForSessionID`): the mapped length (`xpc_shmem_map`) must be >= 0xe460, the word at +0 must be **0x104** and the word at +4 must be >= 0xe460. Otherwise it logs "Shared memory page version %d didn't match expected one ...", unmaps it and has **no page** (it asks again with 110 at the next use; an all-zero page is in this case). A page with a valid header is kept in a per-session cache and remapped with `vm_remap(copy = 0)`, so **the server writes the page in place and clients read the changes live**; the page has to be one object for the whole session. A page whose `metaInformationFlags` (+0x74) is negative is "destroyed": the client drops it. While the lock count (+0x0c) is not 0 the readers return nothing.
+
+Header (all little-endian 32-bit words; the daemon allocates `round_page(0xe460)` = 0xf000 bytes, zeroes it and sets what the "init" column says):
+
+| offset | name (from the getter `_LSSharedMemoryGet<Name>`) | init | observed on the Mac |
+|---|---|---|---|
+| 0x00 | Version | 0x104 | 0x104 |
+| 0x04 | Size | 0xf000 | 0xf000 |
+| 0x08 | SessionID | the session | 100001 |
+| 0x0c | LockCount (writers increment it around a record write) | 0 | 0 |
+| 0x10 | DebugLevel | 0 | 0 |
+| 0x14 | ChangeCount | 0 | 0 |
+| 0x20 | FrontApplicationASNSeed | 100 | +1 per change of front application |
+| 0x24 | MenuBarOwnerASNSeed | 100 | +1 per change of menu bar owner |
+| 0x28 | ApplicationListSeed | 100 | +1 per application added, more on removal |
+| 0x2c | PendingApplicationListSeed | 100 | 100 |
+| 0x30 | VisibleApplicationListSeed | 100 | changes with launch/quit |
+| 0x34 | ApplicationInformationSeed | 100 | +4 at a check-in, +0x30 at an app launch |
+| 0x50 | FrontASNLow | 0 | low half of the front ASN (Terminal, then Calculator) |
+| 0x54 | MenuBarOwnerASNLow | 0 | same as front in the captures |
+| 0x58 | SystemProcessASNLow | 0 | loginwindow |
+| 0x5c | SessionLauncherASNLow | 0 | 0 |
+| 0x60 | LaunchProgressFlags | 0 | 0 |
+| 0x64 | LaunchProgressUserActivityCount | 0 | 0 |
+| 0x68 | CGSSessionID | 0 | 0x101 (the WindowServer session) |
+| 0x6c | NextAppToBringForwardASNLow | 0 | 0 |
+| 0x70 | SystemUIPresentationMode | 0 | 0 |
+| 0x74 | MetaInformationFlags (negative = page destroyed) | 0 | 0 |
+| 0x78 | SystemUIPresentationOptions | 0 | 0 |
+| 0x7c | ExpectedFrontApplicationASNLow | 0 | 0 |
+| 0x88 | ApplicationListCount (`IsApplicationInformationUsable` = count < 0x32b) | 0 | 43 |
+| 0x8c | capacity | 0x32a | 0x32a |
+
+Records: `0x90 + i * 0x48`, i < min(count, 0x32a) (0x90 + 0x32a * 0x48 = 0xe460, the minimum size). Removing an application compacts the array (the count drops, later records move down).
+
+| offset | type | meaning | evidence |
+|---|---|---|---|
+| +0x00 | u32 | ASN low half (the key of all lookups) | [decompiled] lookups by ASN; [captured] = `LSASN.lo`, e.g. 0x89089 for the probe whose 500 reply had lo 561289 |
+| +0x04 | u32 | `ChangeCount` of the record (the writer sets it to 0 first and writes it last) | [decompiled] `SetApplicationInformation`; [captured] 0x202 = 514 = `ChangeCount` of the 500 reply |
+| +0x08 | u32 | flags; < 0 (sign bit) = slot not valid; bit 0x2 = skipped by the pid/bundle-id matchers (application going away) | [decompiled]; [captured] 0x80 = a checked-in process with no bundle (the probe), 0x40c0 Foreground apps (Terminal, Calculator), 0x44c0 Finder, 0x64e0/0x44e0/0x44d0 UIElement, 0x4090/0x4490/0x40a0 BackgroundOnly: the other bits are not decoded [inferred: they follow ApplicationType, readiness and visibility] |
+| +0x0c | u16 | position in the front-to-back order of visible applications (1 = front, 0 = not in the list) | [captured] Calculator 1, Terminal 1 -> 2, Finder 2 -> 3, back after quit |
+| +0x10 | i32 | pid | [decompiled] `GetApplicationInformationForPid`; [captured] |
+| +0x14 | i32 | pid version (`audit_token_to_pidversion` of the check-in) | [decompiled] `_LSSharedMemorySetApplicationInformationFromToken` |
+| +0x18 | u64 | `CFHash(CFBundleIdentifier)` (0 if none; a hash of 0 is stored as 1) | [decompiled] `copyMatchingApplicationsBasedOnSharedMemory`; [captured] 0x405fb37c70e1a673 = CFHash("com.apple.loginwindow") |
+| +0x20 | u64 | `CFHash` of the executable file name (case kept) | [captured] 0xdb610cddec279fbc = CFHash("loginwindow"), CFHash("ViewBridgeAuxiliary") |
+| +0x28 | i32 | device of the bundle (`CFBundleExecutablePathDeviceID` for a bare executable) | [captured] 0x100000a = `stat -f %d` of loginwindow.app |
+| +0x30 | u64 | inode of the bundle directory | [captured] 0x0fffffff00037386 = `stat -f %i` of /System/Library/CoreServices/loginwindow.app |
+| +0x38 | i32 | device of the executable | [captured] |
+| +0x40 | u64 | inode of the executable (`CFBundleExecutablePathINode`) | [captured] 0x0fffffff0003738b = inode of .../Contents/MacOS/loginwindow; for a bare executable +0x28/+0x30 = +0x38/+0x40 |
+
+ASN low halves given by the Mac daemon are `k * 0x1001` (k a counter: 0x5005 loginwindow, 0x1c01c Terminal, 0x89089 ...) **[captured]**; the client only needs them to be unique and equal to `LSASN.lo` of the record.
+
+When the daemon updates the page **[captured]**: at a check-in (500) it adds a record (count + 1, ApplicationListSeed + 1, VisibleApplicationListSeed + 1, ApplicationInformationSeed + 4); when an application becomes front it sets FrontASNLow and MenuBarOwnerASNLow, bumps the two seeds and rewrites the +0x0c order of every visible record; at a quit it removes the record and bumps the seeds again. The client side reads seeds to invalidate its caches (`_LSGetFrontApplicationSeed`, `_LSGetApplicationListSeed`, ... log "frontApplicationSeed=%d") and stops an iteration when ApplicationListSeed changes under it.
+
+Why the client asks for 110 so often: `CopyForSessionID` caches the page under the session number written at +8, but the callers ask for session -2 ("the session of this process", `NormalizeLSSessionID` keeps -2 unless the session attribute bit 0x10 is set), so most lookups miss the cache and send 110 again **[decompiled]**; the same pattern is seen with the real daemon (`captures/launchservicesd-xpc.txt`).
+
+### 6.4 The Dock abort "unable to get application ASN from launchservicesd" (HIServices `_RegisterApplication`)
+
+**[decompiled: HIServices `____RegisterApplication_block_invoke`, LaunchServices `_LSApplicationCheckIn`, `LSClientToServerConnection::setupServerConnection` and its event handler, `clientIsAllowedToConnect`, `IsLSServerConnected`] [captured: Mac VM, `probes/fk.c`]**
+
+1. `_RegisterApplication` calls `_LSApplicationCheckIn(-2, info)`. If that returns NULL it tries `_LSCopyApplicationInformation(-2, ASN{hi 1, lo pid})`. If both fail the ASN low half (`DAT_7ff8438121a4`) stays 0, and when the application requires an ASN (the Dock does; a plain AppKit tool does not) and `sysctlbyname("hw.willshutdown")` does not say "shutting down", it aborts with that message.
+2. `_LSApplicationCheckIn` returns NULL **without sending 500** when: the session normalizes to 0 or `info` is NULL; `clientIsAllowedToConnect()` is false (`kern.willshutdown` sysctl readable and not 0, connection status flags bit 1/2 set, e.g. after a server message with `shuttingdown`); or `LSClientToServerConnection` has no xpc connection: log "rdar://problem/28724618 Unable to register with launchservicsed, couldn't create connection object."
+3. The xpc connection to launchservicesd is created once (`dispatch_once`) and kept in a global. On `XPC_ERROR_CONNECTION_INTERRUPTED` the client drops its cached pages and sends 100 again on the next use (the connection survives). On **`XPC_ERROR_CONNECTION_INVALID`** it sets the global to NULL ("Got an XPC_ERROR_INVALID on our server connection, so failing.", crash string "XPC_ERROR_CONNECTION_INVALID from launchservicesd") and **never creates it again**: every later LaunchServices call that needs the server fails at once and sends nothing.
+4. The content of the info page is **not** what stops the 500: Apple's AppKit client (probes/a.m) against `lsd-stub` with an all-zero page, on the Mac VM through `__LSXPCSERVICENAME`, sends 505 and 500 and checks in normally (the zero page is only rejected and asked for again).
+5. Reproduction of the pearOS signature on the Mac VM: `probes/fk.c` answers 100 and two 110 (zero page) and then makes its service disappear (it boots its own launchd job out). The client logs `XPC_ERROR_INVALID` then "couldn't create connection object", and the server never sees 500 - the same `100, 110, 110, (abort)` that the Dock shows on pearOS. When the server only cancels the peer connection (INTERRUPTED), the client reconnects with 100 and checks in.
+
+So on pearOS the Dock's connection to `lsd-stub` became **invalid** after the second 110: the service went away for the client (stub process died or its receive right/launchd registration was lost under darwinator) or darwinator's libxpc delivered `XPC_ERROR_CONNECTION_INVALID` for another reason. To confirm on pearOS: Dock.out (with `OS_ACTIVITY_DT_MODE=YES`) should show "Got an XPC_ERROR_INVALID on our server connection" or "couldn't create connection object"; check whether `lsd-stub` is still alive after the second 110. A valid page (6.3) is still needed for correct behaviour after check-in (front application, application lists, pid and bundle-id lookups without 360).
 
 ## 7. Minimal compatible subset for the Dock
 
@@ -346,7 +459,7 @@ Needed, in this order:
 1. `com.apple.lsd.mapdb` (NSXPC, options 0): `getServerStoreNonBlocking...` -> exactly the reply of section 3 (`_CSStore{XPCRepresentation:0}`, `FSNode` of the store file, nil, 0, nil, with `ool[0]` = the file as an xpc data object). Everything else of `_LSDReadProtocol` may answer with the values of 2.1 (status 256, empty preferences, `LSSettingsStoreConfiguration` with an endpoint, developer dir, 105/47 element sets, errors -50/-54 for the entitled calls); `getSystemContentStore...` -> the same shape with the system store (or the same store).
 2. The store: a valid container (5.1/5.2) with the 33 tables, the DB header (5.3) whose **UUID is stable and sequence bumped on every change**, the 8 binding class-name strings and the string cache (5.7/5.8): without them the client discards the file and builds its own. Records: one Bundle per application (5.12: `_clas` 2, identifier + binding, Alias of the path, `_mtime`, `revision` 0xb, Container of the volume, `iconsDict` in the `CFBundlePrimaryIcon` form; not under /tmp unless it is a test) is what Apple's client needs to find the application by identifier and by URL and to render its icon from the record (proven on the Mac VM, `lsapp.py`). The *icon pixels* still come from the bundle (IconServices renders them); the record supplies identity and the icon names.
 3. `com.apple.lsd.modifydb`: `registerItemInfo:...` must return `(YES, unit, nil, NO, nil)` and update the store (read the bundle, write the records, bump the sequence), and the next `getServerStore...` must return the new store; `unregisterBundleUnit`, `registerContainerURL` (reply `I` = container unit) and `setDatabaseIsSeeded` as simple success. The remaining methods can reply success/nil.
-4. `com.apple.coreservices.launchservicesd`: 100, 110, 130, 200, 300, 360, 410, 500, 505, 510 as in section 6 (the existing `lsd-stub` already does most; 130 is new).
+4. `com.apple.coreservices.launchservicesd`: 100, 110, 130, 200, 300, 360, 410, 500, 505, 510 as in section 6, with a valid info page (6.3: version 0x104, one page per session written in place, a record per check-in); the service must stay valid for the client for the whole session: an `XPC_ERROR_CONNECTION_INVALID` makes LaunchServices give up for ever and the Dock aborts (6.4).
 5. Not needed for startup: `open`, `openurl`, `advertisingidentifiers`, `trustedsignatures`, `encryption`, `dissemination`, `plugin`, `diagnostics`, `extensions`, `personaobserver`, `translocation`.
 
 On the Mac VM a store written by our tools is accepted by Apple's Launch Services client (5.7, 5.12). **To do in `LaunchServices/store` (C writer of our lsd)**: add the 8 class-name strings and the `<string>` cache (5.7/5.8) and the Bundle records of `lsapp.py` (5.12); our lsd serves the empty store without them, which the client rejects (it then builds a database in its own process, as the Dock log showed). pearOS itself was not tested in this round.
@@ -368,7 +481,10 @@ On the Mac VM a store written by our tools is accepted by Apple's Launch Service
 | `extract_common_strings.py` | writes `plist_common_strings.txt` (257 strings of the plist compaction) from the user's LaunchServices binary (the list is not kept in the repository) |
 | `probes/lsf.m`, `probes/q.m`, `probes/b.m` | serve a store file as `com.apple.lsd.mapdb`; lookups by identifier / URL; one binding lookup with `_CSStringBindingFindStringAndBindings` |
 | `lsrecord.py`, `extract_enc.py` | decode a record from the named ObjC struct encoding taken from the user's LaunchServices binary |
-| `captures/` | decoded wire captures and the protocol dump |
+| `probes/ip.c` | client: 100 + (500) + 110 to launchservicesd (or `__LSXPCSERVICENAME`), maps `lsinfopage` and writes it to a file |
+| `infopage.py` | decoder of the info page (6.3), joins `lsappinfo list` names |
+| `probes/fk.c` | fake launchservicesd that invalidates the client connection after N 110: reproduces the Dock ASN abort (6.4) |
+| `captures/` | decoded wire captures and the protocol dump; `infopage.txt` (pages across check-in, launch, quit), `infopage-checkin500.txt` |
 
 ## 9. Unknowns and questions
 
@@ -376,7 +492,7 @@ On the Mac VM a store written by our tools is accepted by Apple's Launch Service
 - U2 (answered): Apple's client accepts a store we wrote when 5.7 holds; header flag `+0x28` and "seeded" state were not needed.
 - U3 (partly answered): binding hash (5.9), arrays (5.9), strings (5.8), plist compaction (5.10), bookmark (5.11), BindingList/LocalizedString/CanonicalString (5.14) decoded; open: field meaning of `Claim` (w0..w9), `Type` (w0..w17), `Service`, `Plugin`, `ExtensionPoint`, `Container`, the `Bundle` flag bits (`_bundleFlags`, `_itemFlags`, `_plistContentFlags`, `moreFlags`), `BindableKeyMap`, `<dictionary>`; the 63 extra cache entries.
 - U4: protocols of `diagnostics`, `extensions`, `personaobserver`, `openurl`, `security.translocation`; real `setClasses:` of the non-`_LSDService` interfaces; connection types 2/4/5/6/9/10/11/13/14.
-- U5: layout of `lsinfopage` (61440-byte shared page).
+- U5 (answered, 6.3): layout of `lsinfopage`. Open: the meaning of most bits of the record flags (+0x08) and every server-side update beyond the observed ones (needs the launchservicesd binary).
 - U6 (answered for the three lookups, 5.12): which Bundle fields Apple's client needs for identifier lookup, URL lookup and ISBundleIcon. Open: what the *Dock* reads beyond that (display names, claims for "open with"); server side of registration beyond the observed diff (5.13): reading code signatures (teamID, cdhashes), entitlements, claims/types from CFBundleDocumentTypes / UTExportedTypeDeclarations.
 - U7: LSD behaviour with the entitlement checks of `modifydb` for unentitled callers (the probes were not refused for `registerItemInfo`: a plain unsigned user binary registered an app).
 - Q1 (owner): Disabling SIP on the Mac VM would allow attaching lldb to `lsd` (server side of registration, `getServerStore`) and reading the `.dv` directory; not needed so far. Say if you want it.
