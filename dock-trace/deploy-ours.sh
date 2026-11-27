@@ -2,7 +2,7 @@
 # Build apps/dock-cocoa on the Mac VM and put the new binary under ~/dock-cocoa (the path of the TCC rows and of the launchd job); restart the job if it is loaded.
 #   sh research/dock-trace/deploy-ours.sh
 M="ssh -p 2229 -i $HOME/fbsd-vm/id_ed25519 -o IdentitiesOnly=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q alex@localhost"
-cd ~/pearOS/apps && tar -cf - dock-cocoa dock/dock_layout.c dock/dock_layout.h | $M 'rm -rf ~/dock-build && mkdir ~/dock-build && cd ~/dock-build && tar xf - && cd dock-cocoa && make 2>&1 | grep -E "error|warning: unused" | head -12
+cd ~/pearOS/apps && tar -cf - dock-cocoa | $M 'rm -rf ~/dock-build && mkdir ~/dock-build && cd ~/dock-build && tar xf - && cd dock-cocoa && make 2>&1 | grep -E "error|warning: unused" | head -12
 if [ -x Dock.app/Contents/MacOS/Dock ]; then
   mkdir -p ~/dock-cocoa && rsync -a --delete Dock.app ~/dock-cocoa/ && { [ -s ~/dock-ents.plist ] || codesign -d --entitlements :- /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock > ~/dock-ents.plist 2>/dev/null; } ; codesign --force -s - --entitlements ~/dock-ents.plist ~/dock-cocoa/Dock.app 2>/dev/null || codesign --force -s - ~/dock-cocoa/Dock.app && rsync -a ~/dock-build/dock/ ~/dock/ 2>/dev/null
   # TCC identifies the app by CFBundleIdentifier (com.apple.dock) and stores a code requirement (the cdhash of the binary) on first use: a new build is refused until that requirement is cleared

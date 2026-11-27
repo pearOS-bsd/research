@@ -1,7 +1,7 @@
 #!/bin/sh
 # Which Dock runs on the Mac VM:   sh dock-switch.sh ours     (our ~/dock-cocoa/Dock.app as a launchd job com.pearos.dock, KeepAlive; the real Dock is booted out)
 #                                  sh dock-switch.sh real     (back to Apple's Dock: our job removed, the real job bootstrapped and kicked)
-# Build ours first (tar apps/dock-cocoa + dock/dock_layout.* to ~/ and make).  Nothing under /System is touched.
+# Build ours first (tar apps/dock-cocoa to ~/ and make).  Nothing under /System is touched.
 M="ssh -p 2229 -i $HOME/fbsd-vm/id_ed25519 -o IdentitiesOnly=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q alex@localhost"
 case "$1" in
 ours) $M 'cat > /tmp/com.pearos.dock.plist <<EOF

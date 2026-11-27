@@ -1,6 +1,6 @@
 #!/bin/sh
 # Screenshot of OUR Dock alone on the Mac VM: stops the real Dock (launchctl bootout), runs ~/dock-cocoa/Dock.app for 20 s, takes the picture after 15 s, restores the real Dock
-# (bootstrap + kickstart; the job has RunAtLoad false).  If OUR Dock already runs as the job com.pearos.dock (dock-switch.sh ours) it is only restarted with the new build and left running.   sh research/dock-trace/shot-ours.sh out.png     (build first: tar apps/dock-cocoa + dock/dock_layout.* to ~/ and make)
+# (bootstrap + kickstart; the job has RunAtLoad false).  If OUR Dock already runs as the job com.pearos.dock (dock-switch.sh ours) it is only restarted with the new build and left running.   sh research/dock-trace/shot-ours.sh out.png     (build first: tar apps/dock-cocoa to ~/ and make)
 OUT="${1:-ours.png}"
 M="ssh -p 2229 -i $HOME/fbsd-vm/id_ed25519 -o IdentitiesOnly=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q alex@localhost"
 $M 'if launchctl print gui/501/com.pearos.dock >/dev/null 2>&1; then
