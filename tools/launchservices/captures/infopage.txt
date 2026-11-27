@@ -1,0 +1,192 @@
+# launchservicesd info page (command 110), macOS 26.7.2 Mac VM, decoded with tools/launchservices/infopage.py; names joined from lsappinfo list
+## s0: idle session (43 applications)
+0x0000 version (0x104)                    0x104
+0x0004 size                               0xf000
+0x0008 sessionID                          0x186a1
+0x000c lockCount                          0x0
+0x0010 debugLevel                         0x0
+0x0014 changeCount                        0x0
+0x0020 frontApplicationASNSeed            0x94
+0x0024 menuBarOwnerASNSeed                0x6e
+0x0028 applicationListSeed                0x1a8
+0x002c pendingApplicationListSeed         0x64
+0x0030 visibleApplicationListSeed         0x1fb
+0x0034 applicationInformationSeed         0x1005
+0x0050 frontASNLow                        0x1c01c (Terminal)
+0x0054 menuBarOwnerASNLow                 0x1c01c (Terminal)
+0x0058 systemProcessASNLow                0x5005 (loginwindow)
+0x005c sessionLauncherASNLow              0x0
+0x0060 launchProgressFlags                0x0
+0x0064 launchProgressUserActivityCount    0x0
+0x0068 CGSSessionID                       0x101
+0x006c nextAppToBringForwardASNLow        0x0
+0x0070 systemUIPresentationMode           0x0
+0x0074 metaInformationFlags               0x0
+0x0078 systemUIPresentationOptions        0x0
+0x007c expectedFrontApplicationASNLow     0x0
+0x0088 applicationListCount               0x2b
+0x008c applicationListCapacity (0x32a)    0x32a
+
+ idx  asnLow   chg      flags    u16  pid    pidver bundleIDHash     execNameHash     bndlDev    bndlIno            execDev    execIno            name
+   0  0x5005   0x219    0x64e0   0    209    372    405fb37c70e1a673 db610cddec279fbc 0x100000a  0xfffffff00037386  0x100000a  0xfffffff0003738b  loginwindow
+   1  0x7007   0x208    0x4090   0    373    817    0a498f89383e156a 1e3ec05a36ec26b3 0x100000a  0xfffffff00090d88  0x100000a  0xfffffff00090d8d  ViewBridgeAuxiliary
+   2  0x9009   0x208    0x4490   0    395    878    0000000000000000 4181169f8ad5ddbf 0x100000a  0xfffffff000aa11b  0x100000a  0xfffffff000aa11b  universalaccessd
+   3  0xa00a   0x20f    0x64e0   0    394    879    0be88fafe6e869f3 367327172112636d 0x100000a  0xfffffff00031ddb  0x100000a  0xfffffff00031de0  CoreServicesUIAgent
+   4  0xb00b   0x212    0x64e0   0    397    886    7d3d86347184f7f7 8bbe5b0b91b28f40 0x100000a  0xfffffff000371d5  0x100000a  0xfffffff000371da  WindowManager
+   5  0xc00c   0x208    0x4090   0    407    915    0a498f89383e156a 1e3ec05a36ec26b3 0x100000a  0xfffffff00090d88  0x100000a  0xfffffff00090d8d  ViewBridgeAuxiliary
+   6  0xd00d   0x20f    0x64e0   0    406    910    34ed11b058e9660f 2e9d787930649dbd 0x100000a  0xfffffff000374d9  0x100000a  0xfffffff000374d9  talagentd
+   7  0xf00f   0x20c    0x44e0   0    416    945    226a89c62d8505e5 75c1683433fdfd2e 0x100000a  0xfffffff000340b8  0x100000a  0xfffffff000340bd  IOUIAgent
+   8  0x11011  0x20c    0x44e0   0    441    1017   2b45e52b7eb1ee79 fb922c7932b281c2 0x100000a  0xfffffff00031d9a  0x100000a  0xfffffff00031d9f  CoreLocationAgent
+   9  0x12012  0x215    0x64e0   0    444    1026   afc950a4146d5829 0e330b051a025155 0x100000a  0xfffffff0003034c  0x100000a  0xfffffff00030351  Accessibility
+  10  0x13013  0x20f    0x44e0   0    464    1083   bf55ecf877a8cd31 8da8ff563e5d577b 0x100000a  0xfffffff000350d3  0x100000a  0xfffffff000350d8  Notification Center
+  11  0x14014  0x207    0x4090   0    457    1066   91e245f2ee4cd0ab 41a2e34776d6e7f4 0x100000a  0xfffffff0005e875  0x100000a  0xfffffff0005e875  chronod
+  12  0x15015  0x20c    0x44e0   0    472    1110   3ce1e0eb7df790c7 5234518e646bce0b 0x100000a  0xfffffff0005a6e4  0x100000a  0xfffffff0005a6e9  Single Sign-On
+  13  0x16016  0x208    0x40a0   0    484    1144   f534efa28906f7fe 8cf5cd92028e88ce 0x100000a  0xfffffff0003577f  0x100000a  0xfffffff00035784  ARDAgent
+  14  0x17017  0x20c    0x44e0   0    488    1156   f6986632746505ec e9d7a7941b86c735 0x100000a  0xfffffff00035957  0x100000a  0xfffffff0003595c  SSMenuAgent
+  15  0x18018  0x20a    0x40d0   0    490    1163   e24dab7a163ec131 ece5d6d4a9e72856 0x100000a  0xfffffff00036e10  0x100000a  0xfffffff00036e15  UIKitSystem
+  16  0x19019  0x20a    0x44d0   0    477    1123   0000000000000000 dcd564ec4e0c1676 0x100000a  0xfffffff0005a6f6  0x100000a  0xfffffff0005a6f6  AppSSODaemon
+  17  0x1a01a  0x211    0x44e0   0    560    1376   7a15800888381b46 23003705e3694e70 0x100000a  0xfffffff00031a94  0x100000a  0xfffffff00031a99  Control Center
+  18  0x1b01b  0x20c    0x44e0   0    570    1406   fcdceaba0218bd00 00000e0c4f9185c1 0x100000a  0xfffffff000370fa  0x100000a  0xfffffff000370ff  Wi-Fi
+  19  0x1c01c  0x221    0x40c0   1    655    1645   7ce45488f8c7f6fb dae9c2792cb89744 0x100000a  0xfffffff000086a4  0x100000a  0xfffffff000086a9  Terminal
+  20  0x1d01d  0x20f    0x64e0   0    657    1651   0a1b4f96035c07df 03fd8ce246e5fda8 0x100000a  0xfffffff0003693e  0x100000a  0xfffffff00036943  SystemUIServer
+  21  0x1f01f  0x20f    0x44d0   0    663    1666   e4b1ed5c8d1286d4 7b2c9851f1f3912e 0x100000a  0xfffffff00045901  0x100000a  0xfffffff00045906  QuickLookUIService (PID 658)
+  22  0x20020  0x20c    0x44e0   0    662    1663   85ebef64c1b983cb b042493e3e89e1b1 0x100000a  0xfffffff00036fd0  0x100000a  0xfffffff00036fd5  Wallpaper
+  23  0x21021  0x213    0x44c0   2    658    1654   29186c1a2e376135 001868339d2776de 0x100000a  0xfffffff00032807  0x100000a  0xfffffff0003297a  Finder
+  24  0x23023  0x20c    0x44e0   0    698    1758   05880a0852943104 13db319c649aae23 0x100000a  0xfffffff000305a2  0x100000a  0xfffffff000305a7  AirPlay Screen Mirroring
+  25  0x24024  0x20f    0x64e0   0    699    1757   36f1fefa29a18902 227f2ba1cefc5b4b 0x100000a  0xfffffff00036a21  0x100000a  0xfffffff00036a26  TextInputMenuAgent
+  26  0x25025  0x20c    0x44e0   0    694    1759   e77b09f6d2ca6e52 00000006ac41384b 0x100000a  0xfffffff0003640f  0x100000a  0xfffffff00036414  Siri
+  27  0x26026  0x20f    0x64e0   0    705    1773   a122ace0215b607e 68bcf7d46fc189c7 0x100000a  0xfffffff0003667d  0x100000a  0xfffffff0003671e  Spotlight
+  28  0x27027  0x20c    0x44e0   0    702    1761   47731f63bbb83628 556e260b497e6c53 0x100000a  0xfffffff0008cf3e  0x100000a  0xfffffff0008cf43  SoftwareUpdateNotificationManager
+  29  0x28028  0x214    0x44d0   0    709    1783   3455d35a5191f15c e193c3c8c25c839b 0x100000a  0xfffffff0008f2e2  0x100000a  0xfffffff0008f2e7  CursorUIViewService
+  30  0x29029  0x20f    0x64e0   0    706    1776   295a33904c03c0c6 58f036b63c9e540f 0x100000a  0xfffffff00036a9a  0x100000a  0xfffffff00036a9f  TextInputSwitcher
+  31  0x2a02a  0x20c    0x44e0   0    741    1875   aa41531a6134d5c3 277a449e3d199fd8 0x100000a  0xfffffff0009213d  0x100000a  0xfffffff00092142  Shortcuts
+  32  0x2b02b  0x20c    0x44d0   0    807    2039   2aba8269d2de31bd 1c58995c37448906 0x100000a  0xfffffff00036453  0x100000a  0xfffffff00036458  SiriNCService
+  33  0x2c02c  0x20a    0x44d0   0    854    2154   0000000000000000 398cb7b1fe1b8ee8 0x100000a  0xfffffff000a99ea  0x100000a  0xfffffff000a99ea  GamePolicyAgent
+  34  0x3c03c  0x208    0x490    0    3056   8192   f33ca162c159fb36 cb4a0430dea5080e 0x1000006  0x4a52             0x1000006  0x4a52             AuthenticationServicesAgent
+  35  0x53053  0x20a    0x4490   0    5049   13730  45504fa8efcd1c2a 59d732dcd826eb73 0x100000a  0xfffffff000a9eb9  0x100000a  0xfffffff000a9eb9  studentd
+  36  0x5c05c  0x20c    0x44e0   0    7753   21331  23b507f9bc918541 a838d6b84cb922c1 0x100000a  0xfffffff000346f8  0x100000a  0xfffffff000346fd  Keychain Circle Notification
+  37  0x60060  0x20c    0x44e0   0    15068  41499  eac51a27ac12859d 474c5ae7bb9315e6 0x100000a  0xfffffff0006f824  0x100000a  0xfffffff0006f829  nbagent
+  38  0x64064  0x20c    0x44e0   0    41870  120930 898e287ee6a6ee02 988c0f6f75b4a09c 0x100000a  0xfffffff0005d7b0  0x100000a  0xfffffff0005d7b5  BackgroundTaskManagementAgent
+  39  0x66066  0x218    0x40e0   0    44710  127838 b990b99ea3f7bdea df51beac82a0c354 0x100000a  0xfffffff00035602  0x100000a  0xfffffff00035607  Problem Reporter
+  40  0x6f06f  0x215    0x64e0   0    47677  134851 0b520443c38bad68 e263e8f8d20fa4fd 0x100000a  0xfffffff00036f4d  0x100000a  0xfffffff00036f52  UserNotificationCenter
+  41  0x73073  0x20a    0x40e0   0    48487  136833 e77b0e4530061e5c 00000005aaa706d5 0x100000a  0xfffffff000321e9  0x100000a  0xfffffff000321ee  Dock
+  42  0x74074  0x20c    0x44e0   0    48488  136836 3f0dfece6048fcb4 26c4edfeb366acaf 0x100000a  0xfffffff000325ef  0x100000a  0xfffffff000325f4  Dock Extra
+
+## s0 -> s2: probes/ip.c checked in (500, Foreground, no bundle)
+9c9
+< 0x0028 applicationListSeed                0x1a8
+---
+> 0x0028 applicationListSeed                0x1a9
+11,12c11,12
+< 0x0030 visibleApplicationListSeed         0x1fb
+< 0x0034 applicationInformationSeed         0x1005
+---
+> 0x0030 visibleApplicationListSeed         0x1fc
+> 0x0034 applicationInformationSeed         0x1009
+25c25
+< 0x0088 applicationListCount               0x2b
+---
+> 0x0088 applicationListCount               0x2c
+71a72
+>   43  0x89089  0x202    0x80     0    92353  237868 0000000000000000 00000000000c2547 0x0        0x0                0x0        0x0                ip
+
+## s2 -> s3: open -a Calculator (front)
+7,9c7,9
+< 0x0020 frontApplicationASNSeed            0x94
+< 0x0024 menuBarOwnerASNSeed                0x6e
+< 0x0028 applicationListSeed                0x1a9
+---
+> 0x0020 frontApplicationASNSeed            0x95
+> 0x0024 menuBarOwnerASNSeed                0x6f
+> 0x0028 applicationListSeed                0x1aa
+11,14c11,14
+< 0x0030 visibleApplicationListSeed         0x1fc
+< 0x0034 applicationInformationSeed         0x1009
+< 0x0050 frontASNLow                        0x1c01c (Terminal)
+< 0x0054 menuBarOwnerASNLow                 0x1c01c (Terminal)
+---
+> 0x0030 visibleApplicationListSeed         0x1ff
+> 0x0034 applicationInformationSeed         0x1039
+> 0x0050 frontASNLow                        0x8a08a (Calculator)
+> 0x0054 menuBarOwnerASNLow                 0x8a08a (Calculator)
+25c25
+< 0x0088 applicationListCount               0x2c
+---
+> 0x0088 applicationListCount               0x2d
+48c48
+<   19  0x1c01c  0x221    0x40c0   1    655    1645   7ce45488f8c7f6fb dae9c2792cb89744 0x100000a  0xfffffff000086a4  0x100000a  0xfffffff000086a9  Terminal
+---
+>   19  0x1c01c  0x221    0x40c0   2    655    1645   7ce45488f8c7f6fb dae9c2792cb89744 0x100000a  0xfffffff000086a4  0x100000a  0xfffffff000086a9  Terminal
+52c52
+<   23  0x21021  0x213    0x44c0   2    658    1654   29186c1a2e376135 001868339d2776de 0x100000a  0xfffffff00032807  0x100000a  0xfffffff0003297a  Finder
+---
+>   23  0x21021  0x213    0x44c0   3    658    1654   29186c1a2e376135 001868339d2776de 0x100000a  0xfffffff00032807  0x100000a  0xfffffff0003297a  Finder
+72a73
+>   44  0x8a08a  0x218    0x40c0   1    92361  237887 e8af9ec536fdc9eb 6179b2910a45d414 0x100000a  0xfffffff00000cc0  0x100000a  0xfffffff00000cc5  Calculator
+
+## s3 -> s4: Calculator quit, ip exited
+7,9c7,9
+< 0x0020 frontApplicationASNSeed            0x95
+< 0x0024 menuBarOwnerASNSeed                0x6f
+< 0x0028 applicationListSeed                0x1aa
+---
+> 0x0020 frontApplicationASNSeed            0x96
+> 0x0024 menuBarOwnerASNSeed                0x70
+> 0x0028 applicationListSeed                0x1b1
+11,14c11,14
+< 0x0030 visibleApplicationListSeed         0x1ff
+< 0x0034 applicationInformationSeed         0x1039
+< 0x0050 frontASNLow                        0x8a08a (Calculator)
+< 0x0054 menuBarOwnerASNLow                 0x8a08a (Calculator)
+---
+> 0x0030 visibleApplicationListSeed         0x208
+> 0x0034 applicationInformationSeed         0x1052
+> 0x0050 frontASNLow                        0x1c01c (Terminal)
+> 0x0054 menuBarOwnerASNLow                 0x1c01c (Terminal)
+25c25
+< 0x0088 applicationListCount               0x2d
+---
+> 0x0088 applicationListCount               0x2b
+48c48
+<   19  0x1c01c  0x221    0x40c0   2    655    1645   7ce45488f8c7f6fb dae9c2792cb89744 0x100000a  0xfffffff000086a4  0x100000a  0xfffffff000086a9  Terminal
+---
+>   19  0x1c01c  0x221    0x40c0   1    655    1645   7ce45488f8c7f6fb dae9c2792cb89744 0x100000a  0xfffffff000086a4  0x100000a  0xfffffff000086a9  Terminal
+52c52
+<   23  0x21021  0x213    0x44c0   3    658    1654   29186c1a2e376135 001868339d2776de 0x100000a  0xfffffff00032807  0x100000a  0xfffffff0003297a  Finder
+---
+>   23  0x21021  0x213    0x44c0   2    658    1654   29186c1a2e376135 001868339d2776de 0x100000a  0xfffffff00032807  0x100000a  0xfffffff0003297a  Finder
+72,73d71
+<   43  0x89089  0x202    0x80     0    92353  237868 0000000000000000 00000000000c2547 0x0        0x0                0x0        0x0                ip
+<   44  0x8a08a  0x218    0x40c0   1    92361  237887 e8af9ec536fdc9eb 6179b2910a45d414 0x100000a  0xfffffff00000cc0  0x100000a  0xfffffff00000cc5  Calculator
+
+## lsd-stub (pearOS) page after two AppKit clients checked in (Mac VM, Apple's client, __LSXPCSERVICENAME)
+0x0000 version (0x104)                    0x104
+0x0004 size                               0xf000
+0x0008 sessionID                          0x186a1
+0x000c lockCount                          0x0
+0x0010 debugLevel                         0x0
+0x0014 changeCount                        0x0
+0x0020 frontApplicationASNSeed            0x64
+0x0024 menuBarOwnerASNSeed                0x64
+0x0028 applicationListSeed                0x66
+0x002c pendingApplicationListSeed         0x64
+0x0030 visibleApplicationListSeed         0x64
+0x0034 applicationInformationSeed         0x66
+0x0050 frontASNLow                        0x0
+0x0054 menuBarOwnerASNLow                 0x0
+0x0058 systemProcessASNLow                0x0
+0x005c sessionLauncherASNLow              0x0
+0x0060 launchProgressFlags                0x0
+0x0064 launchProgressUserActivityCount    0x0
+0x0068 CGSSessionID                       0x101
+0x006c nextAppToBringForwardASNLow        0x0
+0x0070 systemUIPresentationMode           0x0
+0x0074 metaInformationFlags               0x0
+0x0078 systemUIPresentationOptions        0x0
+0x007c expectedFrontApplicationASNLow     0x0
+0x0088 applicationListCount               0x2
+0x008c applicationListCapacity (0x32a)    0x32a
+
+ idx  asnLow   chg      flags    u16  pid    pidver bundleIDHash     execNameHash     bndlDev    bndlIno            execDev    execIno            name
+   0  0x2f041  0x1      0x80     0    92577  0      0000000000000000 0000000000000000 0x0        0x0                0x0        0x0                
+   1  0x2f047  0x1      0x80     0    92583  0      0000000000000000 0000000000000000 0x0        0x0                0x0        0x0                

@@ -1,0 +1,34 @@
+# probes/ip.c checkin: the 500 reply of the Mac's launchservicesd to a minimal check-in (pid etc. of that run)
+<dictionary: 0x600001144000> { count = 3, transaction: 0, voucher = 0x0, contents =
+	"serverversion" => <uint64: 0xdc62c0c9bcba42f3>: 277872640
+	"success" => <bool: 0x7ff845adb820>: true
+	"session" => <int64: 0xdc62c1c0a4d052e3>: 100001
+}
+<dictionary: 0x600001144100> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"success" => <bool: 0x7ff845adb820>: true
+	"result" => <dictionary: 0x600000940180> { count = 14, transaction: 0, voucher = 0x0, contents =
+		"LSAuditToken" => <data: 0x6000038403c0>: { length = 32 bytes, contents = 0xf5010000f501000014000000f501000014000000c1680100... }
+		"LSExecutableFileName" => <string: 0x6000023403f0> { string cache = 0x0, length = 2, contents = "ip" }
+		"LSDisplayName" => <string: 0x6000023403c0> { string cache = 0x0, length = 2, contents = "ip" }
+		"LSExecutableFilenameLowerCaseKey" => <string: 0x600002340480> { string cache = 0x0, length = 2, contents = "ip" }
+		"CFBundleExecutablePath" => <string: 0x600002340450> { string cache = 0x0, length = 4, contents = "./ip" }
+		"Hidden" => <bool: 0x7ff845adb840>: false
+		"LSApplicationMemberCoalitionIDKey" => <int64: 0xdc62c1c0bf9222e3>: 12934
+		"LSArchitecture" => <string: 0x600002340540> { string cache = 0x0, length = 6, contents = "x86_64" }
+		"pid" => <int64: 0xdc62c1c0aa3652e3>: 92353
+		"LSASN" => <dictionary: 0x600000940240> { count = 3, transaction: 0, voucher = 0x0, contents =
+			"com.apple.coreservices.asn.lo" => <uint64: 0xdc62c1c035b2d2f3>: 561289
+			"com.apple.coreservices.asn" => <uuid: 0x6000023404b0> C96172A0-CE74-4D62-AFEF-ECFE4D04D827
+			"com.apple.coreservices.asn.hi" => <uint64: 0xdc62c1c0bcba42f3>: 0
+		}
+		"LSCheckInTime*" => <date: 0x600002d411e0> Fri Nov 27 03:13:19 2026 PST (approx)
+		"LSApplicationHasRegistered" => <bool: 0x7ff845adb820>: true
+		"ChangeCount" => <int64: 0xdc62c1c0bc9a62e3>: 514
+		"ApplicationType" => <string: 0x600002340570> { string cache = 0x0, length = 10, contents = "Foreground" }
+	}
+}
+<dictionary: 0x600001140100> { count = 2, transaction: 0, voucher = 0x0, contents =
+	"lsinfopage" => <shmem: 0x6000023440c0>: 61440 bytes (15 pages)
+	"success" => <bool: 0x7ff845adb820>: true
+}
+mapped 61440 bytes at 0x1033d8000 session 100001
