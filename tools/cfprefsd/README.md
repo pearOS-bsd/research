@@ -8,6 +8,10 @@ What Apple's `cfprefsd` (macOS 26.7.2, CoreFoundation-5026.6.7.5) says to its cl
 | `p1.c` | CFPreferences C API: read a missing domain, set, synchronize, key list, ByHost, a global key, delete |
 | `p2.m` | NSUserDefaults suite: `watch` (KVO + NSUserDefaultsDidChangeNotification) and `write` in a second process (`run2.sh` runs both) |
 | `p3.c`, `p4.c` | disk behaviour: when the plist file appears / is rewritten, mode, owner, inode |
+| `p5.c` | the daemon side: `kCFPreferencesAnyUser` written by root and read / written by a user, root's own domain |
+| `norm.py` | normalises a capture (addresses, test names, counter values, per-connection order) so that Apple's run and ours can be diffed |
+| `setup-test.sh`, `cmp.sh` | Mac VM: build `d/darwin/cfprefsd`, run it as the test services (`com.apple.cfprefsd.{agent,daemon}.test`, jobs `com.pearos.t.cfpagent` / `com.pearos.t.cfpdaemon`), run a probe against Apple's daemon and against ours (`__CFPreferencesTestDaemon=1`) from the same files: `/tmp/cmp-apple.txt`, `/tmp/cmp-ours.txt` |
+| `swap.sh` | Mac VM: put our agent in place of Apple's for the session (`ours`) and back (`apple`); needs SIP off (launchd refuses to boot out a system job otherwise) |
 | `captures/` | the recorded output of the probes (text) |
 
 Build and run on the Mac: `clang -dynamiclib xcap.c -o xcap.dylib; clang p1.c -framework CoreFoundation -o p1; DYLD_INSERT_LIBRARIES=./xcap.dylib ./p1`.  For a system tool, copy it and sign the copy ad hoc first (`codesign -s - defaults-copy`).
