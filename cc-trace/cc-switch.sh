@@ -14,7 +14,7 @@ PL='cat > /tmp/com.pearos.controlcenter.plist <<EOF
 EOF'
 case "$1" in
 ours) $M "$PL"'
-launchctl bootout gui/501/com.pearos.controlcenter 2>/dev/null; launchctl bootout gui/501/com.apple.controlcenter 2>/dev/null; sleep 2; launchctl bootstrap gui/501 /tmp/com.pearos.controlcenter.plist 2>&1 | head -1; sleep 4; pgrep -lx ControlCenter';;
+launchctl bootout gui/501/com.pearos.controlcenter 2>/dev/null; launchctl bootout gui/501/com.apple.controlcenter 2>/dev/null; launchctl bootout gui/501/com.pearos.ccdump 2>/dev/null; sleep 2; launchctl bootstrap gui/501 /tmp/com.pearos.controlcenter.plist 2>&1 | head -1; sleep 4; pgrep -lx ControlCenter';;
 stop) $M "$PL"'
 launchctl bootout gui/501/com.pearos.controlcenter 2>/dev/null; launchctl bootout gui/501/com.apple.controlcenter 2>/dev/null; sleep 1; pgrep -lx ControlCenter';;
 real) $M 'launchctl bootout gui/501/com.pearos.controlcenter 2>/dev/null; sleep 1; launchctl bootstrap gui/501 /System/Library/LaunchAgents/com.apple.controlcenter.plist 2>&1 | head -1; launchctl kickstart gui/501/com.apple.controlcenter 2>&1 | head -1; sleep 4; pgrep -lx ControlCenter';;
