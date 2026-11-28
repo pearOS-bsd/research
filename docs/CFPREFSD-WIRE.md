@@ -557,7 +557,7 @@ Apple's clients against Apple's cfprefsd and against ours (`d/darwin/cfprefsd`, 
   `/usr/sbin/cfprefsd` calls `_qtn_proc_alloc`, `_qtn_proc_set_identifier("com.apple.cfprefsd")`,
   `_qtn_proc_set_flags(6)` and `_qtn_proc_apply_to_self`, and exits when the apply fails. Ours does the same and the
   apply returns 0, but our files get no xattr. The cause was not found.
-- **Not done on the Mac:** replacing the session's own agent. That needs SIP off; the GPU VM (reims) has SIP on.
+- **Done on the Mac (2026-11-28):** the session's own agent replaced (GPU VM with SIP off, `swap.sh ours`): `defaults`, Calculator, TextEdit, Finder, SystemUIServer and the Dock run on ours; Calculator writes its file at quit; the Dock restarted after `defaults write com.apple.dock tilesize -int 32` shows the smaller tiles.
 
 ## 11. Open points (not read in this pass)
 
