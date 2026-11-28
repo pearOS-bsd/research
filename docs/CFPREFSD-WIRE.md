@@ -545,7 +545,8 @@ Apple's clients against Apple's cfprefsd and against ours (`d/darwin/cfprefsd`, 
   daemon probe (`p5`) produce the same messages, the same reply keys, the same `CFPreferencesShmemIndex`
   values (for example 2615..2619 for `org.pearos.cfptest`, 1078..1082 for the global domain) and the same files.
   This confirms the slot formula of §3.3 with Apple's `CFHash`.
-- **Different but harmless:** Apple's replies can carry `PlistDiff` (pending changes). Ours always merge the
+- **PlistDiff / PlistFD (2026-11-28):** now sent like Apple's and checked against Apple's replies: base = the file bytes (52 bytes in the probe, identical), `PlistDiff` = `["a", <bplist data>, "b", "str", "old", null]` (values exactly as the writer sent them), `PlistFD` for a 1.2 MiB file (`openat(O_NOFOLLOW)`, `fstat` size >= 0x100000; client: `xpc_dictionary_dup_fd` + `mmap`). The daemon's forced synchronous write depends on the source's user (root / role account), not on the writer: a root write to AnyUser is answered later with a `PlistDiff` on the Mac.
+- **(old note)** Apple's replies can carry `PlistDiff` (pending changes). Ours always merged the
   pending changes first and send the whole dictionary, so the client ends up with the same contents.
 - **Seen in the files:** the mirror file `.GlobalPreferences_m.plist` holds `AppleLanguages`/`AppleLocale` plus
   `Sig_<key>` = `"<process>(<pid>): <yyyy-mm-dd hh:mm:ss> (<zone>)"` (for example

@@ -18,6 +18,7 @@ int main(int argc, char **argv) { @autoreleasepool {
     printf("=== STEP write\n"); fflush(stdout);
     [d setObject:@(time(0)) forKey:@"wk"];
     [d synchronize];
+    if (argc > 2) sleep(3);	/* "write slow": the watcher sees the value before the domain goes away */
     printf("=== STEP registerDefaults\n"); fflush(stdout);
     [d registerDefaults:@{@"rk": @1}];
     printf("=== STEP removeSuite\n"); fflush(stdout);
